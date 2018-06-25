@@ -1,0 +1,11 @@
+Package: sitedefinition
+Title: Site definition by features
+Version: 0.0.0.9000
+Authors@R: person("Sophie C.", "Schmidt",  role = c("aut", "cre"), email = "s.c.schmidt@uni-koeln.de")
+Description: This package will give data and code of the paper on site definition by feature density and feature distances.
+Depends: R (>= 3.3.1)
+License: MIT + file LICENSE
+Imports: rmarkdown, bookdown, knitr, dplyr, maptools, spatstat, spatstat.data, rgdal, ggplot2, pastecs, ecp
+Encoding: UTF-8
+LazyData: true
+
