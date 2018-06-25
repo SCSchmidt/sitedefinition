@@ -10,11 +10,11 @@ output:
 csl: deutsches-archaologisches-institut.csl
 bibliography: sitedefinition.bib
 abstract: In diesem Beitrag wird der Begriff der Fundstelle und seine Problematik für die archäologische Forschung umrissen. Nach der Vorstellung der amerikanischen Debatte um die *site* und den Überlegungen zur Abgrenzung von Siedlungen, die im deutschsprachigen Raum geäußert wurden, wird auf eine Methode der Fundstellenabgrenzung eingegangen, die nicht auf Funden sondern Befunden basiert. Dies wird anhand von Ausgrabungen entlang eines Transekts vorgeführt. Vor- und Nachteile der befundbasierten Vorgehensweise werden diskutiert. 
-keywords:   Siedlungsarchäologie; computational methods; site
+keywords:   Siedlungsarchäologie, Fundstelle, Geostatistik, räumliche Analyse, statistische Programmiersprache R, off-site Archäologie, Transektgrabung, Mitteldeutschland
 highlights:  These are the highlights. 
 ---
 ^[Dieser Artikel entstand aus einer Masterarbeit mit dem Titel „Siedlungsarchäologie auf Befundebene – Untersuchungen zu Standortfaktoren
-und Besiedlungsdichte in einem Transsekt im Mittelelbe-Saale-Gebiet“, die im März 2016 an der Freien Universität Berlin unter Betreuung von Prof. Dr. Dr. h.c. W. Schier eingereicht wurde. Ein Teilaspekt dieser Arbeit beschäftigte sich mit Möglichkeiten zur Abgrenzung von Fundstellen aufgrund der Dichte von Befunden. Die Datengrundlage bilden Ausgrabungen des Abschnitts PA 16 der Bundesstraße 6 (B6n) bei Köthen, deren Grabungsdokumentationen der Autorin vom Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt zur Verfügung gestellt wurde. Die hier vorgestellten Berechnungen, sowie die zugrunde liegenden Daten werden auf dem Github-Repository "/scschmidt/sitedefinition" als R-Paket zur Verfügung gestellt. Sie unterliegen der MIT-Lizenz und sind damit nach Nennung der Autorenschaft zum weiteren wissenschaftlichen Gebrauch frei. Für hilfreiche Diskussionen und Ermutigungen gilt mein Dank Prof. Schier, Dr. Jan Ahlrichs, Sebastian Hageneuer, Dr. Daniel Knitter, Shabnam Moshfegh-Nia, Dr. Oliver Nakoinz und Matthias Nieberle.]
+und Besiedlungsdichte in einem Transsekt im Mittelelbe-Saale-Gebiet“, die im März 2016 an der Freien Universität Berlin unter Betreuung von Prof. Dr. Dr. h.c. W. Schier eingereicht wurde. Ein Teilaspekt dieser Arbeit beschäftigte sich mit Möglichkeiten zur Abgrenzung von Fundstellen aufgrund der Dichte von Befunden. Die Datengrundlage bilden Ausgrabungen des Abschnitts PA 16 der Bundesstraße 6 (B6n) bei Köthen, deren Grabungsdokumentationen der Autorin vom Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt zur Verfügung gestellt wurde. Die hier vorgestellten Berechnungen werden auf dem Github-Repository "/scschmidt/sitedefinition" als R-Paket zur Verfügung gestellt. Sie unterliegen der MIT-Lizenz und sind damit nach Nennung der Autorenschaft zum weiteren wissenschaftlichen Gebrauch frei. Für hilfreiche Diskussionen und Ermutigungen gilt mein Dank Prof. Schier, Dr. des. Jan Ahlrichs, Funda Aşkın, Sebastian Hageneuer, Dr. Daniel Knitter, Shabnam Moshfegh-Nia, Dr. Oliver Nakoinz und Matthias Nieberle.]
 
 
 # Problematisierung
@@ -34,7 +34,7 @@ knitr::opts_chunk$set(
   message = FALSE,
   echo = FALSE,
   comment = "#>",
-  fig.path = "figures"
+  fig.path = "../figures/"
 )
 
 ```
