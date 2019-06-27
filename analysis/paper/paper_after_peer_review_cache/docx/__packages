@@ -1,0 +1,15 @@
+base
+dplyr
+sp
+maptools
+spatstat.data
+nlme
+rpart
+spatstat
+rgdal
+ggplot2
+pastecs
+gdtools
+Rcpp
+ecp
+knitr
