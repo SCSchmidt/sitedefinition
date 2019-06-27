@@ -18,19 +18,17 @@ und Besiedlungsdichte in einem Transekt im Mittelelbe-Saale-Gebiet“, die im M�
 
 
 # Einleitung
+Nach Eggert bildet die Fundstelle „die zentrale Größe aller Bemühungen, die archäologischen Hinterlassenschaften räumlich zu ordnen“^[@eggert_2005, 270.]. Die räumliche Abgrenzung von Fundstellen, Fundorten oder Fundplätzen ist grundlegend für siedlungs- und landschaftsarchäologische Arbeiten, da so neu aufgedeckte Funde und Befunde entweder einer bestehenden Fundstelle zugewiesen werden können oder eine neue definieren. Bisherige siedlungsarchäologischen Arbeiten kommen stets zu unterschiedlichen Annahmen darüber, was ein angemessener Abstand ist^[Siehe z. B. @malmer_1962: 200 m, wobei er festhält: „Die Bestimmung derselben müsste von Rechts wegen auf einem empirischen Studium der Häuser, Höfe und Dörfer der Streitaxtkultur aufbauen“ ebd., 258 ; @linke_1976: „mehrere[n] Dekameter[n]“, ebd. 8; @mischka_2007: weniger als 50 m, ebd. 49-50.] Schirren weist darauf hin, dass dabei kulturspezifisch vorgegangen werden muss und „Definitionen von „Siedlung“ [...] aus Gebieten mit vergleichbaren naturräumlichen Voraussetzungen und Überlieferungsbedingungen“ ^[@schirren_1997, 30.] herangezogen werden müssen. 
 
-Die Begriffe Fundstelle, Fundort oder Fundplatz sind weder in der deutschsprachigen noch anglophonen prähistorischen Archäologie universell definiert^[Vgl. @doneus_2013, 122; @dunnell_1992, 21.], obwohl sie elementare Analyseeinheiten für siedlungs- und landschaftsarchäologische Untersuchungen darstellen.
+An dieser Stelle setzt diese Arbeit an und verfolgt die Frage, wie weit Funde oder Befunde zu dem nächsten entfernt sein müssen, um eine neue Fundstelle zu markieren. Dafür wurde eine geostatistische Methode zur Schätzung von Siedlungsgrößen und -abständen anhand von Grabungsergebnissen einer Transektgrabung entwickelt.
+
+Dabei stellt sich das Problem, dass die Begriffe Fundstelle, Fundort oder Fundplatz weder in der deutschsprachigen noch anglophonen Archäologie universell definiert sind^[Vgl. @doneus_2013, 122; @dunnell_1992, 21.]. 
 
 In der deutschsprachigen Archäologie konzentriert sich die Debatte auf den Begriff der „Siedlung“ mehr als auf den des Fundplatzes und darauf, wie diese zu erkennen und abzugrenzen ist^[Siehe z. B. @malmer_1962; @nelson_1988; @schirren_1997.].  
 
 In der englischsprachigen Forschung wurde die Bedeutung von *site* insbesondere seit den 1970er Jahren ausführlich debattiert^[Unter anderem: @thomas_1975; @foley_1981; @dunnell_1992; @binford_1992; @alcock_1994; @fentress_2000; @de_haas_2012.]. Hier wurden Ansätze entwickelt, deren Ziel es war, die Verteilung archäologischer Funde in der Landschaft unabhängig von Fundstellen zu untersuchen^[@thomas_1975; @foley_1981]. Mit dieser *non-* oder *off-site*-Archäologie wurde einerseits das Vorhandensein von *sites* und andererseits der Nutzen des Begriffs für die Landschaftsarchäologie allgemein in Frage gestellt^[@thomas_1975; @dunnell_1992.].  
 
-Beiden Diskussionen liegt das Problem zugrunde, dass die Ergebnisse von Feldbegehungen, bzw. *surveys* interpretiert werden müssen. Es werden qualitative und quantitative Merkmale, die die Zuweisung der gefundenen Artefakte z. B. zu einem Siedlungsplatz, einem Gräberfeld oder einem Hortfund ermöglichen, gesucht. 
-
-Daran knüpft die vorliegende Arbeit an und entwickelt eine geostatistische Methode zur Schätzung von Siedlungsgrößen und -abständen anhand von Grabungsergebnissen einer Transektgrabung.
-Diese geschätzten Siedlungsgrößen und -abstände sollen bei der Interpretation von Feldbegungsresultaten behilflich sein. 
-
-Da dabei auf theoretische Überlegungen zu Siedlungen und Fundstellen zurückgegriffen wird, wird am Beginn der Arbeit die forschungsgeschichtliche Entwicklung der Begriffe Fundort, Fundstelle und Siedlung sowie *site*  dargelegt. 
+Da im Rahmen der Methodenentwicklung auf theoretische Überlegungen zu Siedlungen und Fundstellen zurückgegriffen wird, wird am Beginn der Arbeit die forschungsgeschichtliche Entwicklung der Begriffe Fundort, Fundstelle und Siedlung sowie *site*  dargelegt. 
 Anschließend wird die Methode vorgestellt, die Siedlungsgrößen und -abstände anhand von Befunddichten zu eruieren versucht, und exemplarisch anhand von Ausgrabungsergebnissen entlang der B6n nahe der Kreisstadt Köthen, Sachsen-Anhalt, vorgeführt. 
 
 
