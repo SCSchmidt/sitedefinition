@@ -387,17 +387,19 @@ Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonver
 
 
 ## Analyseergebnisse
+An dieser Stelle werden jetzt erst die Ergebnisse der Analysen vorgestellt, bevor sie im nächsten Kapitel interpretiert werden. 
+
 
 ### Dichtefunktion über die Distanzmaße
 
-Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet hat.
+Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team_2013) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet hat.
 
 Bei dieser Berechnung zeigen Maxima der Verteilungen an, dass in diesem Abstand von einem Befund die höchste Dichte von gleichdatierten Befunden zu erwarten ist - Cluster von Befunden können als zusammengehörige Gruppe postuliert werden. Minima bedeuten folglich eine geringe zu erwartende Dichte bei diesem Abstand - interpretierbar als Entfernungen von Siedlungen zueinander.
 
 Werden die Entfernungen über den gesamten Transekt genommen, ergibt sich folgendes Bild (siehe Abb. \@ref(fig:Distanzmatrizen1)):
 
 
-```{r Distanzmatrizen1, fig.cap="Periodenspezifische Dichtefunktionen über die Entfernungen von Siedlungsbefunden zueinander.", echo=FALSE, fig.height=8, fig.width=11, message=FALSE, cache=FALSE}
+```{r Distanzmatrizen1, fig.cap="Periodenspezifische Dichtefunktionen über die Entfernungen von Siedlungsbefunden zueinander un m.", echo=FALSE, fig.height=8, fig.width=11, message=FALSE, cache=FALSE}
 
 ggplot() +
   geom_density(data = siedlSnK_dist_df, aes(x = siedlSnK_dist_df[,1], color = "1 SnK")) +
@@ -411,7 +413,7 @@ ggplot() +
         legend.position="bottom", 
         legend.title=element_blank(),
         plot.margin = margin(10, 20, 10, 10))+
-  scale_x_continuous(name="Entfernung der Siedlungsbefunde zueinander")+
+  scale_x_continuous(name="Entfernung der Siedlungsbefunde zueinander (in m)")+
   scale_y_continuous(name="Dichte")
 
 ggsave("../figures/Abb3.jpeg", 
@@ -429,7 +431,7 @@ ggsave("../figures/Abb3.pdf",
        units = "cm")
 ```
 
-Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststellen. Während die Schnurkeramik sich offensichtlich in relativ regelmäßigen Abständen über das gesamte Arbeitsgebiet verteilt, liegen alle frühbronzezeitlichen Befunde in einem Radius von ca. 3000 m zu einander. Die Befunde der späten Bronzezeit und der älteren Eisenzeit liegen größtenteils sehr eng beieinander. Zwei Schwerpunkte zeigen sich, welche über 10 km voneinander entfernt liegen (etwa an dieser Stelle nimmt die Dichte wieder zu). 
+Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststellen. Während die Befunde der Schnurkeramik offensichtlich in relativ regelmäßigen Abständen über das gesamte Arbeitsgebiet verteilt aufgefunden wurden, liegen alle  frühbronzezeitlichen Befunde in einem Radius von ca. 3000 m zu einander. Die Befunde der späten Bronzezeit und der älteren Eisenzeit liegen größtenteils sehr eng beieinander. Zwei Schwerpunkte zeigen sich, welche über 10 km voneinander entfernt liegen (etwa an dieser Stelle nimmt die Dichte wieder zu). 
 
 Aus Abbildung \@ref(fig:Distanzmatrizen1) lässt sich ein Querschnitt der Verteilung der Befunde entlang der Trasse ablesen. Ein Mehrwert gegenüber einer Kartierung der Befunde ist nicht gegeben. Für die Abgrenzung von Fundstellen ist die Einteilung auf der x-Achse zu grob. 
 
@@ -467,7 +469,7 @@ turns_SnK <- which(DeltaY_SnK[-1] * DeltaY_SnK[-length(DeltaY_SnK)] < 0) + 1
 ```
 
 
-```{r Distanzmatrizen2, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 1000 m begrenzt.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
+```{r Distanzmatrizen2, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 1000 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 
 ggplot() +
   geom_density(data = siedlSnK_dist_df_1000, aes(x = siedlSnK_dist_df_1000[,1], color = "1 SnK")) +
