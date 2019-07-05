@@ -115,19 +115,7 @@ Diese Definition benötigt *räumliche* Informationen (*spatially bounded*) und 
 
 Verschiedene Bearbeiter ziehen ähnliche Definitionen wie die von Plog et al. 1978 heran. Die Art, wie die Dichte der Funde gemessen wird, ist jedoch nach Arbeitsgebiet, Vorgehensweise und Interpretation der Streuung unterschiedlich^[Zusammenfassend: @gallant_1986, 408; @witcher_2012, 17. Vor allem in der mediterranen Archäologie ist in den letzten Jahren viel mit Feldbegehungen gearbeitet worden, siehe auch @rajala_2006.]. Die Vergleichbarkeit verschiedener Begehungen erscheint damit schwerlich gegeben^[@plog_1978, 386; @given_2004; @lohmann_2009, 50-51.]. Für die funktionale Interpretation wird zudem die Einbeziehung von qualitativen und chronologischen Überlegungen sowie eine genauere lokale und regionale Einordnung des Aufgefundenen gefordert^[@de_haas_2012, 77-78. Dies scheint vergleichbar mit den Überlegungen, die oben zu „Siedlungsdefinition“ im deutschsprachigen Bereich gemacht wurden.].
 
-Implizit wird davon ausgegangen, dass die Dichte der Funde mit den darunter liegenden Befunden korreliert. Dies wird seit den 1970er hinterfragt: Verschiedene taphonomische Prozesse^[@foley_1981, 166-181; @renfrew_2009, 77.] sowie geographische^[Insbesondere alluviale Überformungsprozesse oder Reliefenergie (@saile_2002).], räumliche und kulturelle Einflüsse können zu deutlichen Verzerrungen in der Fundverteilung führen^[@martens_2008, 132-133]. 
-
-
-Es überrascht, dass hier wichtige Referenzen zu diesem Themenbereich fehlen.
-
-M. Sommer, zur Entstehung archäologischer Fundvergesellschaftungen. Versuch einer archäologischen Taphonomie. In: Studien zur Siedlungsarchäologie I. Universitätsforschungen zur prähistorischen Archäologie 6 (Bonn 1991) 51–174.
-
-M. B. Schiffer, Formation Processes of the Archaeological Record (Albuquerque 1987).
-
-S. Gerhard, Beiträge zur archäologischen Quellenkritik an Beispielen aus dem Neolithikum und der Frühbronzezeit Südbayerns. Arbeiten zur Archäologie Süddeutschlands 18 (Büchenbach 2006).
-
-
-
+Implizit wird davon ausgegangen, dass die Dichte der Funde mit den darunter liegenden Befunden korreliert. Dies wird seit den 1970er hinterfragt: Verschiedene taphonomische Prozesse^[@foley_1981, 166-181; @renfrew_2009, 77.] sowie geographische^[Insbesondere alluviale Überformungsprozesse oder Reliefenergie (@saile_2002).], räumliche und kulturelle Einflüsse können zu deutlichen Verzerrungen in der Fundverteilung führen^[@martens_2008, 132-133; zusammenfassend: @schiffer_1987, 199-234; @sommer_1991, 109-123.]. 
 
 Zudem ist das Problem der zeitlichen Abhängigkeit der Lage der Funde zu nennen: Da Funde sowohl vertikal als auch horizontal im Boden verlagert werden, ist jede Definition einer *site* in Abhängigkeit der Lage der Funde eine, die nur zu diesem Zeitpunkt so gemacht werden konnte^[Ähnliches stellt Thompson fest, der innerhalb von 20 Jahren einen deutlichen Fundstellenschwund feststellen konnte (@thompson_2004).]. Ausgehend von dieser Beobachtung vertritt Dunnell die Auffassung, dass eine *site a priori* keine archäologisch sinnvolle Einheit sei.^[@dunnell_1992, 26.].
 
