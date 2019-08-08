@@ -43,6 +43,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "../figures/"
 )
+library(bookdown)
 
 ```
 
@@ -321,7 +322,7 @@ CSR_dist_df_1000$prozent <-c(CSR_dist_df_1000$n/nrow(CSR_dist_df_1000)) # macht 
 
 ```
 
-```{r Entfernungsmatrizen, fig.cap="Darstellung der Distanzmatrizen der einzelnen Perioden. Die Entfernung jeweils zweier Befunde (Befundpaare) zueineinander wird auf der y-Achse abgetragen (aufsteigend geordnet bis 1000 m). Die Information, welche zwei Befunde dies sind, ist in diesem Falle irrelevant und deshalb nicht explizit auf der x-Achse eingetragen.", fig.height=11, fig.width=11, cache=FALSE}
+```{r Entfernungsmatrizen_berechnung, message=FALSE, include=FALSE, cache=FALSE}
 
 p1 <- ggplot() +
   geom_line(data=siedlSnK_dist_df_1000, aes(x=n, y=siedlSnK_dist_v)) +
@@ -372,6 +373,10 @@ ggsave("../figures/Abb2.pdf",
        width = 20, 
        height = 15, 
        units = "cm")
+
+```
+
+```{r Entfernungsmatrizen, fig.cap="Darstellung der Distanzmatrizen der einzelnen Perioden. Die Entfernung jeweils zweier Befunde (Befundpaare) zueineinander wird auf der y-Achse abgetragen (aufsteigend geordnet bis 1000 m). Die Information, welche zwei Befunde dies sind, ist in diesem Falle irrelevant und deshalb nicht explizit auf der x-Achse eingetragen.", fig.height=11, fig.width=11, cache=FALSE}
 
 g
 
@@ -847,7 +852,9 @@ ggplot() +
   scale_x_discrete(labels=c("SnK","fBZ","sBZ", "äEZ", "Abstände \n zw. Flächen", "Längste Flächen- \n seite"))+
   theme(axis.title.x = element_blank())+
    ylab("Meter") 
-  
+```
+
+```{r}
 ggsave("../figures/Abb7.jpeg", 
        width = 20, 
        height = 15, 
