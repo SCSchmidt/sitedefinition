@@ -154,7 +154,7 @@ Dabei lässt sich kein bestimmter Wert ausfindig machen, dem alle Siedlungen ent
 
 
 ### Datenbasis
-Grundlage für die folgenden Berechnungen sind die Ergebnisse der Ausgrabungen entlang der Bundesstraße 6 in ihrem Planungsabschnitt 16 (PA 16) bei Köthen (siehe Abb. \@ref(Karte)). Es handelt sich um 41 Einzelgrabungen des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalts, die auf einer Länge von 13,4 km einen in der Regel ca. 40 m breiten Schnitt durch landwirtschaftlich genutzte Flächen gelegt wurden. Da das Landesdenkmalamt vor der eigentlichen archäologischen Ausgrabung einen Suchschnitt entlang der Trasse gelegt und erst danach die „Aktivitätszonen“, das heißt die zu untersuchenden Flächen festgelegt hat, kann davon ausgegangen werden, dass auf der Trasse fast alle^[Der Vergleich unterschiedlicher Vor-Untersuchungsmethoden und ihrer Effektivität zur Vorhersage von archäologischen Fundstellen zeigt, dass *machine trenching* allgemein die besten Ergebnisse liefert. Auch bei dieser Methode werden jedoch nicht alle *sites* vorhergesagt, vor allem neolithische Fundstellen können durch das Raster fallen (@hey_2006).] archäologischen Befunde erfasst wurden^[Es gibt eine Ausnahme im Süden Köthens: Auf einem ehemaligen Kasernen- und Fluggelände, über das ca. 750 m des Trassenabschnitts gehen, kam es seit den 1920er-Jahren zu zahlreichen Bodeneingriffen, zu Bombardierungen und Zerstörungen.]. Neben der reinen Trassenlänge kommen weitere untersuchte Gebiete, wie Zufahrten in Kreuzungsbereichen und Untersuchungsstreifen in Regenrückhaltebecken, zur Grabungsfläche hinzu, die sich dadurch auf ca. 9 ha beläuft^[@fahr_0000.].
+Grundlage für die folgenden Berechnungen sind die Ergebnisse der Ausgrabungen entlang der Bundesstraße 6 in ihrem Planungsabschnitt 16 (PA 16) bei Köthen (siehe Abb. \@ref(Karte)). Es handelt sich um 41 Einzelgrabungen des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalts, die auf einer Länge von 13,4 km einen in der Regel ca. 40 m breiten Schnitt durch landwirtschaftlich genutzte Flächen gelegt wurden. Da das Landesdenkmalamt vor der eigentlichen archäologischen Ausgrabung einen Suchschnitt entlang der Trasse gelegt und erst danach die „Aktivitätszonen“, das heißt die zu untersuchenden Flächen festgelegt hat, kann davon ausgegangen werden, dass auf der Trasse fast alle^[Der Vergleich unterschiedlicher Vor-Untersuchungsmethoden und ihrer Effektivität zur Vorhersage von archäologischen Fundstellen zeigt, dass *machine trenching* allgemein die besten Ergebnisse liefert. Auch bei dieser Methode werden jedoch nicht alle *sites* vorhergesagt, vor allem neolithische Fundstellen können durch das Raster fallen (@hey_2006).] archäologischen Befunde erfasst wurden^[Es gibt eine Ausnahme im Süden Köthens: Auf einem ehemaligen Kasernen- und Fluggelände, über das ca. 750 m des Trassenabschnitts gehen, kam es seit den 1920er-Jahren zu zahlreichen Bodeneingriffen, zu Bombardierungen und Zerstörungen.]. Neben der reinen Trassenlänge kommen weitere untersuchte Gebiete, wie Zufahrten in Kreuzungsbereichen und Untersuchungsstreifen in Regenrückhaltebecken, zur Grabungsfläche hinzu, die sich dadurch auf ca. 9 ha beläuft^[@fahr_nodate.].
 
 ![Figure @Karte : Arbeitsgebiet. Wohn- und Industriegebiete (Daten heruntergeladen von der Geofabrik des OSM-Projektes) durch Strichmuster markiert. Hintergrund ist ein geschummertes digitales Geländemodell (Daten vom Amt für Geologie und Bergwesen Sachsen-Anhalt). Die einzelnen Grabungen des Landesdenkmalamtes sind nummeriert.](../figures/Abb1_neu3.jpg)
 
@@ -180,8 +180,11 @@ Datierungen <- c("3950 - 2650 v. Chr", "2800 - 2200 v. Chr.", "5500 - 2200 v. Ch
 Datierungen <- as.data.frame(Datierungen)
 colnames(Datierungen) <- "Datierung"
 
+siedlung_BefSchnitt<-subset(BefSchnitt, BefSchnitt$befundart=='Siedlung')
+
+
 library(dplyr)
-BefSchnitt %>% group_by(epoche,abschnitt) %>% arrange(epoche,abschnitt) %>% summarise(count = n())-> table
+siedlung_BefSchnitt %>% group_by(epoche,abschnitt) %>% arrange(epoche,abschnitt) %>% summarise(count = n())-> table
 table <- as.data.frame(table)
 table <- cbind(table, Datierungen)
 knitr::kable(table,
@@ -205,9 +208,9 @@ Es muss betont werden, dass der Großteil der Befunde undatiert bleiben musste (
 
 ### Vorgehensweise
 
-Zur Abgrenzung der Fundstelle findet das Konzept von Plog et al. 1978 Anwendung, die die Abgrenzung einer Fundstelle anhand einer relativen Veränderung in der Dichte des Fundmaterials vornehmen. In dieser Arbeit wird allerdings mit *Siedlungsbefund*dichten und nicht mit Funddichten gearbeitet^[Aus diesem Grund ist die Korrektur für Sichtbarkeit, die Gallant für *surveys* vorschlägt (@gallant_1986, 409), nicht notwendig.]. 
+Zur Abgrenzung der Fundstellen findet das Konzept von Plog et al. 1978 Anwendung, die die Abgrenzung einer Fundstelle anhand einer relativen Veränderung in der Dichte des Fundmaterials vornehmen. In dieser Arbeit wird allerdings mit *Siedlungsbefund*dichten und nicht mit Funddichten gearbeitet^[Aus diesem Grund ist die Korrektur für Sichtbarkeit, die Gallant für *surveys* vorschlägt (@gallant_1986, 409), nicht notwendig.]. 
 
-Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„*Density is defined as the measure of **something** in a certain **amount** of space*” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer zwischen zwei Befunden einer Zeitstellung gemessen (im Folgenden „Befundpaare” genannt). Dies wurde an den Siedlungsbefunden einer archäologischen Zeitstufe vorgenommen, wenn mehr als zehn Befunde dieser Periode zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit - äEZ). Die „spätbronze-/ältereisenzeitlich” datierten Befunde werden gemeinsam mit der Spätbronzezeit und gemeinsam mit der älteren Eisenzeit untersucht. Die späte Bronzezeit und ältere Eisenzeit sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar. 
+Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„*Density is defined as the measure of **something** in a certain **amount** of space*” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer zwischen zwei Befunden einer Zeitstellung gemessen (im Folgenden „Befundpaare” genannt). Dies wurde an den Siedlungsbefunden einer archäologischen Zeitstufe vorgenommen, wenn mehr als zehn Befunde dieser Periode zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit - äEZ). Die „spätbronze-/ältereisenzeitlich” datierten Befunde werden gemeinsam mit der Spätbronzezeit und gemeinsam mit der älteren Eisenzeit untersucht. Die späte Bronzezeit und ältere Eisenzeit sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95.]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar. 
 
 ```{r, message=FALSE, include=FALSE, cache=FALSE}
 
@@ -370,6 +373,8 @@ ggsave("../figures/Abb2.pdf",
        height = 15, 
        units = "cm")
 
+g
+
 ```
 
 
@@ -383,7 +388,7 @@ Es ist sinnvoll, bei der Erzeugung der Graphen sehr weite Entfernungen nicht ein
 
 Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonverteilung, erzeugt mit spatstat::rpoispp, $\lambda$ = 0.01, die eine vollständige räumliche Zufälligkeit und eine voneinander unabhängige identische Verteilung aufweisen (*CSR - complete spatial randomness* und *i.i.d - independent and identically distributed*). Das R-Paket spatstat wurde von @baddeley_2015 entwickelt.] verglichen, für welche die gleichen Berechnungen vorgenommen wurden. Dabei lässt sich z. B. ein Clustergrad feststellen, wenn die empirisch beobachteten Distanzmatrizen mehr kürzere Distanzen aufzeigen, als in einer zufälligen Berechnung zu erwarten wären^[Eine höhere Anzahl kürzerer Entfernungen bedeutet, dass die Befunde zum Teil näher beieinander liegen als wenn sie zufällig gestreut werden. Dies ist bei archäologischen Befunden fast immer der Fall.].
 
-Abschließend werden die Analyseergebnisse mit den vom Landesdenkmalamt definierten Grabungsarealen verglichen, um abzuschätzen, inwieweit deren Größe Einfluss auf die Ergebnisse hat. Dies erfolgt mit einem Boxplotdiagramm unter dem [Kapitel "Einschränkende Beobachteunen"](#einschraenkungen)
+Abschließend werden die Analyseergebnisse mit den vom Landesdenkmalamt definierten Grabungsarealen verglichen, um abzuschätzen, inwieweit deren Größe Einfluss auf die Ergebnisse hat. Dies erfolgt mit einem Boxplotdiagramm unter dem Abschnitt "Einschränkende Beobachtungen".
 
 
 
@@ -508,7 +513,7 @@ ggsave("../figures/Abb4.pdf",
 
 
 Der Abstand von 1000 m bringt den Vorteil mit sich, dass sich in den Dichtefunktion zwei Maxima um ein Minimum fassen lassen. 
-Die Werte in Tabelle \@ref(tab:Extrema) lassen sich aus der Grafik extrahieren. Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am häufigsten liegen, d. h. die höchste Dichte aufweisen. Dieser Wert ist für die Spätbronzezeit am geringsten (33 m), es folgen diejenigen der Schnurkeramik (62 m), der Aunjetitzer Kultur (87 m) und der der älteren Eisenzeit (92 m). 
+Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am häufigsten liegen, d. h. die höchste Dichte aufweisen. Dieser Wert ist für die Spätbronzezeit am geringsten (33 m), es folgen diejenigen der Schnurkeramik (62 m), der Aunjetitzer Kultur (87 m) und der der älteren Eisenzeit (92 m). 
 
 Das Minimum ist die Entfernung, in welcher die wenigsten Befunde auftauchen. In der Grafik kann man erkennen, dass diese für die ersten drei Perioden in einem Bereich von 100 m beieinander liegen (zwischen 433 und 532 m), während die ältere Eisenzeit in dem Bereich einen Anstieg aufweist und ihr Minimum bei 346 m ermittelt werden konnte. 
 
@@ -554,7 +559,7 @@ ggsave("../figures/Abb6.pdf",
        units = "cm")
 ```
 
-Während das Bild der Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändern, zeigen die Graphen der Frühbronzezeit und späten Bronze-/ frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
+Während sich das Bild für die Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändert, zeigen die Graphen der Frühbronzezeit und späten Bronze-/ frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
 
 ```{r calculation density maxima 500 m}
 
@@ -584,7 +589,7 @@ Das erste lokale Maximum der späten Bronze-/ frühen Eisenzeit liegt bei 67 m, 
 ### Kumulative Darstellung der Distanzmaße
 
 
-Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen. Anhand dieser Auswertungen können sprunghafte Distanzzunahmen identifiziert werden^[Das bedeutet, die Abstände der Befunde zueinander werden größer.]. 
+Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen (im Folgenden Wendepunkte genannt). Das bedeutet, die Abstände der Befunde zueinander werden größer. Anhand dieser Auswertungen können sprunghafte Distanzzunahmen identifiziert werden. 
 
 Es entsteht implizit das Bild einer Siedlung, in deren Mitte die Befunde am dichtesten beieinander liegen, während sie zu den Rändern ausstreuen. Dies ist jedoch nur eine Modell. Durch die Abstraktion, dass alle Fundstellen gleichzeitig betrachtet werden, kommen übergreifende Trends zum Ausdruck, nicht die Beschreibung einer einzelnen Siedlung.
 
@@ -636,7 +641,7 @@ extrem_fBZ <- siedlfBZ_Bef_dens_1000$x[turns_fBZ]
 extrem_SnK <- siedlSnK_Bef_dens_1000$x[turns_SnK]
 
 
-werte <- matrix(c(nrow(siedlung_SnK_Bef), nrow(siedlung_fBZ_Bef), nrow(siedlung_sBZ_Bef), nrow(siedlung_sBZ_aeEZ),
+werte <- matrix(c(siedlung_SnK_Bef_pp$n, siedlung_fBZ_Bef_pp$n, siedlung_sBZ_Bef_pp$n, siedlung_sBZ_aeEZ_pp$n,
          round (extrem_SnK[1]), round(extrem_fBZ[1]), round(extrem_sBZ[1]), round(extrem_sBZ_aeEZ[1]),
          round(extrem_SnK[2]), round(extrem_fBZ[2]), round(extrem_sBZ[6]), round(extrem_sBZ_aeEZ[2])), ncol=3)
 
