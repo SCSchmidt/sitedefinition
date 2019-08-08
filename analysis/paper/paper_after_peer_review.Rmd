@@ -8,13 +8,13 @@ output:
     fig_caption: yes
     reference_docx: templates/template.docx
 csl: RGK_archaeology_DGUF.csl
-bibliography: sitedefinition.bib
+bibliography: sitedefinition2.bib
 abstract: In diesem Beitrag wird der Begriff der Fundstelle und seine Problematik für die archäologische Forschung umrissen. Nach der Vorstellung der amerikanischen Debatte um die *site* und den Überlegungen zur Abgrenzung von Siedlungen, die im deutschsprachigen Raum geäußert wurden, wird auf eine Methode der Fundstellenabgrenzung eingegangen, die nicht auf Funden sondern Befunden basiert. Dies wird anhand von Ausgrabungen entlang eines Transekts vorgeführt. Vor- und Nachteile der befundbasierten Vorgehensweise werden diskutiert. 
 keywords:   Siedlungsarchäologie, Fundstelle, Geostatistik, räumliche Analyse, statistische Programmiersprache R, off-site Archäologie, Transektgrabung, Mitteldeutschland
 highlights:  These are the highlights. 
 ---
 ^[Dieser Artikel entstand aus einer Masterarbeit mit dem Titel „Siedlungsarchäologie auf Befundebene – Untersuchungen zu Standortfaktoren
-und Besiedlungsdichte in einem Transekt im Mittelelbe-Saale-Gebiet“, die im März 2016 an der Freien Universität Berlin unter Betreuung von Prof. Dr. Dr. h.c. W. Schier eingereicht wurde. Die hier vorgestellten Berechnungen werden auf dem Github-Repository "/scschmidt/sitedefinition" als R-Paket zur Verfügung gestellt. Sie unterliegen der MIT-Lizenz und sind damit nach Nennung der Autorenschaft zum weiteren wissenschaftlichen Gebrauch frei. Für hilfreiche Diskussionen und Ermutigungen gilt mein Dank Prof. Schier, Dr. Jan Mira, Funda Aşkın, Sebastian Hageneuer, Dr. Daniel Knitter, Shabnam Moshfegh-Nia, Dr. Oliver Nakoinz und Matthias Nieberle.]
+und Besiedlungsdichte in einem Transekt im Mittelelbe-Saale-Gebiet“, die im März 2016 an der Freien Universität Berlin unter Betreuung von Prof. Dr. Dr. h.c. W. Schier eingereicht wurde. Die hier vorgestellten Berechnungen werden auf dem Github-Repository "/scschmidt/sitedefinition" als R-Paket zur Verfügung gestellt. Sie unterliegen der MIT-Lizenz und sind damit nach Nennung der Autorenschaft zum weiteren wissenschaftlichen Gebrauch frei. Für hilfreiche Diskussionen und Ermutigungen gilt mein Dank Prof. Schier, Dr. Jan Mira, Funda Aşkın, Sebastian Hageneuer, Dr. Daniel Knitter, Shabnam Moshfegh-Nia, Dr. Oliver Nakoinz und Matthias Nieberle. Der/m anonymen Reviewer_in sei für konstruktive Kritik gedankt.]
 
 
 # Einleitung
@@ -207,7 +207,7 @@ Es muss betont werden, dass der Großteil der Befunde undatiert bleiben musste (
 
 Zur Abgrenzung der Fundstelle findet das Konzept von Plog et al. 1978 Anwendung, die die Abgrenzung einer Fundstelle anhand einer relativen Veränderung in der Dichte des Fundmaterials vornehmen. In dieser Arbeit wird allerdings mit *Siedlungsbefund*dichten und nicht mit Funddichten gearbeitet^[Aus diesem Grund ist die Korrektur für Sichtbarkeit, die Gallant für *surveys* vorschlägt (@gallant_1986, 409), nicht notwendig.]. 
 
-Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„*Density is defined as the measure of **something** in a certain **amount** of space*” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer zwischen zwei Befunden einer Zeitstellung gemessen (Befundpaare). Dies wurde an den Siedlungsbefunden einer archäologischen Zeitstufe vorgenommen, wenn mehr als zehn Befunde dieser Periode zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit - äEZ). Die „spätbronze-/ältereisenzeitlich” datierten Befunde werden gemeinsam mit der Spätbronzezeit und gemeinsam mit der älteren Eisenzeit untersucht. Die späte Bronzezeit und ältere Eisenzeit sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde gerechtfertigt. 
+Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„*Density is defined as the measure of **something** in a certain **amount** of space*” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer zwischen zwei Befunden einer Zeitstellung gemessen (im Folgenden „Befundpaare” genannt). Dies wurde an den Siedlungsbefunden einer archäologischen Zeitstufe vorgenommen, wenn mehr als zehn Befunde dieser Periode zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit - äEZ). Die „spätbronze-/ältereisenzeitlich” datierten Befunde werden gemeinsam mit der Spätbronzezeit und gemeinsam mit der älteren Eisenzeit untersucht. Die späte Bronzezeit und ältere Eisenzeit sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar. 
 
 ```{r, message=FALSE, include=FALSE, cache=FALSE}
 
@@ -382,7 +382,7 @@ Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte auf
 
 Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
 
-Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonverteilung, erzeugt mit spatstat::rpoispp, $\lambda$ = 0.01, die eine vollständige räumliche Zufälligkeit und eine voneinander unabhängige identische Verteilung aufweisen (*CSR - complete spatial randomness* und *i.i.d - independent and identically distributed*).] verglichen, für welche die gleichen Berechnungen vorgenommen wurden. Dabei lässt sich z. B. ein Clustergrad feststellen, wenn die empirisch beobachteten Distanzmatrizen mehr kürzere Distanzen aufzeigen, als in einer zufälligen Berechnung zu erwarten wären^[Eine höhere Anzahl kürzerer Entfernungen bedeutet, dass die Befunde zum Teil näher beieinander liegen als wenn sie zufällig gestreut werden. Dies ist bei archäologischen Befunden fast immer der Fall.].
+Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonverteilung, erzeugt mit spatstat::rpoispp, $\lambda$ = 0.01, die eine vollständige räumliche Zufälligkeit und eine voneinander unabhängige identische Verteilung aufweisen (*CSR - complete spatial randomness* und *i.i.d - independent and identically distributed*). Das R-Paket spatstat wurde von @baddeley_2015 entwickelt.] verglichen, für welche die gleichen Berechnungen vorgenommen wurden. Dabei lässt sich z. B. ein Clustergrad feststellen, wenn die empirisch beobachteten Distanzmatrizen mehr kürzere Distanzen aufzeigen, als in einer zufälligen Berechnung zu erwarten wären^[Eine höhere Anzahl kürzerer Entfernungen bedeutet, dass die Befunde zum Teil näher beieinander liegen als wenn sie zufällig gestreut werden. Dies ist bei archäologischen Befunden fast immer der Fall.].
 
 
 
@@ -399,7 +399,7 @@ Bei dieser Berechnung zeigen Maxima der Verteilungen an, dass in diesem Abstand 
 Werden die Entfernungen über den gesamten Transekt genommen, ergibt sich folgendes Bild (siehe Abb. \@ref(fig:Distanzmatrizen1)):
 
 
-```{r Distanzmatrizen1, fig.cap="Periodenspezifische Dichtefunktionen über die Entfernungen von Siedlungsbefunden zueinander un m.", echo=FALSE, fig.height=8, fig.width=11, message=FALSE, cache=FALSE}
+```{r Distanzmatrizen1, fig.cap="Periodenspezifische Dichtefunktionen über die Entfernungen von Siedlungsbefunden zueinander in m. CSR beschreibt die Zufallsverteilung.", echo=FALSE, fig.height=8, fig.width=11, message=FALSE, cache=FALSE}
 
 ggplot() +
   geom_density(data = siedlSnK_dist_df, aes(x = siedlSnK_dist_df[,1], color = "1 SnK")) +
@@ -505,25 +505,6 @@ ggsave("../figures/Abb4.pdf",
 ```
 
 
-```{r Extrema, echo = FALSE, cache=FALSE}
-
-extrem_sBZ_aeEZ <- siedlsBZ_aeEZ_Bef_dens_1000$x[turns_sBZ_aeEZ]
-extrem_sBZ <- siedlsBZ_Bef_dens_1000$x[turns_sBZ]
-extrem_fBZ <- siedlfBZ_Bef_dens_1000$x[turns_fBZ]
-extrem_SnK <- siedlSnK_Bef_dens_1000$x[turns_SnK]
-
-
-werte <- matrix(c(nrow(siedlung_SnK_Bef), nrow(siedlung_fBZ_Bef), nrow(siedlung_sBZ_Bef), nrow(siedlung_sBZ_aeEZ),
-         round (extrem_SnK[1]), round(extrem_fBZ[1]), round(extrem_sBZ[1]), round(extrem_sBZ_aeEZ[1]),
-         round(extrem_SnK[2]), round(extrem_fBZ[2]), round(extrem_sBZ[6]), round(extrem_sBZ_aeEZ[2])), ncol=3)
-
-colnames(werte) <- c("Befunde (n)", "1. Maximum", "Minimum")
-rownames(werte) <- c("SnK", "fBZ", "sBZ", "sBZ/äEZ")
-werte1 <- as.table(werte)
-
-knitr::kable(werte1, 
-             caption="periodenspezifische Extrema der Dichtefunktionen ")
-```
 
 Der Abstand von 1000 m bringt den Vorteil mit sich, dass sich in den Dichtefunktion zwei Maxima um ein Minimum fassen lassen. 
 Die Werte in Tabelle \@ref(tab:Extrema) lassen sich aus der Grafik extrahieren. Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am häufigsten liegen, d. h. die höchste Dichte aufweisen. Dieser Wert ist für die Spätbronzezeit am geringsten (33 m), es folgen diejenigen der Schnurkeramik (62 m), der Aunjetitzer Kultur (87 m) und der der älteren Eisenzeit (92 m). 
@@ -537,10 +518,10 @@ Das Minimum ist die Entfernung, in welcher die wenigsten Befunde auftauchen. In 
 
 Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen. Anhand dieser Auswertungen können sprunghafte Distanzzunahmen identifiziert werden^[Das bedeutet, die Abstände der Befunde zueinander werden größer.]. 
 
-Es entsteht implizit das Bild einer Siedlung, in deren Mitte die Befunde am dichtesten beieinander liegen, während sie zu den Rändern ausstreuen. Das muss nicht der Realität entsprechen. Durch die Abstraktion, dass alle Fundstellen gleichzeitig betrachtet werden, kommen übergreifende Trends zum Ausdruck, nicht die Beschreibung einer einzelnen Siedlung.
+Es entsteht implizit das Bild einer Siedlung, in deren Mitte die Befunde am dichtesten beieinander liegen, während sie zu den Rändern ausstreuen. Dies ist jedoch nur eine Modell. Durch die Abstraktion, dass alle Fundstellen gleichzeitig betrachtet werden, kommen übergreifende Trends zum Ausdruck, nicht die Beschreibung einer einzelnen Siedlung.
 
 
-```{r Distanzen_kumulativ, fig.cap="Periodenspezifische Darstellung der kumulierten Entfernungen von Siedlungsbefunden.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
+```{r Distanzen_kumulativ, fig.cap="Periodenspezifische Darstellung der kumulierten Entfernungen von Siedlungsbefunden. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 
 ggplot()+
   geom_line(data = siedlSnK_dist_df_1000, aes(x = siedlSnK_dist_v, y = prozent, color="1 SnK")) +
@@ -577,8 +558,27 @@ Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Di
 
 
 ```{r, include=FALSE, cache=FALSE}
+
+## Berechnung der Wendepunkte der Dichtefunktionen
+extrem_sBZ_aeEZ <- siedlsBZ_aeEZ_Bef_dens_1000$x[turns_sBZ_aeEZ]
+extrem_sBZ <- siedlsBZ_Bef_dens_1000$x[turns_sBZ]
+extrem_fBZ <- siedlfBZ_Bef_dens_1000$x[turns_fBZ]
+extrem_SnK <- siedlSnK_Bef_dens_1000$x[turns_SnK]
+
+
+werte <- matrix(c(nrow(siedlung_SnK_Bef), nrow(siedlung_fBZ_Bef), nrow(siedlung_sBZ_Bef), nrow(siedlung_sBZ_aeEZ),
+         round (extrem_SnK[1]), round(extrem_fBZ[1]), round(extrem_sBZ[1]), round(extrem_sBZ_aeEZ[1]),
+         round(extrem_SnK[2]), round(extrem_fBZ[2]), round(extrem_sBZ[6]), round(extrem_sBZ_aeEZ[2])), ncol=3)
+
+colnames(werte) <- c("Befunde (n)", "1. Maximum", "Minimum")
+rownames(werte) <- c("Schnurkeramik", "Frühbronzezeit", "Spätbronzezeit", "ältere Eisenzeit")
+werte1 <- as.table(werte)
+
+
 #install.packages("ecp")
 library("ecp")
+
+## Berechnung der Wendepunkte der kumulativen Funktion
 
 turn_SnK <- e.divisive(as.matrix(diff(siedlSnK_dist_df_1000$siedlSnK_dist_v)), k = 1, min.size = nrow(siedlSnK_dist_df_1000)/10) #looks for change points, needs matrix, k number of changepoints estimated, min.size = minimum number of observations between change points -> decided to be a tenth of the number of observations so it's not every small change that's documented
 
@@ -600,6 +600,7 @@ siedlSnK_turn<- siedlSnK_dist_df_1000$siedlSnK_dist_v[turn_SnK$estimates]
 siedlfBZ_turn <- siedlfBZ_dist_df_1000$siedlfBZ_dist_v[turn_fBZ$estimates]
 siedlsBZ_turn <- siedlsBZ_dist_df_1000_sm$siedlsBZ_dist_v[turn_sBZ$estimates]
 siedlsBZ_aeEZ_turn<- siedlsBZ_aeEZ_dist_df_1000_sm$siedlsBZ_aeEZ_dist_v[turn_sBZ_aeEZ$estimates]
+
 
 werte2 <- cbind(werte1, Wendepunkt = c(round(siedlSnK_turn[2]), round(siedlfBZ_turn[2]), round(siedlsBZ_turn[2]), round(siedlsBZ_aeEZ_turn[2])))
 
