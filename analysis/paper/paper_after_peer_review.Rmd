@@ -373,14 +373,13 @@ ggsave("../figures/Abb2.pdf",
 ```
 
 
-
 Die entstandenen Datenreihen (siehe Abb. \@ref(fig:Entfernungsmatrizen)) der absoluten Entfernungen aller gleichdatierten Befunde zueinander werden zur Erfassung von Siedlungsgrößen und -abständen auf zwei unterschiedliche Art und Weisen modelliert:
 
-Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen, die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.
+Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen, die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.  
 
 Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt damit stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter ([-@nakoinz_2016], 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen (abgetragen an der x-Achse) hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
 
-Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
+Es ist sinnvoll, bei der Erzeugung der Graphen sehr weite Entfernungen nicht einzubeziehen, da sie für die Fragestellung irrelevant sind und kleinräumige Entwicklungen sonst überprägt werden können. Wo die Grenze gezogen wird, kann für die einzelnen Perioden unterschiedlich sein. Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
 
 Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonverteilung, erzeugt mit spatstat::rpoispp, $\lambda$ = 0.01, die eine vollständige räumliche Zufälligkeit und eine voneinander unabhängige identische Verteilung aufweisen (*CSR - complete spatial randomness* und *i.i.d - independent and identically distributed*). Das R-Paket spatstat wurde von @baddeley_2015 entwickelt.] verglichen, für welche die gleichen Berechnungen vorgenommen wurden. Dabei lässt sich z. B. ein Clustergrad feststellen, wenn die empirisch beobachteten Distanzmatrizen mehr kürzere Distanzen aufzeigen, als in einer zufälligen Berechnung zu erwarten wären^[Eine höhere Anzahl kürzerer Entfernungen bedeutet, dass die Befunde zum Teil näher beieinander liegen als wenn sie zufällig gestreut werden. Dies ist bei archäologischen Befunden fast immer der Fall.].
 
@@ -435,7 +434,7 @@ Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststelle
 
 Aus Abbildung \@ref(fig:Distanzmatrizen1) lässt sich ein Querschnitt der Verteilung der Befunde entlang der Trasse ablesen. Ein Mehrwert gegenüber einer Kartierung der Befunde ist nicht gegeben. Für die Abgrenzung von Fundstellen ist die Einteilung auf der x-Achse zu grob. 
 
-Im Folgenden werden die Distanzen aus diesem Grund auf bis zu 1000 m eingeschränkt (siehe Abb. \@ref(fig:Distanzmatrizen2)), da nicht zu erwarten ist, dass eine prähistorische Siedlung eine größere Ausdehnung als 2 km hatte (die Entfernung von 1000 m muss als Radius um einen Befund gedacht werden). Die Abschätzung der Bandweite durch „Silverman's Rule of Thumb“ hat sich damit ebenfalls verändert^[Für die Schnurkeramik ist die Bandweite nach dieser Regel hier BW = 45 m, für die Frübronzezeit ist die BW = 94,4 m, für die Spätbronzezeit ist die BW = 17,7 m und für die Spätbronze-/ältere Eisenzeit ist die BW = 13,8 m.]
+Im Folgenden werden die Distanzen aus diesem Grund auf bis zu 1000 m eingeschränkt (siehe Abb. \@ref(fig:Distanzmatrizen2)), da nicht zu erwarten ist, dass eine prähistorische Siedlung eine größere Ausdehnung als 2 km hatte (die Entfernung von 1000 m muss als Radius um einen Befund gedacht werden). Die Abschätzung der Bandweite durch „Silverman's Rule of Thumb“ hat sich damit ebenfalls verändert^[Für die Schnurkeramik ist die Bandweite nach dieser Regel hier BW = 45 m, für die Frübronzezeit ist die BW = 94,4 m, für die Spätbronzezeit ist die BW = 17,7 m und für die Spätbronze-/ältere Eisenzeit ist die BW = 13,8 m.].
 
 
 ```{r CSR, cache=FALSE}
@@ -511,6 +510,49 @@ Die Werte in Tabelle \@ref(tab:Extrema) lassen sich aus der Grafik extrahieren. 
 
 Das Minimum ist die Entfernung, in welcher die wenigsten Befunde auftauchen. In der Grafik kann man erkennen, dass diese für die ersten drei Perioden in einem Bereich von 100 m beieinander liegen (zwischen 433 und 532 m), während die ältere Eisenzeit in dem Bereich einen Anstieg aufweist und ihr Minimum bei 346 m ermittelt werden konnte. 
 
+Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt. 
+
+```{r Distanzmatrizen3, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 500 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
+siedlSnK_dist_df_500 <-subset(siedlSnK_dist_df, siedlSnK_dist_df > 0 & siedlSnK_dist_df < 500 )
+siedlfBZ_dist_df_500 <-subset(siedlfBZ_dist_df, siedlfBZ_dist_df > 0 & siedlfBZ_dist_df < 500 )
+siedlsBZ_dist_df_500 <-subset(siedlsBZ_dist_df, siedlsBZ_dist_df > 0 & siedlsBZ_dist_df < 500 )
+siedlsBZ_aeEZ_dist_df_500 <-subset(siedlsBZ_aeEZ_dist_df, siedlsBZ_aeEZ_dist_df > 0 & siedlsBZ_aeEZ_dist_df < 500 )
+CSR_dist_df_500 <- subset(CSR_dist_df, CSR_dist_df > 0 & CSR_dist_df < 500)
+
+
+ggplot() +
+  geom_density(data = siedlSnK_dist_df_500, aes(x = siedlSnK_dist_df_500[,1], color = "1 SnK")) +
+  geom_density(data = siedlfBZ_dist_df_500, aes(x = siedlfBZ_dist_df_500[,1], color = "2 fBZ"), size = 1)  +
+  geom_density(data = siedlsBZ_dist_df_500, aes(x = siedlsBZ_dist_df_500[,1], color = "3 sBZ"))+
+  geom_density(data = siedlsBZ_aeEZ_dist_df_500, aes(x = siedlsBZ_aeEZ_dist_df_500[,1], color = "4 sBZ/äEZ")) +
+  geom_density(data = CSR_dist_df_500, aes(x = CSR_dist_df_500[,1], color = "5 CSR")) +
+  theme(legend.title=element_blank())+
+  scale_y_continuous(name = "Dichte")+
+  theme(legend.position="bottom", 
+        legend.title=element_blank())+
+  ggtitle("")+
+  scale_color_manual(labels = c("SnK", "fBZ","sBZ","sBZ/äEZ", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+  scale_x_continuous(name="Entfernungen (auf 500 m eingeschränkt)")
+
+
+ggsave("../figures/Abb6.jpeg", #Abbildungsnummern überarbeiten!
+       width = 12, 
+       height = 10, 
+       units = "cm",
+       dpi = 300)
+
+ggsave("../figures/Abb6.svg", 
+       width = 12, 
+       height = 10, 
+       units = "cm")
+
+ggsave("../figures/Abb6.pdf", 
+       width = 12, 
+       height = 10, 
+       units = "cm")
+```
+
+Für die frühbronzezeitlichen Befunde ergibt sich ein erstes Maximum von 87 m, in dem sich die Befunde des Clusters befinden können. Der Wendepunkt der kumulativen Entfernungen liegt bei 219 m. 
 
 
 ### Kumulative Darstellung der Distanzmaße
@@ -554,7 +596,9 @@ ggsave("../figures/Abb5.pdf",
 
 ```
 
-Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Distanzwerte häufiger kleinere Werte zeigen als bei einer zufälligen Poisson (CSR) -Verteilung (siehe Abb. \@ref(fig:Distanzen_kumulativ)). Wo die Kurven der archäologischen Befunde der räumlichen Zufallsverteilungen nahe kommen, ist dies nicht mehr gegeben.
+Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Distanzwerte häufiger kleinere Werte zeigen als bei einer zufälligen Poisson (CSR)-Verteilung (siehe Abb. \@ref(fig:Distanzen_kumulativ)). Wo die Kurven der archäologischen Befunde der räumlichen Zufallsverteilungen nahe kommen, ist dies nicht mehr gegeben. 
+Die Wendepunkte der Kurven sind interessant, da sie den Punkt beschreiben, in der die Kurve abflacht und es damit ab dieser Entfernung weniger Befunde gibt, die zu der Kumulation hinzugefügt werden können. 
+Den geringsten Wert zeigt die Spätbronzezeit (203 m), es folgt die Frühbronzezeit (219 m), die Spätbronze-/Ältere Eisenzeit (285 m) und die Schnurkeramik (297 m). 
 
 
 ```{r, include=FALSE, cache=FALSE}
@@ -570,7 +614,7 @@ werte <- matrix(c(nrow(siedlung_SnK_Bef), nrow(siedlung_fBZ_Bef), nrow(siedlung_
          round (extrem_SnK[1]), round(extrem_fBZ[1]), round(extrem_sBZ[1]), round(extrem_sBZ_aeEZ[1]),
          round(extrem_SnK[2]), round(extrem_fBZ[2]), round(extrem_sBZ[6]), round(extrem_sBZ_aeEZ[2])), ncol=3)
 
-colnames(werte) <- c("Befunde (n)", "1. Maximum", "Minimum")
+colnames(werte) <- c("Befunde (n)", "1. Maximum (Dichtefunktion)", "Minimum (Dichtefunktion)")
 rownames(werte) <- c("Schnurkeramik", "Frühbronzezeit", "Spätbronzezeit", "ältere Eisenzeit")
 werte1 <- as.table(werte)
 
@@ -615,12 +659,13 @@ werte2 <- cbind(werte1, Wendepunkt = c(round(siedlSnK_turn[2]), round(siedlfBZ_t
 library(knitr)
 
 kable(werte2,
-      caption="Wendepunkt der kumulativen Entfernungsfunktionen")
+      caption="Ergebnisse der Analysen: Maxima und Minima der Dichtefunktionen sowie Wendepunkte der kumulativen Entfernungsfunktionen")
 
 ```
 
-In der Tabelle \@ref(tab:Wendepunkte) wurde den Maximal- und Minimalwerten die Wendepunkte der kumulativen Verteilungen hinzugefügt. Den geringsten Wert zeigt die Spätbronzezeit (203 m), es folgt die Frühbronzezeit (219 m), die Spätbronze-/Ältere Eisenzeit (285 m) und die Schnurkeramik (297 m). 
 
+
+In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt. 
 
 
 
@@ -643,48 +688,6 @@ Ein Vergleich der anderen beiden errechneten Werte ist nicht möglich, da keine 
 
 ### Frühbronzezeit (Aunjetitzer Kultur)
 Die aunjetitzer Befunde zeigen die höchste Dichte in einem Radius von 87 m, fallen dann stetig bis zum Minimum bei 433 m. Die große „Glätte“ der Kurve lässt sich durch die geringe Anzahl aunjetitzer Befunde, die nur aus 7 Häusern und 21 anderen Siedlungsbefunden besteht sowie die große Bandweite von 94 m erklären. Die frühbronzezeitlichen Befunde befinden sich nur im westlichen Drittel des Transekts (Fpl. 2-12). Durch den hohen Abstraktionsgrad der Dichtewerte auf einen Radius bis 1000 m bei so wenigen Befunden ist es wahrscheinlich, dass hier feinere Unterschiede überprägt werden. So sind Abstände von Siedlungsbefunden zueinander und zu Häusern geringer als die der Häuser untereinander. Dies zeigt sich besser beim Betrachten der Analyse, die auf 500 m zugeschnitten wurde (siehe Abb. \@ref(fig:Distanzmatrizen3)). Hier ist das zweite lokale Maximum bei ca. 100 m, was den Entfernungen der Häuser zueinander entspricht, die größtenteils zwischen 87 und 127 m liegen. Auf Fundplatz 5 finden sich zudem 3 überlappende Hausgrundrisse. Es muss also während der Frühbronzezeit mit einer nicht-Gleichzeitigkeit aller Befunde gerechnet werden^[Ein Grundproblem archäologischer Periodendatierung und durchaus bekannt für Aunjetitzer Siedlungen (@huth_1998, 193).].
-
-```{r Distanzmatrizen3, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 500 m begrenzt.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
-siedlSnK_dist_df_500 <-subset(siedlSnK_dist_df, siedlSnK_dist_df > 0 & siedlSnK_dist_df < 500 )
-siedlfBZ_dist_df_500 <-subset(siedlfBZ_dist_df, siedlfBZ_dist_df > 0 & siedlfBZ_dist_df < 500 )
-siedlsBZ_dist_df_500 <-subset(siedlsBZ_dist_df, siedlsBZ_dist_df > 0 & siedlsBZ_dist_df < 500 )
-siedlsBZ_aeEZ_dist_df_500 <-subset(siedlsBZ_aeEZ_dist_df, siedlsBZ_aeEZ_dist_df > 0 & siedlsBZ_aeEZ_dist_df < 500 )
-CSR_dist_df_500 <- subset(CSR_dist_df, CSR_dist_df > 0 & CSR_dist_df < 500)
-
-
-ggplot() +
-  geom_density(data = siedlSnK_dist_df_500, aes(x = siedlSnK_dist_df_500[,1], color = "1 SnK")) +
-  geom_density(data = siedlfBZ_dist_df_500, aes(x = siedlfBZ_dist_df_500[,1], color = "2 fBZ"))  +
-  geom_density(data = siedlsBZ_dist_df_500, aes(x = siedlsBZ_dist_df_500[,1], color = "3 sBZ"))+
-  geom_density(data = siedlsBZ_aeEZ_dist_df_500, aes(x = siedlsBZ_aeEZ_dist_df_500[,1], color = "4 sBZ/äEZ")) +
-  geom_density(data = CSR_dist_df_500, aes(x = CSR_dist_df_500[,1], color = "5 CSR")) +
-  theme(legend.title=element_blank())+
-  scale_y_continuous(name = "Dichte")+
-  theme(legend.position="bottom", 
-        legend.title=element_blank())+
-  ggtitle("")+
-  scale_color_manual(labels = c("SnK", "fBZ","sBZ","sBZ/äEZ", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
-  scale_x_continuous(name="Entfernungen (auf 500 m eingeschränkt)")
-
-
-ggsave("../figures/Abb6.jpeg", 
-       width = 12, 
-       height = 10, 
-       units = "cm",
-       dpi = 300)
-
-ggsave("../figures/Abb6.svg", 
-       width = 12, 
-       height = 10, 
-       units = "cm")
-
-ggsave("../figures/Abb6.pdf", 
-       width = 12, 
-       height = 10, 
-       units = "cm")
-```
-                                                                                        
-Wird das erste Maximum als Radius verstanden, ergibt sich ein Durchschnitt von 174 m, in dem sich die Befunde des Clusters befinden können. Der Wendepunkt der kumulativen Entfernungen liegt bei 219 m. 
 
 Siedlungsbefunde der Aunjetitzer Kultur sind noch relativ selten in Sachsen-Anhalt^[@brabandt_2007, 103.]. Allgemein sind großflächig ergrabene Siedlungen rar, häufig werden nur kleine Konzentrationen von wenigen Befunden aufgedeckt^[Vgl. Anonymus 2009, http://mars.geographie.uni-halle.de/for550/index.php/a5/laufende-arbeiten/18-besiedlungsstruktur , abgerufen 12.09.2017, 17:00.]. Nichtsdestotrotz lassen sich einige Vergleiche aus Mitteldeutschland anführen, bei denen auch Hausgrundrisse bekannt sind^[Bekannte Fundorte sind Urbach (@walter_2001), Schloßvippach (@walter_2007), Höngeda (@winter_2002), Zwenkau (@huth_1998), Benzingerode und Heimbach (@koch_2009) sowie Salzmünde (@moser_2006, 55-56).].
 
