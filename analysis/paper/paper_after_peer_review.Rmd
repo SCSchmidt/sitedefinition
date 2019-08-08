@@ -1,5 +1,5 @@
 ---
-title: "Analyse von Transektdaten: Siedlungsgrößen und potentielle Regelabstände zwischen Siedlungsstandorten"
+title: "Geostatistische Analyse von Transektdaten: Siedlungsgrößen und Abstände zwischen Siedlungsstandorten"
 author:
   - Schmidt, Sophie C.
 date: "`r format(Sys.time(), '%d %B, %Y')`"
@@ -9,7 +9,7 @@ output:
     reference_docx: templates/template.docx
 csl: RGK_archaeology_DGUF.csl
 bibliography: sitedefinition2.bib
-abstract: In diesem Beitrag wird der Begriff der Fundstelle und seine Problematik für die archäologische Forschung umrissen. Nach der Vorstellung der amerikanischen Debatte um die *site* und den Überlegungen zur Abgrenzung von Siedlungen, die im deutschsprachigen Raum geäußert wurden, wird auf eine Methode der Fundstellenabgrenzung eingegangen, die nicht auf Funden sondern Befunden basiert. Dies wird anhand von Ausgrabungen entlang eines Transekts vorgeführt. Vor- und Nachteile der befundbasierten Vorgehensweise werden diskutiert. 
+abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ ein Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um zu prüfen, ob überhaupt kulturspezifische Aussagen getroffen werden können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern innerhalb einer Siedlung, die Berechnung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
 keywords:   Siedlungsarchäologie, Fundstelle, Geostatistik, räumliche Analyse, statistische Programmiersprache R, off-site Archäologie, Transektgrabung, Mitteldeutschland
 highlights:  These are the highlights. 
 ---
@@ -22,14 +22,14 @@ Nach Eggert bildet die Fundstelle „die zentrale Größe aller Bemühungen, die
 
 An dieser Stelle setzt diese Arbeit an und verfolgt die Frage, wie weit Funde oder Befunde zu dem nächsten entfernt sein müssen, um eine neue Fundstelle zu markieren. Dafür wurde eine geostatistische Methode zur Schätzung von Siedlungsgrößen und -abständen anhand von Grabungsergebnissen einer Transektgrabung entwickelt.
 
-Dabei stellt sich das Problem, dass die Begriffe Fundstelle, Fundort oder Fundplatz weder in der deutschsprachigen noch anglophonen Archäologie universell definiert sind^[Vgl. @doneus_2013, 122; @dunnell_1992, 21.]. 
+Dabei ergibt sich das Problem, dass die Begriffe Fundstelle, Fundort oder Fundplatz weder in der deutschsprachigen noch anglophonen Archäologie universell definiert sind^[Vgl. @doneus_2013, 122; @dunnell_1992, 21.]. 
 
 In der deutschsprachigen Archäologie konzentriert sich die Debatte auf den Begriff der „Siedlung“ mehr als auf den des Fundplatzes und darauf, wie diese zu erkennen und abzugrenzen sind^[Siehe z. B. @malmer_1962; @nelson_1988; @schirren_1997.].  
 
 In der englischsprachigen Forschung wurde die Bedeutung von *site* insbesondere seit den 1970er Jahren ausführlich debattiert^[Unter anderem: @thomas_1975; @foley_1981; @dunnell_1992; @binford_1992; @alcock_1994; @fentress_2000; @de_haas_2012.]. Hier wurden Ansätze entwickelt, deren Ziel es war, die Verteilung archäologischer Funde in der Landschaft unabhängig von Fundstellen zu untersuchen^[@thomas_1975; @foley_1981]. Mit dieser *non-* oder *off-site*-Archäologie wurde einerseits das Vorhandensein von *sites* und andererseits der Nutzen des Begriffs für die Landschaftsarchäologie allgemein in Frage gestellt^[@thomas_1975; @dunnell_1992.].  
 
 Da im Rahmen der Methodenentwicklung auf theoretische Überlegungen zu Siedlungen und Fundstellen zurückgegriffen wird, wird am Beginn der Arbeit die forschungsgeschichtliche Entwicklung der Begriffe Fundort, Fundstelle und Siedlung sowie *site*  dargelegt. 
-Anschließend wird die Methode vorgestellt, die Siedlungsgrößen und -abstände anhand von Befunddichten zu eruieren versucht, und exemplarisch anhand von Ausgrabungsergebnissen entlang der B6n nahe der Kreisstadt Köthen, Sachsen-Anhalt, vorgeführt. 
+Anschließend wird die Methode vorgestellt, die Siedlungsgrößen und -abstände anhand von Befunddichten zu eruieren versucht, und exemplarisch anhand von Ausgrabungsergebnissen entlang der B6n nahe der Kreisstadt Köthen, Sachsen-Anhalt, vorgeführt. Die Ergebnisse werden abschließend kritisch diskutiert.
 
 
 
@@ -102,7 +102,7 @@ Im englischsprachigen Bereich gibt es eine rege Diskussion um den Begriff *site*
 
 Auf der einen Seite gibt es einen theoretischen Diskurs zwischen kulturhistorischen, prozessualen und post-prozessualen Vertretern darüber, was eine *site* darstellt: In Lehrbüchern der 1950er bis 1970er ist es ein Ort bzw. eine räumliche Einheit^[@dunnell_1992, 23-24.]. Binford definiert *site* als eine Anhäufung von Befunden und Artefakten, ergo eine Assemblage bzw. räumliche Beziehung^[@binford_1964, 431.]. Dunnell hingegen betrachtet *site* als eine rein moderne, zeitlich beschränkte Einheit zur Interpretation^[@dunnell_1992, 33.].
 
-Des Weiteren ist die Frage aufgeworfen worden, ob *sites* beobachtet oder konstruiert werden^[@dunnell_1992, 26.]. Der Diskurs scheint anzuerkennen, dass ein konstruierendes Element gegeben ist^[„Sites are **conceptual generalizations** about the spatial distribution of artifacts“ (@binford_1992, 44; Hervorhebung d. Verf.).], dies jedoch der Existenz von *sites* keinen Abbruch tut.^[z. B. @vanhaverbeke_2008-1, 2-3]. Das spiegelt sich in dem nächsten Aspekt wider: Wie wird eine *site* von einer nicht-*site* abgegrenzt und wie können beide archäologisch interpretiert werden?
+Des Weiteren ist die Frage aufgeworfen worden, ob *sites* beobachtet oder konstruiert werden^[@dunnell_1992, 26.]. Der Diskurs scheint anzuerkennen, dass ein konstruierendes Element gegeben ist^[„Sites are **conceptual generalizations** about the spatial distribution of artifacts“ (@binford_1992, 44; Hervorhebung d. Verf.).], dies jedoch der Existenz von *sites* keinen Abbruch tut^[z. B. @vanhaverbeke_2008-1, 2-3]. Das spiegelt sich in dem nächsten Aspekt wider: Wie wird eine *site* von einer nicht-*site* abgegrenzt und wie können beide archäologisch interpretiert werden?
 
 Da diese Frage für spätere Überlegungen besonders wichtig ist, wird hierauf nun der Fokus gelegt.
 
@@ -150,7 +150,7 @@ Bodeneingriffe geschehen durchaus auch außerhalb von Siedlungen oder Gräberfel
 
 2. Welche Abstände lassen sich zwischen ihnen feststellen?
 
-Dabei lässt sich kein bestimmter Wert ausfindig machen, dem alle Siedlungen entsprechen. Dies wäre eine unrealistische Erwartung, die an jeglicher Variabilität menschlicher Aktivitäten, Agency, geographischen Bedingungen und ähnlichen Faktoren vorbeiginge. Stattdessen soll das Ziel die Abschätzung von Bereichen sein, in denen die archäologischen Befunde als zu einer Siedlung gehörig zu erwarten sind.
+Dabei lässt sich kein bestimmter Wert ausfindig machen, dem alle Siedlungen entsprechen. Dies wäre eine unrealistische Erwartung, die an jeglicher Variabilität menschlicher Aktivitäten, geographischen Bedingungen und ähnlichen Faktoren vorbeiginge. Stattdessen soll das Ziel die Abschätzung von Bereichen sein, in denen die archäologischen Befunde als zu einer Siedlung gehörig zu erwarten sind.
 
 
 ### Datenbasis
