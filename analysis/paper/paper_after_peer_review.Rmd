@@ -9,7 +9,7 @@ output:
     reference_docx: templates/template.docx
 csl: RGK_archaeology_DGUF.csl
 bibliography: sitedefinition2.bib
-abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ ein Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um zu prüfen, ob überhaupt kulturspezifische Aussagen getroffen werden können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern innerhalb einer Siedlung, die Berechnung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
+abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ eine Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um zu prüfen, ob überhaupt kulturspezifische Aussagen getroffen werden können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern innerhalb einer Siedlung, die Berechnung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
 keywords:   Siedlungsarchäologie, Fundstelle, Geostatistik, räumliche Analyse, statistische Programmiersprache R, off-site Archäologie, Transektgrabung, Mitteldeutschland
 highlights:  These are the highlights. 
 ---
@@ -156,7 +156,7 @@ Dabei lässt sich kein bestimmter Wert ausfindig machen, dem alle Siedlungen ent
 ### Datenbasis
 Grundlage für die folgenden Berechnungen sind die Ergebnisse der Ausgrabungen entlang der Bundesstraße 6 in ihrem Planungsabschnitt 16 (PA 16) bei Köthen (siehe Abb. \@ref(Karte)). Es handelt sich um 41 Einzelgrabungen des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalts, die auf einer Länge von 13,4 km einen in der Regel ca. 40 m breiten Schnitt durch landwirtschaftlich genutzte Flächen gelegt wurden. Da das Landesdenkmalamt vor der eigentlichen archäologischen Ausgrabung einen Suchschnitt entlang der Trasse gelegt und erst danach die „Aktivitätszonen“, das heißt die zu untersuchenden Flächen festgelegt hat, kann davon ausgegangen werden, dass auf der Trasse fast alle^[Der Vergleich unterschiedlicher Vor-Untersuchungsmethoden und ihrer Effektivität zur Vorhersage von archäologischen Fundstellen zeigt, dass *machine trenching* allgemein die besten Ergebnisse liefert. Auch bei dieser Methode werden jedoch nicht alle *sites* vorhergesagt, vor allem neolithische Fundstellen können durch das Raster fallen (@hey_2006).] archäologischen Befunde erfasst wurden^[Es gibt eine Ausnahme im Süden Köthens: Auf einem ehemaligen Kasernen- und Fluggelände, über das ca. 750 m des Trassenabschnitts gehen, kam es seit den 1920er-Jahren zu zahlreichen Bodeneingriffen, zu Bombardierungen und Zerstörungen.]. Neben der reinen Trassenlänge kommen weitere untersuchte Gebiete, wie Zufahrten in Kreuzungsbereichen und Untersuchungsstreifen in Regenrückhaltebecken, zur Grabungsfläche hinzu, die sich dadurch auf ca. 9 ha beläuft^[@fahr_nodate.].
 
-![Figure @Karte : Arbeitsgebiet. Wohn- und Industriegebiete (Daten heruntergeladen von der Geofabrik des OSM-Projektes) durch Strichmuster markiert. Hintergrund ist ein geschummertes digitales Geländemodell (Daten vom Amt für Geologie und Bergwesen Sachsen-Anhalt). Die einzelnen Grabungen des Landesdenkmalamtes sind nummeriert.](../figures/Abb1_neu3.jpg)
+![Figure @Karte: Arbeitsgebiet. Wohn- und Industriegebiete (Daten heruntergeladen von der Geofabrik des OSM-Projektes) durch Strichmuster markiert. Hintergrund ist ein geschummertes digitales Geländemodell (Daten vom Amt für Geologie und Bergwesen Sachsen-Anhalt). Die einzelnen Grabungen des Landesdenkmalamtes sind nummeriert.](../figures/Abb1_neu3.jpg)
 
 Das Landesdenkmalamt stellte die Grabungsdokumentation dieser Ausgrabungen zur Verfügung. Dazu gehörten die Grabungsdatenbanken, shape-files, in denen jeder einzelne Befund als Polygon verzeichnet wurde, Grabungsberichte und die Autorenfassungen des Sonderberichtes des Landesdenkmalamtes zu diesem Abschnitt.
 
@@ -189,7 +189,7 @@ table <- as.data.frame(table)
 table <- cbind(table, Datierungen)
 knitr::kable(table,
              col.names=c("Epoche", "Abschnitt", "Anzahl", "Datierungen"),
-            caption="Anzahl Befunde nach Perioden")
+            caption="Anzahl Befunde nach Perioden und ihre absolute Datierung")
 ```
 
 
@@ -645,10 +645,12 @@ werte <- matrix(c(siedlung_SnK_Bef_pp$n, siedlung_fBZ_Bef_pp$n, siedlung_sBZ_Bef
          round (extrem_SnK[1]), round(extrem_fBZ[1]), round(extrem_sBZ[1]), round(extrem_sBZ_aeEZ[1]),
          round(extrem_SnK[2]), round(extrem_fBZ[2]), round(extrem_sBZ[6]), round(extrem_sBZ_aeEZ[2])), ncol=3)
 
-colnames(werte) <- c("Befunde (n)", "1. Maximum (Dichtefunktion 1000 m)", "Minimum (Dichtefunktion 1000 m)")
+colnames(werte) <- c("Befunde (n)", "Maximum Dichtefunktion 1000 m (500 m))", "Minimum (Dichtefunktion 1000 m)")
 rownames(werte) <- c("Schnurkeramik", "Frühbronzezeit", "Spätbronzezeit", "ältere Eisenzeit")
 werte1 <- as.table(werte)
 
+## Achtung!! später händisch: , round(extrem_fBZ_500[1,3]) und round(extrem_sBZ_aeEZ_500[1,3]) einfügen!
+# weil matrix: keine "schriftzeichen () erlaubt" -.-
 
 #install.packages("ecp")
 library("ecp")
