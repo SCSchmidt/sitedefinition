@@ -510,7 +510,7 @@ Die Werte in Tabelle \@ref(tab:Extrema) lassen sich aus der Grafik extrahieren. 
 
 Das Minimum ist die Entfernung, in welcher die wenigsten Befunde auftauchen. In der Grafik kann man erkennen, dass diese für die ersten drei Perioden in einem Bereich von 100 m beieinander liegen (zwischen 433 und 532 m), während die ältere Eisenzeit in dem Bereich einen Anstieg aufweist und ihr Minimum bei 346 m ermittelt werden konnte. 
 
-Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt. 
+Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Analyse der Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt^[Damit verkleinern sich die Bandbreiten nach „Silverman's Rule of Thumb“ auf folgende Werte: Für die Schnurkeramik BW = 29,9, für die Frühbronzezeit BW = 24,3; für die Spätbronzezeit BW = 8,63 und die Späte Bronze- /frühe Eisenzeit BW = 8,87.]. 
 
 ```{r Distanzmatrizen3, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 500 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 siedlSnK_dist_df_500 <-subset(siedlSnK_dist_df, siedlSnK_dist_df > 0 & siedlSnK_dist_df < 500 )
@@ -552,7 +552,31 @@ ggsave("../figures/Abb6.pdf",
        units = "cm")
 ```
 
-Für die frühbronzezeitlichen Befunde ergibt sich ein erstes Maximum von 87 m, in dem sich die Befunde des Clusters befinden können. Der Wendepunkt der kumulativen Entfernungen liegt bei 219 m. 
+Während das Bild der Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändern, zeigen die Graphen der Frühbronzezeit und späten Bronze-/ frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
+
+```{r calculation density maxima 500 m}
+
+siedlsBZ_aeEZ_Bef_dens_500 <- density(as.vector(siedlsBZ_aeEZ_dist_df_500[,1]))
+siedlfBZ_Bef_dens_500 <- density(as.vector(siedlfBZ_dist_df_500[,1]))
+siedlsBZ_Bef_dens_500 <- density(as.vector(siedlsBZ_dist_df_500[,1]))
+siedlSnK_Bef_dens_500 <- density(as.vector(siedlSnK_dist_df_500[,1]))
+
+DeltaY_sBZ_aeEZ_500 <- diff(siedlsBZ_aeEZ_Bef_dens_500$y) # unterschied zu jeweils nächstem
+turns_sBZ_aeEZ_500 <- which(DeltaY_sBZ_aeEZ_500[-1] * DeltaY_sBZ_aeEZ_500[-length(DeltaY_sBZ_aeEZ_500)] < 0) + 1 # DeltaY(ohne 1. eintrag) * DeltY (ohne letzten wert) wenn kleiner 0, dann den Wert --> zeigt, ob unterschiede zu oder abnehmen!! (wert +1)
+# wenn einer von beiden negativ ist, dann unter 0
+extrem_aeEZ_500 <- cbind.data.frame(x = siedlsBZ_aeEZ_Bef_dens_500$x[turns_sBZ_aeEZ_500], y = siedlsBZ_aeEZ_Bef_dens_500$y[turns_sBZ_aeEZ_500])
+
+DeltaY_fBZ_500 <- diff(siedlfBZ_Bef_dens_500$y)
+turns_fBZ_500 <- which(DeltaY_fBZ_500[-1] * DeltaY_fBZ_500[-length(DeltaY_fBZ_500)] < 0) + 1
+#siedlfBZ_Bef_dens_500[turns_fBZ]
+extrem_fBZ_500 <-cbind.data.frame(x = siedlfBZ_Bef_dens_500$x[turns_fBZ_500], y = siedlfBZ_Bef_dens_500$y[turns_fBZ_500])
+
+
+```
+
+Das erste lokale Maximum der späten Bronze-/ frühen Eisenzeit liegt bei 67 m, das zweite bei 98 m.
+Das erste lokale Maximum der Entfernungen frühbronzezeitlicher Befunde ist nun bei 23 m, das zweite lokale Maximum liegt bei 95 m.
+
 
 
 ### Kumulative Darstellung der Distanzmaße
@@ -614,7 +638,7 @@ werte <- matrix(c(nrow(siedlung_SnK_Bef), nrow(siedlung_fBZ_Bef), nrow(siedlung_
          round (extrem_SnK[1]), round(extrem_fBZ[1]), round(extrem_sBZ[1]), round(extrem_sBZ_aeEZ[1]),
          round(extrem_SnK[2]), round(extrem_fBZ[2]), round(extrem_sBZ[6]), round(extrem_sBZ_aeEZ[2])), ncol=3)
 
-colnames(werte) <- c("Befunde (n)", "1. Maximum (Dichtefunktion)", "Minimum (Dichtefunktion)")
+colnames(werte) <- c("Befunde (n)", "1. Maximum (Dichtefunktion 1000 m)", "Minimum (Dichtefunktion 1000 m)")
 rownames(werte) <- c("Schnurkeramik", "Frühbronzezeit", "Spätbronzezeit", "ältere Eisenzeit")
 werte1 <- as.table(werte)
 
@@ -687,15 +711,17 @@ Ein Vergleich der anderen beiden errechneten Werte ist nicht möglich, da keine 
 
 
 ### Frühbronzezeit (Aunjetitzer Kultur)
-Die aunjetitzer Befunde zeigen die höchste Dichte in einem Radius von 87 m, fallen dann stetig bis zum Minimum bei 433 m. Die große „Glätte“ der Kurve lässt sich durch die geringe Anzahl aunjetitzer Befunde, die nur aus 7 Häusern und 21 anderen Siedlungsbefunden besteht sowie die große Bandweite von 94 m erklären. Die frühbronzezeitlichen Befunde befinden sich nur im westlichen Drittel des Transekts (Fpl. 2-12). Durch den hohen Abstraktionsgrad der Dichtewerte auf einen Radius bis 1000 m bei so wenigen Befunden ist es wahrscheinlich, dass hier feinere Unterschiede überprägt werden. So sind Abstände von Siedlungsbefunden zueinander und zu Häusern geringer als die der Häuser untereinander. Dies zeigt sich besser beim Betrachten der Analyse, die auf 500 m zugeschnitten wurde (siehe Abb. \@ref(fig:Distanzmatrizen3)). Hier ist das zweite lokale Maximum bei ca. 100 m, was den Entfernungen der Häuser zueinander entspricht, die größtenteils zwischen 87 und 127 m liegen. Auf Fundplatz 5 finden sich zudem 3 überlappende Hausgrundrisse. Es muss also während der Frühbronzezeit mit einer nicht-Gleichzeitigkeit aller Befunde gerechnet werden^[Ein Grundproblem archäologischer Periodendatierung und durchaus bekannt für Aunjetitzer Siedlungen (@huth_1998, 193).].
+Die aunjetitzer Befunde zeigen in der Dichtedarstellung, die auf 1000 m eingeschränkt wurde, die höchste Dichte in einem Radius von 87 m, fallen dann stetig bis zum Minimum bei 433 m. Die große „Glätte“ der Kurve lässt sich durch die geringe Anzahl aunjetitzer Befunde, die nur aus 7 Häusern und 21 anderen Siedlungsbefunden besteht sowie die große Bandweite von 94 m erklären. Die frühbronzezeitlichen Befunde befinden sich nur im westlichen Drittel des Transekts (Fpl. 2-12). Durch den hohen Abstraktionsgrad der Dichtewerte auf einen Radius bis 1000 m bei so wenigen Befunden ist es wahrscheinlich, dass hier feinere Unterschiede überprägt werden. So sind Abstände von Siedlungsbefunden zueinander und zu Häusern geringer als die der Häuser untereinander. Dies zeigt sich besser beim Betrachten der Analyse, die auf 500 m zugeschnitten wurde (siehe Abb. \@ref(fig:Distanzmatrizen3)). Hier ist das zweite lokale Maximum bei 95 m, was den Entfernungen der Häuser zueinander entspricht, die größtenteils zwischen 87 und 127 m liegen. Auf Fundplatz 5 finden sich zudem 3 überlappende Hausgrundrisse. Es muss also während der Frühbronzezeit mit einer nicht-Gleichzeitigkeit aller Befunde gerechnet werden^[Ein Grundproblem archäologischer Periodendatierung und durchaus bekannt für Aunjetitzer Siedlungen (@huth_1998, 193).]. 
+
+Für die frühbronzezeitlichen Befunde ergibt sich bei einer Betrachtung der genaueren Analyse ein erstes Maximum von 22 m, in dem sich die Befunde eines kleineren Clusters befinden können. Der Wendepunkt der kumulativen Entfernungen liegt bei 219 m. 
 
 Siedlungsbefunde der Aunjetitzer Kultur sind noch relativ selten in Sachsen-Anhalt^[@brabandt_2007, 103.]. Allgemein sind großflächig ergrabene Siedlungen rar, häufig werden nur kleine Konzentrationen von wenigen Befunden aufgedeckt^[Vgl. Anonymus 2009, http://mars.geographie.uni-halle.de/for550/index.php/a5/laufende-arbeiten/18-besiedlungsstruktur , abgerufen 12.09.2017, 17:00.]. Nichtsdestotrotz lassen sich einige Vergleiche aus Mitteldeutschland anführen, bei denen auch Hausgrundrisse bekannt sind^[Bekannte Fundorte sind Urbach (@walter_2001), Schloßvippach (@walter_2007), Höngeda (@winter_2002), Zwenkau (@huth_1998), Benzingerode und Heimbach (@koch_2009) sowie Salzmünde (@moser_2006, 55-56).].
 
-Ein großflächig freigelegter Vergleichsbefund in Mitteldeutschland ist der Siedlungs- und Bestattungsplatz „Fasanenwäldchen“ bei Schloßvippach. Dort haben vermutlich zwei bis drei Familien in weilerartigen Gehöften gelebt, die sich über einen Bereich von ca. 180 m Länge und 80 m Breite verteilten^[@walter_2007, 112.]. Dieser Wert liegt zwischen dem doppelten Radius des 1. Maximums wie er im hier untersuchten Arbeitsgebiet mit 87 m errechnet wurde, und dem Wendepunkt der kumulativen Entfernungen (219 m). Auch in Schloßvippach waren anscheinend nicht alle aufgedeckten Häuser zeitgleich^[@walter_2007, 15.], sie lagen jedoch deutlich dichter beieinander als die aunjetitzer Befunde der hier untersuchten Trassengrabung^[Aufgrund des Grabungsplans können die Abstände auf 10 - 80 m geschätzt werden (Beilage in @walter_2007).]. 
+Ein großflächig freigelegter Vergleichsbefund in Mitteldeutschland ist der Siedlungs- und Bestattungsplatz „Fasanenwäldchen“ bei Schloßvippach. Dort haben vermutlich zwei bis drei Familien in weilerartigen Gehöften gelebt, die sich über einen Bereich von ca. 180 m Länge und 80 m Breite verteilten^[@walter_2007, 112.]. Dieser Wert liegt zwischen dem doppelten Radius des 1. Maximums wie er im hier untersuchten Arbeitsgebiet mit 87 - 95 m errechnet wurde, und dem Wendepunkt der kumulativen Entfernungen (219 m). Auch in Schloßvippach waren anscheinend nicht alle aufgedeckten Häuser zeitgleich^[@walter_2007, 15.], sie lagen jedoch deutlich dichter beieinander als die aunjetitzer Befunde der hier untersuchten Trassengrabung^[Aufgrund des Grabungsplans können die Abstände auf 10 - 80 m geschätzt werden (Beilage in @walter_2007).]. 
 
 In einer der größten bekannten aunjetitzer Siedlung, in Zwenkau, umfasst ein ovales Grabenwerk mit den Maßen 220 x 145 m eine Hauptsiedlung^[Ähnlich: Die Siedlung in Höngeda wird von einem 250 x 200 m großem Grabenwerk eingefasst (@winter_2002, 38), in Serbitz maß der Kernbereich mit aunjetitzer Befunden 160 x 70 (max. 87) m (@wicke_2011).], während weitere Häusergruppen sich über das Grabungsareal verteilen^[Das Grabungsareal ist in seiner maximalen Ausdehnung 1100 x 825 m groß (@huth_1998, 194).]. Die Größe der beiden Einfriedungen ähneln dem errechneten Wendepunkt in der kumulativen Entfernungskurve. 
 
-In Zwenkau kann innerhalb des Ovals eine Gliederung in einen Wirtschaftsbereich im Osten^[Dieser Wirtschaftsbereich erscheint fast befundleer. Dies zeigt, dass innerhalb einer Siedlung auch mit befundleeren Bereichen gerechnet werden muss.] und einen Siedlungsbereich im Westen gefasst werden^[@schunke_2009, 311.]. Werden die Häuser innerhalb des Ovals als zusammengehörig angenommen, so breiten sie sich über ca. 150 - 175 m aus. Dies entspricht wieder recht gut dem doppelten Radius des 1. hier errechneten Maximums. 
+In Zwenkau kann innerhalb des Ovals eine Gliederung in einen Wirtschaftsbereich im Osten^[Dieser Wirtschaftsbereich erscheint fast befundleer. Dies zeigt, dass innerhalb einer Siedlung auch mit befundleeren Bereichen gerechnet werden muss.] und einen Siedlungsbereich im Westen gefasst werden^[@schunke_2009, 311.]. Werden die Häuser innerhalb des Ovals als zusammengehörig angenommen, so breiten sie sich über ca. 150 - 175 m aus. Dies entspricht wieder ungefähr dem doppelten Radius des 2. hier errechneten lokalen Maximums. 
 
 Die Häusergruppen außerhalb des Grabenwerks in Zwenkau liegen zwischen 120 und 345 m voneinander entfernt^[Vgl. @huth_1998, 189, Abb. 2.]. Die wenigen Gruben in Zwenkau verstreuen sich über die gesamte Grabungsfläche und zeigen weder einen „deutlichen Bezug zu den Hausgrundrissen dieser Epoche“ noch zu den Brunnen^[@huth_1998, 188. Ähnlich liegen auch im Arbeitsgebiet einige Gruben sehr vereinzelt.]. Eine Vor- und Nachzeitigkeit der verschiedenen Siedlungs- und Hausbefunde ist durch sich überschneidende Befunde belegt^[@huth_1998, 194.], wobei die engstehende Besiedlung innerhalb des Grabenwerks (mit einigen umliegenden Häusern) einer älteren Phase zuzuordnen ist als die weiter verbreiteten Weilerartigen Strukturen^[@schunke_2009, 301-305.]. 
 
