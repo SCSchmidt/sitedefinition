@@ -59,7 +59,7 @@ An erster Stelle geht es im folgenden um die Definitionen der Begriffe Fundort, 
 Fundort, Fundstelle oder Fundplatz scheinen in der deutschsprachigen Archäologie so allgemein verständlich, dass sie in den Einführungswerken zur prähistorischen Archäologie nicht definiert werden. Vielmehr wird im Zusammenhang mit den Quellen des Fachs lediglich auf Befunde und Funde bzw. interpretierte Kategorien wie Siedlungen, Gräber, Horte u. ä. eingegangen^[@wolfram_2002; @eggert_2005, 52; @jankuhn_1977, 8.]. 
 
 Die deutsche Sprache mit ihrer nützlichen Wortkombinatorik bietet durch den Begriff selbst eine einfache Definition: Der Ort/Platz, an dem ein oder mehr (archäologische) Funde gemacht wurden. Es handelt sich folglich um eine räumliche Einheit wie schon in dem einleitenden Zitat erwähnt.
-Dies entspricht der Beschreibung für Fundort und Fundplatz bei den Bearbeitern, die sich auf Dauber beziehen. Dauber definierte 1950 die Fundstelle im Gegensatz zum Fundplatz/Fundort als eine räumlich-chronologische Einheit: „Unter Fundstelle wird hier nicht der Fundpunkt im topographischen Sinne verstanden, sondern der geschlossene Fundkomplex als topographische Erscheinung. Beispiel: Flachgräber der Latènezeit und steinzeitliche Siedlungsreste werden als 2 Fundstellen gezählt, auch wenn sie aus derselben Baugrube stammen“^[@dauber_1950, 96 Anm. 6.]. Fundort bezeichnet folglich den Platz, an dem ein oder mehrere archäologische Funde gemacht wurden und beschreibt lediglich die räumliche Dimension eines archäologischen Objekts. Mit „Fundstelle“ wird zusätzlich eine zeitliche Dimension beschrieben. Diese Einteilung übernehmen u. a. Schwellnus^[@schwelnus_1983, 6], Schier^[@schier_1990, 40.], Saile^[@saile_1997, 33.] und Mischka^[@mischka_2007, 37.]. 
+Dies entspricht der Beschreibung für Fundort und Fundplatz bei den Bearbeitern, die sich auf Dauber beziehen. Dauber definierte 1950 die Fundstelle im Gegensatz zum Fundplatz/Fundort als eine räumlich-chronologische Einheit: „Unter Fundstelle wird hier nicht der Fundpunkt im topographischen Sinne verstanden, sondern der geschlossene Fundkomplex als topographische Erscheinung. Beispiel: Flachgräber der Latènezeit und steinzeitliche Siedlungsreste werden als 2 Fundstellen gezählt, auch wenn sie aus derselben Baugrube stammen“^[@dauber_1950, 96 Anm. 6.]. Fundort bezeichnet folglich den Platz, an dem ein oder mehrere archäologische Funde gemacht wurden und beschreibt lediglich die räumliche Dimension eines archäologischen Objekts. Mit „Fundstelle“ wird zusätzlich eine zeitliche Dimension beschrieben. Diese Einteilung übernehmen u. a. Schwellnus^[@schwelnus_1983, 6], Schier^[@schier_1990, 40.], Saile^[@saile_1997,  33.], Mischka^[@mischka_2007, 37.] und jüngst Miera^[@miera_nodate.]. 
 
 Doneus nutzt eine Definition von Neubauer: „Unter einer archäologischen Fundstelle verstehen wir ein begrenztes geographisches Gebiet, das eine hauptsächlich durch den Menschen oder durch menschliche Einwirkung (man-made) entstandene archäologische Stratifikation aufweist“^[Neubauer 2008 (unpubliziert), zitiert nach @doneus_2013, 124.]. Diese Definition nimmt die chronologische Differenzierung nicht auf und entspricht damit der Definition von Fundort/Fundplatz nach Dauber.
 
@@ -187,10 +187,9 @@ Die Aufbereitung der Daten umfasste das Verbinden der unterschiedlichen Grabungs
 
 Die Datierungen wurden aus den Datenbanken des Landesdenkmalamtes übernommen; sie wurden von Dr. Kathrin Balfanz durchgeführt. Beschränkt wurde der Datensatz auf die Befunde, die zwischen 4000 v. Chr. und 50 v. Chr. und „undatiert“ datieren. Zudem wurden Datierungen vereinheitlicht^[V. a. in der Bronzezeit wurden Datierungen nach nordischen Perioden (Per. IV und V bzw. jüngere und junge BZ) als Spätbronzezeit kodiert.]. Die Periodenbezeichnungen und -laufzeiten richten sich nach den Angaben des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalt.
 
-In der Datenbank liegen nach den oben genannten Zusammenführungen 4770 Befunde vor. Dabei wurden 422 Befunde spätbronze-/früheisenzeitlich bzw. spätbronze-/eisenzeitlich datiert. 
+In der Datenbank liegen nach den oben genannten Zusammenführungen 4770 Befunde vor. Dabei wurden 422 Befunde spätbronze-/früheisenzeitlich bzw. spätbronze-/eisenzeitlich datiert. Diese Befunde wurden bei der Analyse sowohl der späten Bronzezeit als auch der älteren Eisenzeit zugerechnet. Die beiden Perioden sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95.]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar.  Für die Analyse wurden  die Perioden ausgesucht, denen mehr als zehn Befunde zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit).
+
 Die Verteilung der Befunde auf die Datierungsabschnitte wird in der folgenden Tabelle (siehe Tabelle \@ref(tab:Tabelle1)) dargelegt.
-
-
 
 ```{r Tabelle1}
 
@@ -233,7 +232,8 @@ Es muss betont werden, dass der Großteil der Befunde undatiert bleiben musste (
 
 ### Entfernungsmatrizen
 
-nnt). Dies wurde an den Siedlungsbefunden einer archäologischen Zeitstufe vorgenommen, wenn mehr als zehn Befunde dieser Periode zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit - äEZ). Die „spätbronze-/ältereisenzeitlich” datierten Befunde werden gemeinsam mit der Spätbronzezeit und gemeinsam mit der älteren Eisenzeit untersucht. Die späte Bronzezeit und ältere Eisenzeit sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95.]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar. 
+An erster Stelle steht die Berechnung der Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden auf bis zu 1000 m beschränkt.
+
 
 ```{r, message=FALSE, include=FALSE, cache=FALSE}
 
@@ -408,7 +408,7 @@ g
 
 ### Dichtefunktion über die Distanzmaße
 
-Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team_2013) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet hat.
+Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team_2013) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet.
 
 Bei dieser Berechnung zeigen Maxima der Verteilungen an, dass in diesem Abstand von einem Befund die höchste Dichte von gleichdatierten Befunden zu erwarten ist - Cluster von Befunden können als zusammengehörige Gruppe postuliert werden. Minima bedeuten folglich eine geringe zu erwartende Dichte bei diesem Abstand - interpretierbar als Entfernungen von Siedlungen zueinander.
 
@@ -519,7 +519,6 @@ ggsave("../figures/Abb4.pdf",
 
 
 ```
-
 
 
 Der Abstand von 1000 m bringt den Vorteil mit sich, dass sich in den Dichtefunktion zwei Maxima um ein Minimum fassen lassen. 
