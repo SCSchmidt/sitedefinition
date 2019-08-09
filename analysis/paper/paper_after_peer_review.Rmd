@@ -790,12 +790,16 @@ Die Abstraktion der Befunddichte über die Dichte der Entfernungen zueinander er
 
 Für die Schnurkeramik zeigt sich eine lockere Verteilung der Befunde in kleine Anhäufungen mit einem Radius von 62 m. Durch den rapiden Abfall des Steigungsgrades der kumulativen Kurve über die Distanzen der Befunde bei knapp 300 m, kann hier eine räumliche Abgrenzung vorgenommen werden.
 
-Die Verteilung der frühbronzezeitlichen Befunde wird durch die Abstände von Hausgrundrissen zueinander dominiert, die zwischen 87 und 127 m voneinander entfernt liegen. Der Wendepunkt in der kumulativen Distanzenkurve ist bei 219 m deutlich ausgeprägt, ein Wert, der Grabenwerksgrößen aus bekannten aunjetitzer Siedlungen ähnelt.
+Als minimale um eine Fundstelle ausweisbare Fläche kann der Radius des 1. Maximums empfohlen werden, da in diesem Umkreis die meisten weiteren Befunde zu erwarten sind, also 62 m. 
+
+Die Verteilung der frühbronzezeitlichen Befunde wird durch die Abstände von Hausgrundrissen zueinander dominiert, die zwischen 87 und 127 m voneinander entfernt liegen  und den enger gruppiert liegenden weiteren Befunden. Deren lokales Maximum von 22 m sollte als minimale Fläche um eine Fundstelle herum ausgewiesen werden. Der Wendepunkt in der kumulativen Distanzenkurve ist bei 219 m deutlich ausgeprägt, ein Wert, der Grabenwerksgrößen aus bekannten aunjetitzer Siedlungen ähnelt.
 
 
-In der Spätbronzezeit liegen Befunde sehr dicht, wobei bei einem Radius' von 33 m die größten Konzentrationen zu erwarten sind. Kumulativ zeigt sich ein recht breiter Bereich zwischen 117 und 375 m, in dem der Anstieg stetig langsam abnimmt. Hier zeigt sich vermutlich eine Mehrperiodigkeit, die zu einer schlechten Trennbarkeit verschiedener Areale führt.
+In der Spätbronzezeit liegen Befunde sehr dicht, wobei bei einem Radius' von 33 m die größten Konzentrationen zu erwarten sind.  Denkmalpflegerisch sollte also mindestens diese Fläche als geschützt aufgenommen werden. 
+Kumulativ zeigt sich ein recht breiter Bereich zwischen 117 und 375 m, in dem der Anstieg stetig langsam abnimmt. Hier zeigt sich vermutlich eine Mehrperiodigkeit, die zu einer schlechten Trennbarkeit verschiedener Areale führt.
 
-Die spätbronze- und ältereisenzeitlichen Befunde streuen hingegen deutlich weiter, mit einem maximalen Dichtewert von 92 m und dem Wendepunkt der kumulativen Kurve bei 285 m. Hier und bei den spätbronzezeitlichen Befunden spielt sicherlich die schlechte Differenzierbarkeit der beiden Perioden eine entscheidende Rolle.
+
+Die spätbronze- und ältereisenzeitlichen Befunde zeigen wieder zwei lokale Maxima. Deren erstes bei 67 m kann als minimale Fläche um eine Fundstelle angesehen werden. Insgesamt streuen sie deutlich weiter als die spätbronzezeitlichen Befunde, mit einem maximalen Dichtewert von 92 m und dem Wendepunkt der kumulativen Kurve bei 285 m. Hier und bei den spätbronzezeitlichen Befunden spielt sicherlich die schlechte Differenzierbarkeit der beiden Perioden eine entscheidende Rolle.
 
 Die vorgestellten Analysen zur Abgrenzung von Fundstellen zeigen unterschiedliche Werte für die betrachteten Perioden. Dies ist durchaus zu erwarten. Auf diese Weise lassen sich unterschiedliche Siedlungsverhalten beobachten, wie es auch durch vorangegangene Arbeiten bekannt ist. Mit diesen Arbeiten wurden die Ergebnisse korreliert. Dabei zeigten sich erstaunlich gute Übereinstimmungen. 
 
@@ -885,7 +889,7 @@ Die durch die kumulative Entfernungsverteilung errechneten Siedlungsgrößen (si
 
 Die seltenen Abstände zwischen 350 und 541 m scheinen nicht von den Abständen zwischen den Flächen beeinflusst worden zu sein. Hier liegt der Median bei `r median(Flaechen_Distanzen$Strecke)` m. Die Ausgrabungsflächen konstruieren folglich nicht die Abstände zwischen Siedlungen. Dies ist sicherlich dadurch gegeben, dass die Berechnungen diachron differenziert wurden, die Ausgrabungsflächen jedoch nicht. Das oben beschriebene Problem der Fundplätze und Fundstellen spiegelt sich hier deutlich wieder. 
 
-Das heißt auch, dass bei der fundplatzübergreifenden Betrachtung von Befunden, das Modifiable Area Unit Problem^[„Das Modifiable Areal Unit  Problem  (Problem der veränderbaren Gebietseinheit) oder abgekürzt MAUP beschreibt die Anfälligkeit der  Ergebnisse  von kartographischen oder statistischen Analysen und jeder Form von räumlicher Modellierung gegenüber der Definition  der untersuchten Raumeinheiten“ (@madelin_2009, 645). In der archäologischen Literatur diskutiert zuletzt von Harris (-@harris_2006, 48-50).] bei der fundplatzübergreifenden Betrachtung von Befunden nicht greift.
+Das heißt auch, dass das Modifiable Area Unit Problem^[„Das Modifiable Areal Unit  Problem  (Problem der veränderbaren Gebietseinheit) oder abgekürzt MAUP beschreibt die Anfälligkeit der  Ergebnisse  von kartographischen oder statistischen Analysen und jeder Form von räumlicher Modellierung gegenüber der Definition  der untersuchten Raumeinheiten“ (@madelin_2009, 645). In der archäologischen Literatur diskutiert zuletzt von Harris (-@harris_2006, 48-50).] bei der fundplatzübergreifenden Betrachtung von Befunden nicht greift.
 
 ## Zusammenfassung
 
