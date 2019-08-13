@@ -132,7 +132,18 @@ Es bleibt zusammenzufassen, dass in der Diskussion um die *site* von dem Begriff
 
 An der Problematik der Abgrenzbarkeit und, daraus resultierend, der Größe einer Siedlung hängen weitergehende Fragestellungen, z. B. zu Siedlungshierarchien^[z. B. @zimmermann_2004, 61-65.], Bevölkerungsdichten, Nutzungsräumen oder ähnlichem. 
 
-Da, wie oben dargelegt, in der *survey*-Archäologie die Abgrenzung von Fundstellen schwierig ist, soll im Folgenden eine nicht fund- sondern befundbasierte Methode vorgestellt werden, mit der Größen von Fundstellen mathematisch-abstrahiert bestimmt werden können.
+##Ü2 Zusammenfassung
+Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen. Fundstellen können durch Geländebegehungen erkundet worden sein, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht worden. Die funktionale Interpretation der Fundstelle erfolgt häufig anhand von Artefaktspektren, genauere Analysen können jedoch nur anhand von Ausgrabungsergebnissen vorgenommen werden. 
+
+Wurde ein Siedlungsort bestimmt, stellt sich die Frage, wie er räumliche abgegrenzt wird. 
+
+Untersuchungen zur Größe einer Siedlung anhand von Geländebegehungen können aufgrund der Beweglichkeit der Funde verzerrte Ergebnisse liefern. Die Abgrenzung aufgrund von Fund-Dichten sind zudem schwierig, da innerhalb einer Siedlung auch weniger dichte Bereiche zu erwarten sind. Auch ist unklar, wie dicht Funde wirklich liegen müssen, um eine Siedlung zu demarkieren und wie dünnere Streuungen zu interpretieren sind.
+
+Ausgrabungen sind nur selten so groß, dass eine gesamte Fundstelle ergraben wird. Aus diesem Grund können funktionale Zuweisungen schwierig sein, die eine genauere Vorstellung über das Zusammenleben der Menschen an diesem Ort ermöglichen. Hier spielt ebenfalls die zeitliche Tiefe einer archäologischen Periode und kleinräumige Siedlungsverlagerungen eine Rolle. 
+
+Zufallsfunde und Geländebegehungen bringen als Quelle das Problem mit sich, dass der minimale Abstand von Funden zueinander als Anzeiger zweier unterschiedlicher Siedlungen bisher nicht empirisch untersucht wurde. 
+
+Für die Abgrenzung von Fundstellen soll im Folgenden eine nicht fund- sondern befundbasierte Methode vorgestellt werden, mit der Größen von Fundstellen mathematisch-abstrahiert bestimmt werden können.
 
 
 #Ü1# Die Befundbasierte Methode
