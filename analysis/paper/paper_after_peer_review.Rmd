@@ -17,7 +17,7 @@ highlights:  These are the highlights.
 und Besiedlungsdichte in einem Transekt im Mittelelbe-Saale-Gebiet“, die im März 2016 an der Freien Universität Berlin unter Betreuung von Prof. Dr. Dr. h.c. W. Schier eingereicht wurde. Die hier vorgestellten Berechnungen werden auf dem Github-Repository "/scschmidt/sitedefinition" als R-Paket zur Verfügung gestellt. Sie unterliegen der MIT-Lizenz und sind damit nach Nennung der Autorenschaft zum weiteren wissenschaftlichen Gebrauch frei. Für hilfreiche Diskussionen und Ermutigungen gilt mein Dank Prof. Schier, Dr. Jan Mira, Funda Aşkın, Sebastian Hageneuer, Dr. Daniel Knitter, Shabnam Moshfegh-Nia, Dr. Oliver Nakoinz und Matthias Nieberle. Der/m anonymen Reviewer_in sei für konstruktive Kritik gedankt.]
 
 
-# Einleitung
+#Ü1# Einleitung
 Nach Eggert bildet die Fundstelle „die zentrale Größe aller Bemühungen, die archäologischen Hinterlassenschaften räumlich zu ordnen“^[@eggert_2005, 270.]. Die räumliche Abgrenzung von Fundstellen, Fundorten oder Fundplätzen ist grundlegend für siedlungs- und landschaftsarchäologische Arbeiten, da so neu aufgedeckte Funde und Befunde entweder einer bestehenden Fundstelle zugewiesen werden können oder eine neue definieren. Die räumliche Begrenzung wird dabei aus den bekannten Funden oder Befunden ermittelt. Bisherige siedlungsarchäologische Arbeiten kommen bei diesem Schritt stets zu unterschiedlichen Annahmen darüber, was ein angemessener Abstand  zwischen zwei zeitgleichen Funden, ist, um eine neue Fundstelle zu deklarieren.^[Siehe z. B. @malmer_1962: 200 m, ebd., 258 ; @linke_1976: „mehrere[n] Dekameter[n]“, ebd. 8; @mischka_2007: weniger als 50 m, ebd. 49-50.]. 
 @malmer_1962 konstatiert: „Die Bestimmung derselben müsste von Rechts wegen auf einem empirischen Studium“^[@malmer_1962, 258.] basieren. 
 Schirren weist darauf hin, dass dabei kulturspezifisch vorgegangen werden muss und „Definitionen von „Siedlung“ [...] aus Gebieten mit vergleichbaren naturräumlichen Voraussetzungen und Überlieferungsbedingungen“ ^[@schirren_1997, 30.] herangezogen werden müssen. 
@@ -49,12 +49,14 @@ library(bookdown)
 
 ```
 
+#Ü1# Forschungsgeschichtliche Vorüberlegungen
+Zwar kann nicht behauptet werden, dass sich die deutsch- und englischsprachige Forschung nicht gegenseitig befruchtet, dennoch lassen sich die zwei Forschungstraditionen besser nacheinander darstellen. Es wird sich folglich erst auf die deutsche und danach auf die englischsprachige (v. a. amerikanische) Forschungsgeschichte zu den relevanten Begriffen bezogen.
 
 
-## Deutsche Forschungstradition
-An erster Stelle geht es im folgenden um die Definitionen der Begriffe Fundort, Fundplatz, Fundstelle und Siedlung, wie sie in unterschiedlichen Arbeiten seit den 1960er Jahren in Deutschland vorgenommen wurden.
+##Ü2# Deutsche Forschungstradition
+An erster Stelle geht es im Folgenden um die Nutzungsgeschichte der Begriffe Fundort, Fundplatz und Fundstelle anhand ausgewählter Autoren seit den 1960er Jahren. Es wird insbesondere auf die Problematik der angemessenen Kartierung eingegangen. An zweiter Stelle steht die Beschäftigung mit der Zuweisung, dass es sich bei einer Fundstelle um eine Siedlung handelt. Auch hier wird nach der Definitionsfrage das Anliegen der räumlichen Abgrenzbarkeit und inneren Gliederung in den Mittelpunkt gestellt. 
 
-### Fundort und Fundstelle
+###ü3# Fundort und Fundstelle
 
 Fundort, Fundstelle oder Fundplatz scheinen in der deutschsprachigen Archäologie so allgemein verständlich, dass sie in den Einführungswerken zur prähistorischen Archäologie nicht definiert werden. Vielmehr wird im Zusammenhang mit den Quellen des Fachs lediglich auf Befunde und Funde bzw. interpretierte Kategorien wie Siedlungen, Gräber, Horte u. ä. eingegangen^[@wolfram_2002; @eggert_2005, 52; @jankuhn_1977, 8.]. 
 
@@ -74,7 +76,7 @@ Hierbei werden mehrere Reduktionen archäologischer Informationen in Kauf genomm
 
 Erste Fundortkartierungen dieser Art, auf denen unterschiedliche Arten der beobachteten Funde zusammengetragen wurden, gibt es seit der Mitte des 19. Jh.s in Deutschland^[@grunwald_2016, 113.]. Schon Jankuhn beobachtete, dass „die siedlungsanzeigende Funktion [....] bei den verschiedenen Quellengruppen unterschiedlich ausgebildet“ ist^[@jankuhn_1977, 8.]. Nichtsdestotrotz nutzt er die „Fundkarte als Quelle“^[ebd., 24.] und kartiert Fundplätze als Punkte, um Fragen zur Besiedlungsdichte und -entwicklung nachzugehen. Diese Methode ist Standard in der Siedlungsarchäologie. Sie ist in allen größeren siedlungs- oder landschaftsarchäologischen Arbeiten mit einer umfangreichen Quellenkritik verknüpft, die diese Fundkarte und ihre möglichen Verzerrungen aufgrund von Entdeckungswahrscheinlichkeiten, verschiedenen Quellengattungen, Sammlergebieten, Forschungsstand oder ähnlichem kritisch darlegt^[Vgl. zusammenfassend @zimmermann_2004, 42.]. 
 
-### Definition von Siedlungen
+###Ü3# Definition von Siedlungen
 
 Neben diesen Erörterungen über die Abgrenzung einer Fundstelle wird in der deutschsprachigen Siedlungsarchäologie über die Definition und Identifikation einer Siedlung  diskutiert: Schirren moniert, dass „die Archäologischen Landesaufnahmen den Begriff „Siedlung“ und „Fundstelle“ nicht im Sinne eines definierten Vorkommens bestimmter Artefaktformen, Artefaktmengen oder das Auftreten von Befunden verwenden“^[@schirren_1997, 29.], sondern häufig synonym einsetzten^[@schirren_1997, 30.]. 
 
@@ -101,7 +103,7 @@ Diese Diskussion findet anhand von den Ergebnissen von Feldbegehungen statt, der
 
 ## Anglophone Tradition: Die *site*
 
-In der englischsprachigen Archäologie gibt es eine rege Diskussion um den Begriff *site*^[Engl.: Platz / Ort, archäologisch: Fundort, Fundstelle, Fundplatz; @renfrew_2009, 76.], die im Folgenden vorgestellt wird. Vor allem im Zusammenhang mit Feldbegehungen wird debattiert, was eine Fundstelle ist und was ihr archäologischer Aussagewert sein kann^[Schön exemplifiziert in der Phrase „"sites" (whatever the term may mean)“ (@vanhaverbeke_2008-1, 2).]. 
+In der englischsprachigen Archäologie gibt es eine rege Diskussion um den Begriff *site*^[Engl.: Platz / Ort, archäologisch: Fundort, Fundstelle, Fundplatz; @renfrew_2009, 76.], die im Folgenden vorgestellt wird. Vor allem im Zusammenhang mit Feldbegehungen wird debattiert, was eine Fundstelle ist und was ihr archäologischer Aussagewert sein kann^[Schön exemplifiziert in der Phrase „"sites" (whatever the term may mean)“ (@vanhaverbeke_2008-1, 2).]. Dies wird hier knapp anhand einer Auswahl von Autoren skizziert:
 
 Auf der einen Seite gibt es einen theoretischen Diskurs zwischen kulturhistorischen, prozessualen und post-prozessualen Vertretern darüber, was eine *site* darstellt: In Lehrbüchern der 1950er bis 1970er ist es ein Ort bzw. eine räumliche Einheit^[@dunnell_1992, 23-24.]. Binford definiert *site* als eine Anhäufung von Befunden und Artefakten, ergo eine Assemblage bzw. räumliche Beziehung^[@binford_1964, 431.]. Dunnell hingegen betrachtet *site* als eine rein moderne, zeitlich beschränkte Einheit zur Interpretation^[@dunnell_1992, 33.].
 
