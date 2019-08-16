@@ -177,7 +177,7 @@ Dabei ist nicht zu erwarten, dass ein bestimmter Wert ausfindig zu machen ist, d
 
 Zur Abgrenzung der Fundstellen findet das Konzept von Plog et al. 1978 Anwendung, die die Abgrenzung einer Fundstelle anhand einer relativen Veränderung in der Dichte des Fundmaterials vornehmen. In dieser Arbeit wird allerdings mit *Siedlungsbefund*dichten und nicht mit Funddichten gearbeitet^[Aus diesem Grund ist die Korrektur für Sichtbarkeit, die Gallant für *surveys* vorschlägt (@gallant_1986, 409), nicht notwendig.]. 
 
-Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„Density is defined as the measure of **something** in a certain **amount** of space” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer zwischen zwei Befunden einer Zeitstellung gemessen (in den folgenden Graphiken „Befundpaare” genannt).
+Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„Density is defined as the measure of **something** in a certain **amount** of space” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer als zwischen zwei Befunden einer Zeitstellung gelistet (in den folgenden Graphiken „Befundpaare” genannt).
 
 ![Figure @Distanzmatrizen_erklärt: Eine Distanzmatrix ist zuerst eine Zusammenstellung der Distanzen zwischen allen Befunden in Matrix-Form. Sie wurde zur weiteren Analyse in eine tabellarische Form überführt, in der die Entfernungen zwischen den Befunden einzeln untereinander gelistet wurden.](../figures/Abb1_was_sind_distanzmatrizen.jpg)
 
@@ -189,7 +189,7 @@ Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u.,
 ![Figure @Dichteschätzung: Bei einer Dichteschätzung werden die einzelnen gemessenen Werte auf der x-Achse abgetragen und mit einer Kerndichteschätzung übermodelliert. Diese werden aufeinander addiert, um Stellen zu markieren, auf denen besonders häufig und eng beeinander einzelne Werte auftreten.](../figures/Abb2_Dichteschätzung.png)
 
 
-Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt damit stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter ([-@nakoinz_2016], 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen (abgetragen an der x-Achse) hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
+Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt damit stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter (-@nakoinz_2016, 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen (abgetragen an der x-Achse) hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
 
 Es ist sinnvoll, bei der Erzeugung der Graphen sehr weite Entfernungen nicht einzubeziehen, da sie für die Fragestellung irrelevant sind und kleinräumige Entwicklungen sonst überprägt werden können. Wo die Grenze gezogen wird, kann für die einzelnen Perioden unterschiedlich sein. Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
 
@@ -198,6 +198,7 @@ Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonver
 Abschließend können die Analyseergebnisse mit den vom Landesdenkmalamt definierten Grabungsarealen verglichen werden, um abzuschätzen, inwieweit deren Größe Einfluss auf die Ergebnisse hat. 
 
 #Ü1# Fallbeispiel
+
 Die erläuterte Methode wurde anhand einer Straßengrabung  in Sachsen-Anhalt entwickelt. Hier wird im Folgenden die Datenbasis vorgestellt, quellenkritisch reflektiert und daraufhin die Berechnungen durchgeführt und interpretiert.
 
 ##Ü2# Datenbasis
@@ -210,11 +211,11 @@ Grundlage für die folgenden Berechnungen sind die Ergebnisse der Ausgrabungen e
 
 Das Landesdenkmalamt stellte die Grabungsdokumentation dieser Ausgrabungen zur Verfügung. Dazu gehörten die Grabungsdatenbanken, shape-files, in denen jeder einzelne Befund als Polygon verzeichnet wurde, Grabungsberichte und die Autorenfassungen des Sonderberichtes des Landesdenkmalamtes zu diesem Abschnitt.
 
-Die Aufbereitung der Daten umfasste das Verbinden der unterschiedlichen Grabungsdatenbanken, die Zusammenführung der verschiedenen Kartierungen und deren Verknüpfung untereinander. Dabei galt es auch, Befunde, die mehrmals^[An einigen Stellen wurden Befunde in zwei Teilen ergraben oder mehrere Plana eingemessen.] dokumentiert wurden, zusammenzufassen und Pfostenstellungen zu übergeordneten Hausbefunden zu vereinen^[Bei der Identifikation von Hausgrundrissen wurde dabei eher konservativ vorgegangen, d. h. im Zweifel kein Bau rekonstruiert.]. Den Befundtypen wurden in der Datenbank die übergeordneten Kategorien „Siedlung“^[Zu denen folgende vom Landesdenkmalamt aufgenommene Befundtypen gehören:  Vorratsgrube, Pfostengrube, Pfostenbau, Materialentnahmegrube, Abfallgrube, Feuerstelle, Herdstelle, Ofen, Pflaster, Metallbearbeitung, Bauwerk, Brunnen, Grubenhaus, sonstiger Siedlungsbefund, Grube, übergeordneter Befund, sonstiger Befund, Siedlungsgrube, Haus, Befestigung.], „Gräberfeld“ und „unklar“ zugeordnet, um spätere Abfragen zu erleichtern. 
+Die Aufbereitung der Daten umfasste das Verbinden der unterschiedlichen Grabungsdatenbanken, die Zusammenführung der verschiedenen Kartierungen und deren Verknüpfung untereinander. Dabei galt es auch, Befunde, die mehrmals^[An einigen Stellen wurden Befunde in zwei Teilen ergraben oder mehrere Plana eingemessen.] dokumentiert wurden, zusammenzufassen und Pfostenstellungen zu übergeordneten Hausbefunden zu vereinen^[Bei der Identifikation von Hausgrundrissen wurde dabei eher konservativ vorgegangen, d. h. im Zweifel kein Bau rekonstruiert.]. Den Befundtypen wurden in der Datenbank die übergeordneten Kategorien „Siedlung“^[Zu den als Siedlungsbefunde kodierten Befunde gehören folgende vom Landesdenkmalamt aufgenommene Befundtypen:  Vorratsgrube, Pfostengrube, Pfostenbau, Materialentnahmegrube, Abfallgrube, Feuerstelle, Herdstelle, Ofen, Pflaster, Metallbearbeitung, Bauwerk, Brunnen, Grubenhaus, sonstiger Siedlungsbefund, Grube, übergeordneter Befund, sonstiger Befund, Siedlungsgrube, Haus, Befestigung.], „Gräberfeld“ und „unklar“ zugeordnet, um spätere Abfragen zu erleichtern. 
 
 Die Datierungen wurden aus den Datenbanken des Landesdenkmalamtes übernommen; sie wurden von Dr. Kathrin Balfanz durchgeführt. Beschränkt wurde der Datensatz auf die Befunde, die zwischen 4000 v. Chr. und 50 v. Chr. und „undatiert“ datieren. Zudem wurden Datierungen vereinheitlicht^[V. a. in der Bronzezeit wurden Datierungen nach nordischen Perioden (Per. IV und V bzw. jüngere und junge BZ) als Spätbronzezeit kodiert.]. Die Periodenbezeichnungen und -laufzeiten richten sich nach den Angaben des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalt.
 
-In der Datenbank liegen nach den oben genannten Zusammenführungen 4770 Befunde vor. Dabei wurden 422 Befunde spätbronze-/früheisenzeitlich bzw. spätbronze-/eisenzeitlich datiert. Diese Befunde wurden bei der Analyse sowohl der späten Bronzezeit als auch der älteren Eisenzeit zugerechnet. Die beiden Perioden sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95.]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar. Für die Analyse wurden  die Perioden ausgesucht, denen mehr als zehn Befunde zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit).
+In der Datenbank liegen nach den oben genannten Zusammenführungen 4770 Befunde vor. Dabei wurden 422 Befunde spätbronze-/früheisenzeitlich bzw. spätbronze-/eisenzeitlich datiert. Diese Befunde wurden bei der Analyse sowohl der späten Bronzezeit als auch der älteren Eisenzeit zugerechnet. Die beiden Perioden sind in der Region siedlungsarchäologisch kaum zu trennen, weswegen davon ausgegangen wird, dass wir es hier mit Siedlungskontinuitäten zu tun haben^[@wagner_2004, 8; @heske_2005, 95.]. Aus diesem Grund ist die Einbeziehung der ungenau datierten Befunde vertretbar. Für die Analyse wurden  die Perioden ausgesucht, denen mehr als zehn Befunde zugerechnet werden konnten. In der genutzten Datensammlung sind dies die Schnurkeramik (SnK), Aunjetitzer Kultur (fBZ), Saalemündungsgruppe (Spätbronzezeit - sBZ) und die Hausurnenkultur (ältere Eisenzeit - äEZ).
 
 Die Verteilung der Befunde auf die Datierungsabschnitte wird in der folgenden Tabelle (siehe Tabelle \@ref(tab:Tabelle1)) dargelegt.
 
@@ -248,7 +249,7 @@ knitr::kable(table,
 ###Ü3# Einordnung der Datengrundlage und Quellenkritik
 
 Der Trassenschnitt verläuft durch landwirtschaftlich genutztes Gebiet, in welchem bis zum Beginn der Untersuchungen des Landesdenkmalamtes kaum Fundstellen bekannt waren. Solche Prospektionen können als eine Art „Probenentnahme“ für eine Gesamtmenge zeitlich oder räumlich abgegrenzter Beobachtungen^[Vgl. @binford_1964, 432.] gelten, von denen auf die zu untersuchenden Kulturen zurückgeschlossen werden kann. 
-Die Ausgrabung der Trasse wird als lineare Prospektion und damit kontinuierliches Probenentnahme behandelt. Der Begriff „Probe“ ist insofern berechtigt, da die Trasse nur einen schmalen Einblick in die archäologischen Hinterlassenschaften bietet. Im Gegensatz zu einer gezielten Probenentnahme (wie einer gezielten Begehung oder Testschnitten innerhalb einer bekannten Fundstelle) war der Verlauf der Trasse nicht-archäologischen Faktoren unterworfen und kann damit als Zufallsprobe betrachtet werden. Die Abhängigkeit der Auswahl einer Prospektionsfläche von der erwarteten Funddichte wird von Binford als häufiges Probenentnahmenproblem bemängelt.^[@binford_1964, ebd., Harald Stäuble drückt dies so aus: „Die aus archäologischer Sicht zufällige Trassenführung hat auch etwas Gutes: Sie kann als Kontrollmechanismus dienen, mit dem die Kenntnisse zu einem gewissen Zeitpunkt, das heißt das Vor-Wissen [sic!] und die vorgefassten Meinungen sowie die entsprechend zeitgeistabhängigen Besiedlungsmodelle geprüft werden. In diesem Sinne sind die großen linearen Projekte die einzigen Möglichkeiten und daher die idealen Werkzeuge dafür, die Kenntnisse und Hypothesen zur Besiedlungsgeschichte im Großen und zur Siedlungsdichte und -struktur im Detail durch konkrete Ausgrabungen weiträumig zu überprüfen“ (@stauble_2010, 74).]. Der Verlauf des Transekts wurde jedoch unabhängig von der erwarteten Dichte der Funde und Befunde gewählt. 
+Die Ausgrabung der Trasse wird als lineare Prospektion und damit kontinuierliches Probenentnahme behandelt. Der Begriff „Probe“ ist insofern berechtigt, da die Trasse nur einen schmalen Einblick in die archäologischen Hinterlassenschaften bietet. Im Gegensatz zu einer gezielten Probenentnahme (wie einer gezielten Begehung oder Testschnitten innerhalb einer bekannten Fundstelle) war der Verlauf der Trasse nicht-archäologischen Faktoren unterworfen und kann damit als Zufallsprobe betrachtet werden. Die Abhängigkeit der Auswahl einer Prospektionsfläche von der erwarteten Funddichte wird von Binford als häufiges Probenentnahmenproblem bemängelt^[@binford_1964, ebd., Harald Stäuble drückt dies so aus: „Die aus archäologischer Sicht zufällige Trassenführung hat auch etwas Gutes: Sie kann als Kontrollmechanismus dienen, mit dem die Kenntnisse zu einem gewissen Zeitpunkt, das heißt das Vor-Wissen [sic!] und die vorgefassten Meinungen sowie die entsprechend zeitgeistabhängigen Besiedlungsmodelle geprüft werden. In diesem Sinne sind die großen linearen Projekte die einzigen Möglichkeiten und daher die idealen Werkzeuge dafür, die Kenntnisse und Hypothesen zur Besiedlungsgeschichte im Großen und zur Siedlungsdichte und -struktur im Detail durch konkrete Ausgrabungen weiträumig zu überprüfen“ (@stauble_2010, 74).]. Der Verlauf des Transekts wurde jedoch unabhängig von der erwarteten Dichte der Funde und Befunde gewählt. 
 
 Auf der anderen Seite können die Befunde einer Zeitstellung nicht als räumlich unabhängige Stichprobe aufgefasst werden. Unter der Voraussetzung, dass Befunde einer Zeitstellung nicht unabhängig voneinander im Raum platziert wurden, greift Toblers 1. Gesetz der Geographie „everything is related to everything else, but near things are more related than distant things”^[@tobler_1970.]. Dadurch würden z. B. jegliche statistische Tests zu den Lageparametern der Befunde einer räumlichen Autokorrelation unterliegen^[Unabhängig von der Problematik hier ist dies, streng genommen, auch der Fall, wenn nicht Befunde sondern Fundstellen einer Periode in kleinräumigen Regionen untersucht werden. Es kann nicht davon ausgegangen werden, dass Siedlungen unabhängig voneinander entstehen.]. 
 
@@ -256,7 +257,7 @@ Diese Annahme „Befunde und Funde, die sich nahe beieinander befinden, bilden t
 
 Einschränkend ist zu erwähnen, dass durch jahrhundertelange intensive Landwirtschaft manche Befunde nur noch rudimentär erhalten^[So zum Beispiel ein Befund der Bernburger Kultur (Fpl. 18: Bef. 10079).], andere auf Kuppenlagen eventuell ganz erodiert sind. Die Einmessungen von Befunden in verschiedenen Plana wurden so zusammengeführt, dass die größte Ausdehnung die Form bestimmt. Daraus wurde der Mittelpunkt (geometrischer Schwerpunkt) des Polygons ermittelt. Die Entfernungsberechnungen von diesem Mittelpunkt aus schwächen die Verzerrung ab, welche die den taphonomischen Prozessen unterworfene Form der Befunde hervorgerufen haben könnte.
 
-Es muss betont werden, dass der Großteil der Befunde undatiert bleiben musste (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
+Ein großer Teil der Befunde mustte undatiert bleiben (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
 
 ##Ü2# Entfernungsmatrizen
 
@@ -450,10 +451,10 @@ ggplot() +
   geom_density(data = siedlSnK_dist_df, aes(x = siedlSnK_dist_df[,1], color = "1 SnK")) +
   geom_density(data = siedlfBZ_dist_df, aes(x = siedlfBZ_dist_df[,1], color = "2 fBZ"))  +
   geom_density(data = siedlsBZ_dist_df, aes(x = siedlsBZ_dist_df[,1], color = "3 sBZ"))+
-  geom_density(data = siedlsBZ_aeEZ_dist_df, aes(x = siedlsBZ_aeEZ_dist_df[,1], color = "4 sBZ/äEZ")) +
+  geom_density(data = siedlsBZ_aeEZ_dist_df, aes(x = siedlsBZ_aeEZ_dist_df[,1], color = "4 äEZ")) +
   geom_density(data = CSR_dist_df, aes(x = CSR_dist_df[,1], color = "5 CSR")) +
   ggtitle("")+
-  scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Spätbronze-/ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+  scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
   theme(plot.title = element_text(hjust = 0.5), 
         legend.position="bottom", 
         legend.title=element_blank(),
@@ -483,7 +484,7 @@ Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststelle
 
 Aus Abbildung \@ref(fig:Distanzmatrizen1) lässt sich ein Querschnitt der Verteilung der Befunde entlang der Trasse ablesen. Ein Mehrwert gegenüber einer Kartierung der Befunde ist nicht gegeben. Für die Abgrenzung von Fundstellen ist die Einteilung auf der x-Achse zu grob. 
 
-Im Folgenden werden die Distanzen aus diesem Grund auf bis zu 1000 m eingeschränkt (siehe Abb. \@ref(fig:Distanzmatrizen2)), da nicht zu erwarten ist, dass eine prähistorische Siedlung eine größere Ausdehnung als 2 km hatte (die Entfernung von 1000 m muss als Radius um einen Befund gedacht werden). Die Abschätzung der Bandweite durch „Silverman's Rule of Thumb“ hat sich damit ebenfalls verändert^[Für die Schnurkeramik ist die Bandweite nach dieser Regel hier BW = 45 m, für die Frübronzezeit ist die BW = 94,4 m, für die Spätbronzezeit ist die BW = 17,7 m und für die Spätbronze-/ältere Eisenzeit ist die BW = 13,8 m.].
+Im Folgenden werden die Distanzen aus diesem Grund auf bis zu 1000 m eingeschränkt (siehe Abb. \@ref(fig:Distanzmatrizen2)), da nicht zu erwarten ist, dass eine prähistorische Siedlung eine größere Ausdehnung als 2 km hatte (die Entfernung von 1000 m muss als Radius um einen Befund gedacht werden). Die Abschätzung der Bandweite durch „Silverman's Rule of Thumb“ hat sich damit ebenfalls verändert^[Für die Schnurkeramik ist die Bandweite nach dieser Regel hier BW = 45 m, für die Frübronzezeit ist die BW = 94,4 m, für die Spätbronzezeit ist die BW = 17,7 m und für die Ältere Eisenzeit ist die BW = 13,8 m.].
 
 
 ```{r CSR, cache=FALSE}
@@ -524,10 +525,10 @@ ggplot() +
   geom_density(data = siedlSnK_dist_df_1000, aes(x = siedlSnK_dist_df_1000[,1], color = "1 SnK")) +
   geom_density(data = siedlfBZ_dist_df_1000, aes(x = siedlfBZ_dist_df_1000[,1], color = "2 fBZ"))  +
   geom_density(data = siedlsBZ_dist_df_1000, aes(x = siedlsBZ_dist_df_1000[,1], color = "3 sBZ"))+
-  geom_density(data = siedlsBZ_aeEZ_dist_df_1000, aes(x = siedlsBZ_aeEZ_dist_df_1000[,1], color = "4 sBZ/äEZ")) +
+  geom_density(data = siedlsBZ_aeEZ_dist_df_1000, aes(x = siedlsBZ_aeEZ_dist_df_1000[,1], color = "4 äEZ")) +
   geom_density(data = CSR_dist_df_1000, aes(x = CSR_dist_df_1000[,1], color = "5 CSR")) +
   ggtitle("")+
-  scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Spätbronze-/ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+  scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
   theme(legend.position="bottom", 
         legend.title=element_blank(), 
         plot.title = element_text(hjust = 0.5))+
@@ -573,14 +574,14 @@ ggplot() +
   geom_density(data = siedlSnK_dist_df_500, aes(x = siedlSnK_dist_df_500[,1], color = "1 SnK")) +
   geom_density(data = siedlfBZ_dist_df_500, aes(x = siedlfBZ_dist_df_500[,1], color = "2 fBZ"), size = 1)  +
   geom_density(data = siedlsBZ_dist_df_500, aes(x = siedlsBZ_dist_df_500[,1], color = "3 sBZ"))+
-  geom_density(data = siedlsBZ_aeEZ_dist_df_500, aes(x = siedlsBZ_aeEZ_dist_df_500[,1], color = "4 sBZ/äEZ")) +
+  geom_density(data = siedlsBZ_aeEZ_dist_df_500, aes(x = siedlsBZ_aeEZ_dist_df_500[,1], color = "4 äEZ")) +
   geom_density(data = CSR_dist_df_500, aes(x = CSR_dist_df_500[,1], color = "5 CSR")) +
   theme(legend.title=element_blank())+
   scale_y_continuous(name = "Dichte")+
   theme(legend.position="bottom", 
         legend.title=element_blank())+
   ggtitle("")+
-  scale_color_manual(labels = c("SnK", "fBZ","sBZ","sBZ/äEZ", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+  scale_color_manual(labels = c("SnK", "fBZ","sBZ","äEZ", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
   scale_x_continuous(name="Entfernungen (auf 500 m eingeschränkt)")
 
 
@@ -634,7 +635,7 @@ Das erste lokale Maximum der späten Bronze-/ frühen Eisenzeit liegt bei 67 m, 
 ##Ü2# Kumulative Darstellung der Distanzmaße
 
 
-Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen (im Folgenden Wendepunkte genannt). Das bedeutet, die Abstände der Befunde zueinander werden größer. Anhand dieser Auswertungen können sprunghafte Distanzzunahmen identifiziert werden. 
+Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen (im Folgenden Wendepunkte genannt). Ab dort werden die Abstände der Befunde zueinander größer. Anhand dieser Auswertungen können zusätzlich sprunghafte Distanzzunahmen identifiziert werden. 
 
 Es entsteht implizit das Bild einer Siedlung, in deren Mitte die Befunde am dichtesten beieinander liegen, während sie zu den Rändern ausstreuen. Dies ist jedoch nur eine Modell. Durch die Abstraktion, dass alle Fundstellen gleichzeitig betrachtet werden, kommen übergreifende Trends zum Ausdruck, nicht die Beschreibung einer einzelnen Siedlung.
 
@@ -645,10 +646,10 @@ ggplot()+
   geom_line(data = siedlSnK_dist_df_1000, aes(x = siedlSnK_dist_v, y = prozent, color="1 SnK")) +
   geom_line(data = siedlfBZ_dist_df_1000, aes(x = siedlfBZ_dist_v, y = prozent,  color = "2 fBZ"))+
   geom_line(data = siedlsBZ_dist_df_1000, aes(x = siedlsBZ_dist_v, y = prozent, color ="3 sBZ"))+
-  geom_line(data = siedlsBZ_aeEZ_dist_df_1000, aes(x = siedlsBZ_aeEZ_dist_v, y = prozent, color ="4 sBZ/äEZ")) +
+  geom_line(data = siedlsBZ_aeEZ_dist_df_1000, aes(x = siedlsBZ_aeEZ_dist_v, y = prozent, color ="4 äEZ")) +
   geom_line(data = CSR_dist_df_1000, aes(x = CSR_dist_v, y = prozent, color="5 CSR"))+
   ggtitle("")+
-  scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Spätbronze-/ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+  scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
   theme(legend.position="bottom", 
         legend.title=element_blank())+
   scale_x_continuous(name="Entfernung (auf 1000 m eingeschränkt)")+
@@ -676,7 +677,7 @@ ggsave("../figures/Abb6.pdf",
 
 Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Distanzwerte häufiger kleinere Werte zeigen als bei einer zufälligen Poisson (CSR)-Verteilung (siehe Abb. \@ref(fig:Distanzen_kumulativ)). Wo die Kurven der archäologischen Befunde der räumlichen Zufallsverteilungen nahe kommen, ist dies nicht mehr gegeben. 
 Die Wendepunkte der Kurven sind interessant, da sie den Punkt beschreiben, in der die Kurve abflacht und es damit ab dieser Entfernung weniger Befunde gibt, die zu der Kumulation hinzugefügt werden können. 
-Den geringsten Wert zeigt die Spätbronzezeit (203 m), es folgt die Frühbronzezeit (219 m), die Spätbronze-/Ältere Eisenzeit (285 m) und die Schnurkeramik (297 m). 
+Den geringsten Wert zeigt die Spätbronzezeit (203 m), es folgt die Frühbronzezeit (219 m), die Ältere Eisenzeit (285 m) und die Schnurkeramik (297 m). 
 
 
 ```{r, include=FALSE, cache=FALSE}
@@ -873,7 +874,7 @@ Flaech_Dist <- read.csv('../data/raw_data/Entfernung_und_Groesse_Flaechenpolygon
 siedlSnK_dist_df_1000$kultur <-"01 SnK"
 siedlfBZ_dist_df_1000$kultur <-"02 fBZ"
 siedlsBZ_dist_df_1000$kultur <-"03 sBZ"
-siedlsBZ_aeEZ_dist_df_1000$kultur <-"04 sBZ/äEZ"
+siedlsBZ_aeEZ_dist_df_1000$kultur <-"04 äEZ"
 
 
 
