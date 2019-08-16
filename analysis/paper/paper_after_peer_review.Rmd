@@ -395,7 +395,7 @@ p3 <- ggplot()+
 
 p4 <- ggplot()+
   geom_line(data=siedlsBZ_aeEZ_dist_df_1000, aes(x=n, y=siedlsBZ_aeEZ_dist_v)) +
-  scale_x_continuous(name="Paare spätbronze-/ältereisenzeitliche Befunde") +
+  scale_x_continuous(name="Paare ältereisenzeitliche Befunde") +
   scale_y_continuous(name="Entfernung in m")+
   theme(axis.ticks = element_blank(), axis.text.x = element_blank())
 
@@ -560,7 +560,7 @@ Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am h
 
 Das Minimum ist die Entfernung, in welcher die wenigsten Befunde auftauchen. In der Grafik kann man erkennen, dass diese für die ersten drei Perioden in einem Bereich von 100 m beieinander liegen (zwischen 433 und 532 m), während die ältere Eisenzeit in dem Bereich einen Anstieg aufweist und ihr Minimum bei 346 m ermittelt werden konnte. 
 
-Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Analyse der Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt^[Damit verkleinern sich die Bandbreiten nach „Silverman's Rule of Thumb“ auf folgende Werte: Für die Schnurkeramik BW = 29,9, für die Frühbronzezeit BW = 24,3; für die Spätbronzezeit BW = 8,63 und die Späte Bronze- /frühe Eisenzeit BW = 8,87.]. 
+Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Analyse der Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt^[Damit verkleinern sich die Bandbreiten nach „Silverman's Rule of Thumb“ auf folgende Werte: Für die Schnurkeramik BW = 29,9, für die Frühbronzezeit BW = 24,3; für die Spätbronzezeit BW = 8,63 und die frühe Eisenzeit BW = 8,87.]. 
 
 ```{r Distanzmatrizen3, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 500 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 siedlSnK_dist_df_500 <-subset(siedlSnK_dist_df, siedlSnK_dist_df > 0 & siedlSnK_dist_df < 500 )
@@ -605,7 +605,7 @@ ggsave("../figures/Abb5.pdf",
 -- Abb 8
 
 
-Während sich das Bild für die Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändert, zeigen die Graphen der Frühbronzezeit und späten Bronze-/ frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
+Während sich das Bild für die Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändert, zeigen die Graphen der Frühbronzezeit und frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
 
 ```{r calculation density maxima 500 m}
 
@@ -628,7 +628,7 @@ extrem_fBZ_500 <-cbind.data.frame(x = siedlfBZ_Bef_dens_500$x[turns_fBZ_500], y 
 ```
 
 Das erste lokale Maximum der Entfernungen frühbronzezeitlicher Befunde ist nun bei 23 m, das zweite lokale Maximum liegt bei 95 m.
-Das erste lokale Maximum der späten Bronze-/ frühen Eisenzeit liegt bei 67 m, das zweite bei 98 m.
+Das erste lokale Maximum der frühen Eisenzeit liegt bei 67 m, das zweite bei 98 m.
 
 
 
@@ -754,7 +754,8 @@ In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zu
 
 Die hier vorliegenden Ergebnisse mit den Siedlungsgrößenberechnungen anderer Ausgrabungen zu vergleichen, ist schwierig, da großflächige Grabungen selten sind. Ihre vollständige Publikation und die Annahme, dass damit der gesamte Siedlungsbereich erfasst wurde, sind noch seltener^[Vgl. z. B. @bernbeck_1997, 205; @gringmuth-dallmer_1998, 381 ; @hecht_2007, 37.]. Es soll trotzdem für die unterschiedlichen Perioden auszugsweise versucht werden. Der Forderung Schirrens^[S. o., @schirren_1997, 30.] entsprechend, sollen die Vergleiche innerhalb Mitteldeutschlands, und wenn möglich, innerhalb Sachsen-Anhalts erfolgen.
 
-###Ü3# Schnurkeramik
+###Ü3# Spätneolithikum (Schnurkeramik)
+
 Die schnurkeramischen Befunde zeigen das Maximum der Dichte bei einer Entfernung von 62 m. Die Werte fallen danach verhältnismäßig langsam ab und haben ihr Minimum bei 532 m. Dies entspricht der Beobachtung, dass die aufgedeckten schnurkeramischen Öfen sich in lockeren Gruppen mit Abständen von ca. 40 - 60 m zwischen den Öfen über das Arbeitsgebiet verteilen. Der Wendepunkt der kumulativen Entfernungskurve liegt bei knapp 300 m, d. h. während bis zu diesem Abstand die Anzahl der Befunde stetig zunimmt, entsteht nun eine Lücke.
 
 Eventuell muss hier mit einer besonderen Art der Nutzung des Raumes gerechnet werden, da neben Ofenbefunden wenig andere schnurkeramische Siedlungsbefunde in der Trasse aufgedeckt wurden^[Was allerdings auch von anderen Fundplätzen bekannt ist, vgl. die zusammenfassende Darstellung bei Hecht (@hecht_2007, 70).]. Dies kann auch an Bestimmungsproblemen schnurkeramischer Siedlungsbefunde liegen, die das Ergebnis verzerren. Die Konzentration der schnurkeramischen Befunde befindet sich im östlichen Bereich der Trasse (Fpl. 52).
@@ -767,6 +768,7 @@ Ein Vergleich der anderen beiden errechneten Werte ist nicht möglich, da keine 
 
 
 ###Ü3# Frühbronzezeit (Aunjetitzer Kultur)
+
 Die große „Glätte“ der Dichtedarstellung, die auf 1000 m eingeschränkt wurde, lässt sich durch die geringe Anzahl aunjetitzer Befunde, die nur aus 7 Häusern und 21 anderen Siedlungsbefunden besteht sowie durch die große Bandweite von 94 m erklären. Die frühbronzezeitlichen Befunde befinden sich nur im westlichen Drittel des Transekts (Fpl. 2-12). Durch den hohen Abstraktionsgrad der Dichtewerte auf einen Radius bis 1000 m bei so wenigen Befunden ist es wahrscheinlich, dass hier feinere Unterschiede überprägt werden. Aus diesem Grund wurde die Dichte-Analyse noch einmal mit geringeren Bandbreiten und einer geringeren Reichweite (auf 500 m zugeschnitten) durchgeführt (siehe Abb. \@ref(fig:Distanzmatrizen3)). 
 
 Es entstehen nun, wie oben dargelegt, 2 lokale Maxima bei 23 m und 95 m. Dies bildet eine Beobachtung ab, die der Autorin bei der Betrachtung der zugrundeliegenden Daten aufgefallen ist: Abstände von frühbronzezeitlichen Siedlungsbefunden zueinander und zu Häusern sind geringer als die Entfernungen der Häuser zueinander. Häuser liegen größtenteils zwischen 87 und 127 m von einander entfernt. Das lokale Maximum bei 95 m könnte ein Abbild dieser Struktur sein. Das erste lokale Maximum, bei 23 m, bildet damit die kleineren Cluster der übrigen Siedlungsbefunde nach. 
@@ -792,28 +794,25 @@ Insgesamt sind die beobachteten Ausdehnungen der Siedlungen und Grabenwerke durc
 Bei der Untersuchung der B6n im Abschnitt V konnten zwischen Benzingerode und Heimburg zwei aunjetitzer Siedlungsareale aufgedeckt werden, welche ca. 430 m voneinander entfernt lagen. Das östliche Areal erstreckt sich über 150 m und wies zwei Hausgrundrisse auf, während auf dem westlichen über 240 m vereinzelte aunjetitzer Befunde aufgedeckt wurden^[@koch_2009, 201.]. Der Abstand der zwei Siedlungsareale deckt sich genau mit dem vorliegend errechneten Minimum der Entfernungsdichte von Aunjetitzer Siedlungsbefunden von 433 m, während sich der errechnete Siedlungsgrößenbereich von 178 - 219 m ebenfalls gut den Befunden in Benzingerode annähert. 
 
 
-###Ü3# Spätbronzezeit (Saalemündungsgruppe) und Ältere Eisenzeit (Hausurnenkultur)
+###Ü3# Spätbronzezeit (Saalemündungsgruppe) 
 
-Die Trennung der Spätbronzezeit^[Für das Arbeitsgebiet findet sich in der Literatur sowohl die Bezeichnung Jung- als auch Spätbronzezeit, da sich Einflüsse aus dem Norden fassen lassen, die eine Datierung nach Oskar Montelius zulassen als auch Funde aus dem süddeutschen Raum, die nach Reinecke datiert werden (@wagner_2004, 7). Da in der neueren Forschung die Reineck'sche Terminologie bevorzugt zu werden scheint, (vergl. z. B. @wagner_1992 gegenüber @wagner_2004 und @dohlert-albani_2016), wird hier ebenfalls der Begriff "Spätbronzezeit" vorgezogen.] und älteren Eisenzeit ist nur anhand von Gräbern möglich; Siedlungen sind nicht zu differenzieren^[@wagner_2004, 8 ; @heske_2005, 95], unter anderem da die Siedlungskeramik der Hausurnenkultur „einerseits gewiß eng an die der späten Bronzezeit anschließt, andererseits aber unverziert und somit stets viel schwieriger erkennbar ist“^[@nuglisch_1967, 248.]. Eine übergreifende Bearbeitung ältereisenzeitlicher Siedlungen in Mitteldeutschland fehlt^[@brabandt_2007, 129. 159 ; @nuglisch_1967, 356 ; @muller_1985, 40 ; @dohle_2006, 565.].
-
-In der folgenden Untersuchung werden zwei verschiedene Datensammlungen unterschieden:
-Zuerst die der Spätbronzezeit, in der Siedlungsbefunde auftreten, die nur spätbronzezeitlich datiert wurden als auch solche die als spätbronze-/ früheisenzeitlich bestimmt wurden. An zweiter Stelle werden  spätbronze-/ ältereisenzeitlichen zusammen mit den wenigen rein ältereisenzeitlich datierten Befunden zusammen untersucht.
-
-Als Vergleichsgrundlage dient für beide Datensätze die spät-/jungbronze- und ältereisenzeitlich datierte Siedlung in Zwenkau(-Eythra).
+Die Trennung der Spätbronzezeit^[Für das Arbeitsgebiet findet sich in der Literatur sowohl die Bezeichnung Jung- als auch Spätbronzezeit, da sich Einflüsse aus dem Norden fassen lassen, die eine Datierung nach Oskar Montelius zulassen als auch Funde aus dem süddeutschen Raum, die nach Reinecke datiert werden (@wagner_2004, 7). Da in der neueren Forschung die Reineck'sche Terminologie bevorzugt zu werden scheint, (vergl. z. B. @wagner_1992 gegenüber @wagner_2004 und @dohlert-albani_2016), wird hier ebenfalls der Begriff "Spätbronzezeit" vorgezogen.] und älteren Eisenzeit ist nur anhand von Gräbern möglich; Siedlungen sind nicht zu differenzieren^[@wagner_2004, 8 ; @heske_2005, 95], unter anderem da die Siedlungskeramik der Hausurnenkultur „einerseits gewiß eng an die der späten Bronzezeit anschließt, andererseits aber unverziert und somit stets viel schwieriger erkennbar ist“^[@nuglisch_1967, 248.].
 
 Für die Spätbronzezeit sind die meisten Befunde im Arbeitsgebiet bekannt, die sich vor allem in der westlichen Hälfte und an dem östlichen Rand des Transekts befinden. Die 1004 Befunde liegen deutlich enger beieinander als die der vorhergehenden Perioden: Das 1. Maximum der Dichteverteilung befindet sich bei 33 m. Danach fallen die Werte bis ca. 146 m sehr schnell und dann langsam weiter auf das Minimum bei 466 m. Im Vergleich mit den anderen Kurven ist dies vom Dichtewert das größte Minimum, was für eine nicht so deutliche Trennung der *sites* spricht. Auch der Wendepunkt der kumulativen Entfernungen ist eher gering im Vergleich mit denen der vorhergehenden Perioden, er liegt bei 117 m.
-
-Da die Saalemündungsgruppe größtenteils im Flachland vertreten ist, ist bisher nur eine Höhensiedlung bekannt^[Die Hünenburg (@heske_2010).] Nach K. Wagner unterscheidet sich die Saalemündungsgruppe von den südlicher gelegenen Gruppen unter anderem durch die Anlage von Siedlungen in Auen und an Hängen.  Die zehn untersuchten Siedlungen ihrer Arbeit lagen zwischen 55 und 130 m ü. NN und die Höhe über den Auen bei 1 bis 25 m^[@wagner_1983, 38.]. Berthold Schmidt geht von landwirtschaftlich günstigen Lagen der Siedlungen neben Gewässern und in offenem Gelände aus^[@schmidt_1978, 127.]. Rosemarie Müller spricht davon, dass sich die Siedlungen an den ackerbaulich besseren Böden in der Kontaktzone zwischen Schwarzerde und Kiesuntergrund orientieren^[@muller_1992, 259.].
-
-
-Die Werte der spätbronze-/ältereisenzeitlich datierten Befunde unterscheiden sich merklich: Sie zeigen in der Dichteverteilung ein Maximum bei 92 m, bei der Analyse mit geringerer Bandbreite zwei lokale Maxima bei 67 und 98 m. Das Minimum befindet sich bei 346 m und ist damit der kleinste Wert im Vergleich aller Perioden. Die Kurve ist teilweise recht unruhig, was für ein lokal differenziertes Bild spricht. Ein Grund hierfür könnte sein, dass sich unter den spätbronzezeitlich bestimmten Funden noch einige ältereisenzeitliche und anders herum befinden. Der Anstieg der kumulativen Werte verändert sich bei 285 m.
 
 Als großflächig ergrabenen Vergleich kann die Siedlung der jüngeren Bronzezeit und älteren Eisenzeit in Zwenkau^[Bei Döhlert-Albani Zwenkau-Eythra genannt (@dohlert-albani_2016).] in Sachsen herangezogen werden, wo mehrere Einzelhöfe über ein Areal 1100 x 825 m verstreut liegen. Diese Einzelhöfe haben unterschiedliche Ausmaße, die etwa 50 bis 85 m an der längsten Seite betragen (2000 - 2500 m²^[@huth_1998, 213.]). Sie überlagern sich nicht^[@huth_1998, 214.]. Die Abstände zwischen den Höfen sind auch sehr unterschiedlich und können nur grob abgeschätzt werden. Jedoch scheint ein Abstand von ca. 65 - 75 m recht häufig^[Vgl. @huth_1998, 211, Abb. 6.]. Würde eine Analyse mit der hier vorgestellten Methode durchgeführt werden, könnte diese räumliche Nähe zu schlechten Abgrenzungsmöglichkeiten von Siedlungsstätten führen. Auf dem zitierten Plan sind allerdings nur Hausgrundrisse und Zaungräbchen eingezeichnet, was eine Vergleichbarkeit erschwert. Zudem gehen die Bearbeiter davon aus, dass die einzelnen Gehöfte nicht zeitgleich waren, sondern eine Wechselsiedlung bestand, in der stets mehrere Gehöfte in Streulage zueinander standen^[@huth_1998, 214.].
 
 Im Arbeitsgebiet entlang der B6n ist innerhalb der Spätbronzezeit ebenfalls mit einer zeitlichen Tiefe der Befunde zu rechnen^[Belegt durch Befundüberschneidungen z. B. zwischen einem Pfostenbau (Befundnummer 11333) und einer Grube (Befundnummer 11028).]. Im Westen der Trasse (zwischen Fpl. 4 und 11) sind zudem vier Gräben aufgedeckt worden. Gräben werden häufig als Siedlungsgrenzen interpretiert. Die Abstände zueinander (720 m, 370 m, 440 m) sowie die Ausrichtungen des westlichsten und östlichsten der Gräben, die beide gegen Osten abzugrenzen scheinen, lassen vermuten, dass sie nicht gleichzeitig bestanden, sondern ein Zeichen kleinräumiger Verlagerungen darstellen. Die hohe Dichte der Befunde der Spätbronzezeit ist damit sicherlich zum Teil Ergebnis einer ortskonstanten Siedlungsweise^[Wie z.B. der Wechselsiedlung, wie sie für Zwenkau vorgeschlagen wurde (@huth_1998, 208).]. Dennoch zeichnen sich Befundcluster mit einem Radius von 33 m ab, deren Dopplung, 66 m, innerhalb des Bereichs der Größe der Einzelhöfe in Zwenkau liegt. Zwischen Fpl. 4 und 11 liegen neben sehr dichten Clustern sowohl fundleere Bereiche als auch Stellen mit geringerer Befundkonzentration. 
 
-Wie bei den Ergebnissen der Analyse frühbronzezeitlicher Befunde wird sich bei der Analyse der spätbronze-früheisenzeitlichen Begunde auf die Ergebnisse der Dichte-Analyse bis zu 500 m bezogen, die das erste Maximum der gröberen Analyse  in zwei kleinere lokale Maxima aufgespaltet hat. 
-Das erste lokale Maximum der späten Bronze-/ frühen Eisenzeit liegt bei 67 m, das zweite bei 98 m und sie scheinen damit zu groß zu sein, um den Zwenkauer Hofplätzen zu entsprechen. Der Dichtewert am Minimum von 346 m ist wie bei der Spätbronzezeit ein relativ hoher Wert. Dies spricht für eine räumliche Enge unterschiedlicher Siedlungsstellen. Dass das Minimum über einhundert Meter "eher" auftritt als bei der Spätbronzezeit ist ein Hinweis auf enger zusammenliegende Cluster von Befunden, was dem Zwenkauer Beispiel etwas näher kommt. Der "Wendepunkt" der kumulativen Kurve bei 285 m macht dabei ebenfalls größere Räume für zusammengehörige Befunde auf als bei den spätbronzezeitlich datierten.
+
+###Ü3# Ältere Eisenzeit (Hausurnenkultur)
+
+Die Werte der ältereisenzeitlich datierten Befunde unterscheiden sich von den spätbronzezeitlichen merklich, obwohl es eine Überlappung von 422 Befunden gibt (s. o., diese wurden in beide Perioden datiert): Sie zeigen in der Dichteverteilung ein Maximum bei 92 m, bei der Analyse mit geringerer Bandbreite zwei lokale Maxima bei 67 und 98 m. Das Minimum befindet sich bei 346 m und ist damit der kleinste Wert im Vergleich aller Perioden. Die Kurve ist teilweise recht unruhig, was für ein lokal differenziertes Bild spricht. Ein Grund hierfür könnte sein, dass sich unter den spätbronzezeitlich bestimmten Funden noch einige ältereisenzeitliche und anders herum befinden. Der Anstieg der kumulativen Werte verändert sich bei 285 m.
+
+Wie bei den Ergebnissen der Analyse frühbronzezeitlicher Befunde wird sich bei der Analyse der früheisenzeitlichen Begunde auf die Ergebnisse der Dichte-Analyse bis zu 500 m bezogen, die das erste Maximum der gröberen Analyse  in zwei kleinere lokale Maxima aufgespaltet hat. 
+Das erste lokale Maximum der Befunde der frühen Eisenzeit liegt bei 67 m, das zweite bei 98 m und sie scheinen damit zu groß zu sein, um den Zwenkauer Hofplätzen zu entsprechen. Der Dichtewert am Minimum von 346 m ist wie bei der Spätbronzezeit ein relativ hoher Wert. Dies spricht für eine räumliche Enge unterschiedlicher Siedlungsstellen. Dass das Minimum über einhundert Meter "eher" auftritt als bei der Spätbronzezeit ist ein Hinweis auf enger zusammenliegende Cluster von Befunden, was dem Zwenkauer Beispiel etwas näher kommt. Der "Wendepunkt" der kumulativen Kurve bei 285 m macht dabei ebenfalls größere Räume für zusammengehörige Befunde auf als bei den spätbronzezeitlich datierten.
+
+Eine übergreifende Bearbeitung ältereisenzeitlicher Siedlungen in Mitteldeutschland fehlt^[@brabandt_2007, 129. 159 ; @nuglisch_1967, 356 ; @muller_1985, 40 ; @dohle_2006, 565.]. Wie für die Ergebnisse der Analyse spätbronzezeitlicher Befunde kann als Vergleich die Siedlung von Zwenkau herangezogen werden. 
 
 Nach diesen Ergebnissen liegen spätbronzezeitliche Befunde in kleineren Radien (in Analogie zu Zwenkau in Einzelhöfen) eng beieinander, während in der älteren Eisenzeit in größeren Abständen und größeren Zusammenhängen gebaut wurde. In beiden Fällen ist mit zeitlicher Tiefe zu rechnen und mit einer schlechten Abgrenzbarkeit von Siedlungsstätten zueinander.  
 
@@ -839,7 +838,7 @@ In der Spätbronzezeit liegen Befunde sehr dicht, wobei bei einem Radius' von 33
 Kumulativ zeigt sich ein recht breiter Bereich zwischen 117 und 375 m, in dem der Anstieg stetig langsam abnimmt. Hier zeigt sich vermutlich eine Mehrperiodigkeit, die zu einer schlechten Trennbarkeit verschiedener Areale führt.
 
 
-Die spätbronze- und ältereisenzeitlichen Befunde zeigen wieder zwei lokale Maxima. Deren erstes bei 67 m kann als minimale Fläche um eine Fundstelle angesehen werden. Insgesamt streuen sie deutlich weiter als die spätbronzezeitlichen Befunde, mit einem maximalen Dichtewert von 92 m und dem Wendepunkt der kumulativen Kurve bei 285 m. Hier und bei den spätbronzezeitlichen Befunden spielt sicherlich die schlechte Differenzierbarkeit der beiden Perioden eine entscheidende Rolle.
+Die  ältereisenzeitlichen Befunde zeigen wieder zwei lokale Maxima. Deren erstes bei 67 m kann als minimale Fläche um eine Fundstelle angesehen werden. Insgesamt streuen sie deutlich weiter als die spätbronzezeitlichen Befunde, mit einem maximalen Dichtewert von 92 m und dem Wendepunkt der kumulativen Kurve bei 285 m. Hier und bei den spätbronzezeitlichen Befunden spielt sicherlich die schlechte Differenzierbarkeit der beiden Perioden eine entscheidende Rolle.
 
 Die vorgestellten Analysen zur Abgrenzung von Fundstellen zeigen unterschiedliche Werte für die betrachteten Perioden. Dies ist durchaus zu erwarten. Auf diese Weise lassen sich unterschiedliche Siedlungsverhalten beobachten, wie es auch durch vorangegangene Arbeiten bekannt ist. Mit diesen Arbeiten wurden die Ergebnisse korreliert. Dabei zeigten sich erstaunlich gute Übereinstimmungen. 
 
@@ -928,7 +927,7 @@ Da der untersuchte Transekt mit ca. 40 m recht schmal ist, werden die längsten 
 
 Clustergrößen (1. Maximum) in den unterschiedlichen Perioden sind deutlich kleiner als die durchschnittliche längste Flächenseite und scheinen weder von diesem Wert noch von der Breite der Trasse beeinflusst worden zu sein. 
 
-Die durch die kumulative Entfernungsverteilung errechneten Siedlungsgrößen (siehe Tabelle 2 "Wendepunkte", Radius von 117 - 297 m) befinden sich in der Nähe des Medians der längsten Flächenseiten (`r median(Flaechen_Laenge$Strecke)` m, siehe Abb. \@ref(Flaechenpolygone)), was ein guter Hinweis auf einen Zusammenhang darstellt. Die Boxplots der Entfernungen zwischen Befunden jeweils der beiden Perioden Schnurkeramik und Frühbronzezeit befinden sich außerdem in dem Bereich des Quartilabstands der längsten Flächenseiten. Auffällig sind die Entfernungen von spätbronze- und ältereisenzeitlichen Befunden sowie die zahlreichen Ausreißer der Schnurkeramik, die weit darüber hinaus streuen. Ausschlaggebend scheint hier die Anzahl der vorliegenden Befunde zu sein. Dennoch erfassen die Grabungsflächen die räumlichen Zusammenhänge zwischen Befunden angemessen.
+Die durch die kumulative Entfernungsverteilung errechneten Siedlungsgrößen (siehe Tabelle 2 "Wendepunkte", Radius von 117 - 297 m) befinden sich in der Nähe des Medians der längsten Flächenseiten (`r median(Flaechen_Laenge$Strecke)` m, siehe Abb. \@ref(Flaechenpolygone)), was ein guter Hinweis auf einen Zusammenhang darstellt. Die Boxplots der Entfernungen zwischen Befunden jeweils der beiden Perioden Schnurkeramik und Frühbronzezeit befinden sich außerdem in dem Bereich des Quartilabstands der längsten Flächenseiten. Auffällig sind die Entfernungen von  ältereisenzeitlichen Befunden sowie die zahlreichen Ausreißer der Schnurkeramik, die weit darüber hinaus streuen. Ausschlaggebend scheint hier die Anzahl der vorliegenden Befunde zu sein. Dennoch erfassen die Grabungsflächen die räumlichen Zusammenhänge zwischen Befunden angemessen.
 
 Die seltenen Abstände zwischen 350 und 541 m scheinen nicht von den Abständen zwischen den Flächen beeinflusst worden zu sein. Hier liegt der Median bei `r median(Flaechen_Distanzen$Strecke)` m. Die Ausgrabungsflächen konstruieren folglich nicht die Abstände zwischen Siedlungen. Dies ist sicherlich dadurch gegeben, dass die Berechnungen diachron differenziert wurden, die Ausgrabungsflächen jedoch nicht. Das oben beschriebene Problem der Fundplätze und Fundstellen spiegelt sich hier deutlich wieder. 
 
