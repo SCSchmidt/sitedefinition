@@ -18,6 +18,7 @@ und Besiedlungsdichte in einem Transekt im Mittelelbe-Saale-Gebiet“, die im M�
 
 
 #Ü1# Einleitung
+
 Nach Eggert bildet die Fundstelle „die zentrale Größe aller Bemühungen, die archäologischen Hinterlassenschaften räumlich zu ordnen“^[@eggert_2005, 270.]. Die räumliche Abgrenzung von Fundstellen, Fundorten oder Fundplätzen ist grundlegend für siedlungs- und landschaftsarchäologische Arbeiten, da so neu aufgedeckte Funde und Befunde entweder einer bestehenden Fundstelle zugewiesen werden können oder eine neue definieren. Die räumliche Begrenzung wird dabei aus den bekannten Funden oder Befunden ermittelt. Bisherige siedlungsarchäologische Arbeiten kommen bei diesem Schritt stets zu unterschiedlichen Annahmen darüber, was ein angemessener Abstand  zwischen zwei zeitgleichen Funden, ist, um eine neue Fundstelle zu deklarieren.^[Siehe z. B. @malmer_1962: 200 m, ebd., 258 ; @linke_1976: „mehrere[n] Dekameter[n]“, ebd. 8; @mischka_2007: weniger als 50 m, ebd. 49-50.]. 
 @malmer_1962 konstatiert: „Die Bestimmung derselben müsste von Rechts wegen auf einem empirischen Studium“^[@malmer_1962, 258.] basieren. 
 Schirren weist darauf hin, dass dabei kulturspezifisch vorgegangen werden muss und „Definitionen von „Siedlung“ [...] aus Gebieten mit vergleichbaren naturräumlichen Voraussetzungen und Überlieferungsbedingungen“ ^[@schirren_1997, 30.] herangezogen werden müssen. 
@@ -50,6 +51,7 @@ library(bookdown)
 ```
 
 #Ü1# Forschungsgeschichtliche Vorüberlegungen
+
 Zwar kann nicht behauptet werden, dass sich die deutsch- und englischsprachige Forschung nicht gegenseitig befruchtet, dennoch lassen sich die zwei Forschungstraditionen besser nacheinander darstellen. Es wird sich folglich erst auf die deutsche und danach auf die englischsprachige (v. a. amerikanische) Forschungsgeschichte zu den relevanten Begriffen bezogen.
 
 
@@ -61,7 +63,7 @@ An erster Stelle geht es im Folgenden um die Nutzungsgeschichte der Begriffe Fun
 Fundort, Fundstelle oder Fundplatz scheinen in der deutschsprachigen Archäologie so allgemein verständlich, dass sie in den Einführungswerken zur prähistorischen Archäologie nicht definiert werden. Vielmehr wird im Zusammenhang mit den Quellen des Fachs lediglich auf Befunde und Funde bzw. interpretierte Kategorien wie Siedlungen, Gräber, Horte u. ä. eingegangen^[@wolfram_2002; @eggert_2005, 52; @jankuhn_1977, 8.]. 
 
 Die deutsche Sprache mit ihrer nützlichen Wortkombinatorik bietet durch den Begriff selbst eine einfache Definition: Der Ort/Platz, an dem ein oder mehr (archäologische) Funde gemacht wurden. Es handelt sich folglich um eine räumliche Einheit wie schon in dem einleitenden Zitat erwähnt.
-Dies entspricht der Beschreibung für Fundort und Fundplatz bei den Bearbeitern, die sich auf Dauber beziehen. Dauber definierte 1950 die Fundstelle im Gegensatz zum Fundplatz/Fundort als eine räumlich-chronologische Einheit: „Unter Fundstelle wird hier nicht der Fundpunkt im topographischen Sinne verstanden, sondern der geschlossene Fundkomplex als topographische Erscheinung. Beispiel: Flachgräber der Latènezeit und steinzeitliche Siedlungsreste werden als 2 Fundstellen gezählt, auch wenn sie aus derselben Baugrube stammen“^[@dauber_1950, 96 Anm. 6.]. Fundort bezeichnet folglich den Platz, an dem ein oder mehrere archäologische Funde gemacht wurden und beschreibt lediglich die räumliche Dimension eines archäologischen Objekts. Mit „Fundstelle“ wird zusätzlich eine zeitliche Dimension beschrieben. Diese Einteilung übernehmen u. a. Schwellnus^[@schwelnus_1983, 6], Schier^[@schier_1990, 40.], Saile^[@saile_1997,  33.], Mischka^[@mischka_2007, 37.] und jüngst Miera^[@miera_nodate.]. 
+Dies entspricht der Beschreibung für Fundort und Fundplatz bei den Bearbeitern, die sich auf Dauber beziehen. Dauber definierte 1950 die Fundstelle im Gegensatz zum Fundplatz/Fundort als eine räumlich-chronologische Einheit: „Unter Fundstelle wird hier nicht der Fundpunkt im topographischen Sinne verstanden, sondern der geschlossene Fundkomplex als topographische Erscheinung. Beispiel: Flachgräber der Latènezeit und steinzeitliche Siedlungsreste werden als 2 Fundstellen gezählt, auch wenn sie aus derselben Baugrube stammen“^[@dauber_1950, 96 Anm. 6.]. Fundort bezeichnet folglich den Platz, an dem ein oder mehrere archäologische Funde gemacht wurden und beschreibt lediglich die räumliche Dimension eines archäologischen Objekts. Mit „Fundstelle“ wird zusätzlich eine zeitliche Dimension beschrieben. Diese Einteilung übernehmen u. a. Schwellnus^[@schwellnus_1983, 6], Schier^[@schier_1990, 40.], Saile^[@saile_1997,  33.], Mischka^[@mischka_2007, 37.] und jüngst Miera^[@miera_nodate.]. 
 
 Doneus nutzt eine Definition von Neubauer: „Unter einer archäologischen Fundstelle verstehen wir ein begrenztes geographisches Gebiet, das eine hauptsächlich durch den Menschen oder durch menschliche Einwirkung (man-made) entstandene archäologische Stratifikation aufweist“^[Neubauer 2008 (unpubliziert), zitiert nach @doneus_2013, 124.]. Diese Definition nimmt die chronologische Differenzierung nicht auf und entspricht damit der Definition von Fundort/Fundplatz nach Dauber.
 
@@ -133,6 +135,7 @@ Es bleibt zusammenzufassen, dass in der Diskussion um die *site* von dem Begriff
 An der Problematik der Abgrenzbarkeit und, daraus resultierend, der Größe einer Siedlung hängen weitergehende Fragestellungen, z. B. zu Siedlungshierarchien^[z. B. @zimmermann_2004, 61-65.], Bevölkerungsdichten, Nutzungsräumen oder ähnlichem. 
 
 ##Ü2# Zusammenfassung der wichtigsten Vorüberlegungen
+
 Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen. Fundstellen können durch Geländebegehungen erkundet worden sein, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht worden. Die funktionale Interpretation der Fundstelle erfolgt häufig anhand von Artefaktspektren, genauere Analysen können jedoch nur anhand von Ausgrabungsergebnissen vorgenommen werden. 
 
 Wurde ein Siedlungsort bestimmt, stellt sich die Frage, wie er räumlich abgegrenzt wird. 
@@ -174,9 +177,14 @@ Zur Abgrenzung der Fundstellen findet das Konzept von Plog et al. 1978 Anwendung
 
 Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„Density is defined as the measure of **something** in a certain **amount** of space” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. Dafür werden Distanzmatrizen ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungen werden immer zwischen zwei Befunden einer Zeitstellung gemessen (in den folgenden Graphiken „Befundpaare” genannt).
 
-Die entstandenen Datenreihen (siehe im Fallbeispiel Abb. \@ref(fig:Entfernungsmatrizen)) der absoluten Entfernungen aller gleichdatierten Befunde zueinander werden zur Erfassung von Siedlungsgrößen und -abständen auf zwei unterschiedliche Art und Weisen modelliert:
+
+[[Einfügen Bild Was sind Distanzmatrizen -- Abb. 1]]
+
+Die entstandenen Datenreihen der absoluten Entfernungen aller gleichdatierten Befunde zueinander werden zur Erfassung von Siedlungsgrößen und -abständen auf zwei unterschiedliche Art und Weisen modelliert:
 
 Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen, die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.  
+
+[[ Einfügen Bild was sind KDEs --- Abb. 2]]
 
 Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt damit stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter ([-@nakoinz_2016], 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen (abgetragen an der x-Achse) hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
 
@@ -190,9 +198,12 @@ Abschließend können die Analyseergebnisse mit den vom Landesdenkmalamt definie
 Die erläuterte Methode wurde anhand einer Straßengrabung  in Sachsen-Anhalt entwickelt. Hier wird im Folgenden die Datenbasis vorgestellt, quellenkritisch reflektiert und daraufhin die Berechnungen durchgeführt und interpretiert.
 
 ##Ü2# Datenbasis
-Grundlage für die folgenden Berechnungen sind die Ergebnisse der Ausgrabungen entlang der Bundesstraße 6 in ihrem Planungsabschnitt 16 (PA 16) bei Köthen (siehe Abb. \@ref(Karte)). Es handelt sich um 41 Einzelgrabungen des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalts, die auf einer Länge von 13,4 km einen in der Regel ca. 40 m breiten Schnitt durch landwirtschaftlich genutzte Flächen gelegt wurden. Da das Landesdenkmalamt vor der eigentlichen archäologischen Ausgrabung einen Suchschnitt entlang der Trasse gelegt und erst danach die „Aktivitätszonen“, das heißt die zu untersuchenden Flächen festgelegt hat, kann davon ausgegangen werden, dass auf der Trasse fast alle^[Der Vergleich unterschiedlicher Vor-Untersuchungsmethoden und ihrer Effektivität zur Vorhersage von archäologischen Fundstellen zeigt, dass *machine trenching* allgemein die besten Ergebnisse liefert. Auch bei dieser Methode werden jedoch nicht alle *sites* vorhergesagt, vor allem neolithische Fundstellen können durch das Raster fallen (@hey_2006).] archäologischen Befunde erfasst wurden^[Es gibt eine Ausnahme im Süden Köthens: Auf einem ehemaligen Kasernen- und Fluggelände, über das ca. 750 m des Trassenabschnitts gehen, kam es seit den 1920er-Jahren zu zahlreichen Bodeneingriffen, zu Bombardierungen und Zerstörungen.]. Neben der reinen Trassenlänge kommen weitere untersuchte Gebiete, wie Zufahrten in Kreuzungsbereichen und Untersuchungsstreifen in Regenrückhaltebecken, zur Grabungsfläche hinzu, die sich dadurch auf ca. 9 ha beläuft^[@fahr_nodate.].
 
 ![Figure @Karte: Arbeitsgebiet. Wohn- und Industriegebiete (Daten heruntergeladen von der Geofabrik des OSM-Projektes) durch Strichmuster markiert. Hintergrund ist ein geschummertes digitales Geländemodell (Daten vom Amt für Geologie und Bergwesen Sachsen-Anhalt). Die einzelnen Grabungen des Landesdenkmalamtes sind nummeriert.](../figures/Abb1_neu3.jpg)
+--- Abb. 3!
+
+
+Grundlage für die folgenden Berechnungen sind die Ergebnisse der Ausgrabungen entlang der Bundesstraße 6 in ihrem Planungsabschnitt 16 (PA 16) bei Köthen (siehe Abb. \@ref(Karte)). Es handelt sich um 41 Einzelgrabungen des Landesamtes für Denkmalpflege und Archäologie Sachsen-Anhalts, die auf einer Länge von 13,4 km einen in der Regel ca. 40 m breiten Schnitt durch landwirtschaftlich genutzte Flächen gelegt wurden. Da das Landesdenkmalamt vor der eigentlichen archäologischen Ausgrabung einen Suchschnitt entlang der Trasse gelegt und erst danach die „Aktivitätszonen“, das heißt die zu untersuchenden Flächen festgelegt hat, kann davon ausgegangen werden, dass auf der Trasse fast alle^[Der Vergleich unterschiedlicher Vor-Untersuchungsmethoden und ihrer Effektivität zur Vorhersage von archäologischen Fundstellen zeigt, dass *machine trenching* allgemein die besten Ergebnisse liefert. Auch bei dieser Methode werden jedoch nicht alle *sites* vorhergesagt, vor allem neolithische Fundstellen können durch das Raster fallen (@hey_2006).] archäologischen Befunde erfasst wurden^[Es gibt eine Ausnahme im Süden Köthens: Auf einem ehemaligen Kasernen- und Fluggelände, über das ca. 750 m des Trassenabschnitts gehen, kam es seit den 1920er-Jahren zu zahlreichen Bodeneingriffen, zu Bombardierungen und Zerstörungen.]. Neben der reinen Trassenlänge kommen weitere untersuchte Gebiete, wie Zufahrten in Kreuzungsbereichen und Untersuchungsstreifen in Regenrückhaltebecken, zur Grabungsfläche hinzu, die sich dadurch auf ca. 9 ha beläuft^[@fahr_nodate.].
 
 Das Landesdenkmalamt stellte die Grabungsdokumentation dieser Ausgrabungen zur Verfügung. Dazu gehörten die Grabungsdatenbanken, shape-files, in denen jeder einzelne Befund als Polygon verzeichnet wurde, Grabungsberichte und die Autorenfassungen des Sonderberichtes des Landesdenkmalamtes zu diesem Abschnitt.
 
@@ -228,6 +239,7 @@ knitr::kable(table,
              col.names=c("Epoche", "Abschnitt", "Anzahl", "Datierungen"),
             caption="Anzahl Befunde nach Perioden und ihre absolute Datierung")
 ```
+---Tabelle 1
 
 
 ###Ü3# Einordnung der Datengrundlage und Quellenkritik
@@ -244,8 +256,6 @@ Einschränkend ist zu erwähnen, dass durch jahrhundertelange intensive Landwirt
 Es muss betont werden, dass der Großteil der Befunde undatiert bleiben musste (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
 
 ##Ü2# Entfernungsmatrizen
-
-An erster Stelle steht die Berechnung der Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden auf bis zu 1000 m beschränkt.
 
 
 ```{r, message=FALSE, include=FALSE, cache=FALSE}
@@ -416,6 +426,9 @@ ggsave("../figures/Abb2.pdf",
 g
 
 ```
+---Abb. 4
+
+An erster Stelle steht die Berechnung der Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden auf bis zu 1000 m beschränkt.
 
 
 
@@ -460,6 +473,9 @@ ggsave("../figures/Abb3.pdf",
        units = "cm")
 ```
 
+-- Abb. 5 mit der Karte im HG!!
+
+
 Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststellen. Während die Befunde der Schnurkeramik offensichtlich in relativ regelmäßigen Abständen über das gesamte Arbeitsgebiet verteilt aufgefunden wurden, liegen alle  frühbronzezeitlichen Befunde in einem Radius von ca. 3000 m zu einander. Die Befunde der späten Bronzezeit und der älteren Eisenzeit liegen größtenteils sehr eng beieinander. Zwei Schwerpunkte zeigen sich, welche über 10 km voneinander entfernt liegen (etwa an dieser Stelle nimmt die Dichte wieder zu). 
 
 Aus Abbildung \@ref(fig:Distanzmatrizen1) lässt sich ein Querschnitt der Verteilung der Befunde entlang der Trasse ablesen. Ein Mehrwert gegenüber einer Kartierung der Befunde ist nicht gegeben. Für die Abgrenzung von Fundstellen ist die Einteilung auf der x-Achse zu grob. 
@@ -497,6 +513,7 @@ turns_SnK <- which(DeltaY_SnK[-1] * DeltaY_SnK[-length(DeltaY_SnK)] < 0) + 1
 
 ```
 
+-- Abb. 6
 
 ```{r Distanzmatrizen2, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 1000 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 
@@ -532,7 +549,7 @@ ggsave("../figures/Abb4.pdf",
 
 
 ```
-
+-- Abb 7
 
 Der Abstand von 1000 m bringt den Vorteil mit sich, dass sich in den Dichtefunktion zwei Maxima um ein Minimum fassen lassen. 
 Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am häufigsten liegen, d. h. die höchste Dichte aufweisen. Dieser Wert ist für die Spätbronzezeit am geringsten (33 m), es folgen diejenigen der Schnurkeramik (62 m), der Aunjetitzer Kultur (87 m) und der der älteren Eisenzeit (92 m). 
@@ -564,22 +581,25 @@ ggplot() +
   scale_x_continuous(name="Entfernungen (auf 500 m eingeschränkt)")
 
 
-ggsave("../figures/Abb6.jpeg", #Abbildungsnummern überarbeiten!
+ggsave("../figures/Abb5.jpeg", #Abbildungsnummern überarbeitet!
        width = 12, 
        height = 10, 
        units = "cm",
        dpi = 300)
 
-ggsave("../figures/Abb6.svg", 
+ggsave("../figures/Abb5.svg", 
        width = 12, 
        height = 10, 
        units = "cm")
 
-ggsave("../figures/Abb6.pdf", 
+ggsave("../figures/Abb5.pdf", 
        width = 12, 
        height = 10, 
        units = "cm")
 ```
+
+-- Abb 8
+
 
 Während sich das Bild für die Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändert, zeigen die Graphen der Frühbronzezeit und späten Bronze-/ frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
 
@@ -631,23 +651,25 @@ ggplot()+
   scale_x_continuous(name="Entfernung (auf 1000 m eingeschränkt)")+
   scale_y_continuous(name = "kumulativer Anteil")
 
-ggsave("../figures/Abb5.jpeg", 
+ggsave("../figures/Abb6.jpeg", 
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
 
-ggsave("../figures/Abb5.svg", 
+ggsave("../figures/Abb6.svg", 
        width = 20, 
        height = 15, 
        units = "cm")
 
-ggsave("../figures/Abb5.pdf", 
+ggsave("../figures/Abb6.pdf", 
        width = 20, 
        height = 15, 
        units = "cm")
 
 ```
+
+-- Abb. 9
 
 Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Distanzwerte häufiger kleinere Werte zeigen als bei einer zufälligen Poisson (CSR)-Verteilung (siehe Abb. \@ref(fig:Distanzen_kumulativ)). Wo die Kurven der archäologischen Befunde der räumlichen Zufallsverteilungen nahe kommen, ist dies nicht mehr gegeben. 
 Die Wendepunkte der Kurven sind interessant, da sie den Punkt beschreiben, in der die Kurve abflacht und es damit ab dieser Entfernung weniger Befunde gibt, die zu der Kumulation hinzugefügt werden können. 
@@ -717,7 +739,7 @@ kable(werte2,
       caption="Ergebnisse der Analysen: Maxima und Minima der Dichtefunktionen sowie Wendepunkte der kumulativen Entfernungsfunktionen")
 
 ```
-
+--- Tabelle 2
 
 
 In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt. 
@@ -827,7 +849,7 @@ Die Definition einer Fundstelle anhand von Funden wird zu anderen Ergebnissen f�
 
 Die Fundstelle wird nach Binford durch die räumliche Lokalisierung von Artefakten und ihrer Anhäufung definiert^[„A site is a spatial concentration or high-density occurrence of artifacts“ (@binford_1992, 46).]. Ein Verständnis für den zeitlich dynamischen Prozess, der zu dieser Akkumulation geführt hat, lässt sich anhand der Fundstreuung selten oder gar nicht entwickeln^[@zimmermann_2004, 43-44. Modernere Ansätze der mediterranen *survey*-Archäologie nutzen für die Interpretation der Fundstreuungen neben quantitativen vermehrt auch qualitative Argumente (@zahbelicke-scheffenegger_2008; @de_haas_2012).]. Dafür braucht es die Ausgrabung.
 
-Insofern ist die Vergleichbarkeit der beiden unterschiedlichen Ansätze nicht unbedingt gegeben. Die Oberflächenstreuung von Funden und ihre Dokumentation ist abhängig von „*dissemination, visibility, chronology, intensity and geomorphology*“^[@given_2004, 15.]. Diese Abhängigkeiten entstehen durch die Analyse ergrabener Befunde nicht. Dafür muss beachtet werden, dass der „gebaute Raum“ nicht das gesamte Ausmaß menschlichen Verhaltens umschreiben kann und eine abnehmende Befunddichte nicht unbedingt die Grenze einer Siedlung anzeigen muss. Zu einer Siedlung gehören befundleere Areale, da zu erwarten ist, dass sie nicht nur aus eng bebautem Areal, sondern auch aus Arbeitsbereichen, Plätzen o. ä. besteht (s. o.). 
+Insofern ist die Vergleichbarkeit der beiden unterschiedlichen Ansätze nicht unbedingt gegeben. Die Oberflächenstreuung von Funden und ihre Dokumentation ist abhängig von „dissemination, visibility, chronology, intensity and geomorphology“^[@given_2004, 15.]. Diese Abhängigkeiten entstehen durch die Analyse ergrabener Befunde nicht. Dafür muss beachtet werden, dass der „gebaute Raum“ nicht das gesamte Ausmaß menschlichen Verhaltens umschreiben kann und eine abnehmende Befunddichte nicht unbedingt die Grenze einer Siedlung anzeigen muss. Zu einer Siedlung gehören befundleere Areale, da zu erwarten ist, dass sie nicht nur aus eng bebautem Areal, sondern auch aus Arbeitsbereichen, Plätzen o. ä. besteht (s. o.). 
 Für die Abgrenzung von Fundstellen anhand von Fund- oder Befundstreuungen ist dies ein Problem, da in dem begangenen oder ergrabenen Areal ausgeschlossen werden müsste, dass *intra-site* Clustergrenzen nicht als *site*-Grenze definiert wurden. Eine gemeinsame Betrachtung von Fundstreuungen und darunterliegenden Befunden wäre an dieser Stelle wünschenswert.
 
 Insgesamt wird durch diese Betrachtung des aufgenommenen Datensatzes das implizite Verständnis einer Fundstelle als eine Siedlung aufgebrochen. Die räumlichen Beziehungen können genauer untersucht und insbesondere auf die diachronen Verlagerungen innerhalb eines Fundplatzes eingegangen werden. Die erarbeiteten Größen und Abstände von Siedlungen können bei der Einordnung von Fundstreuungen hilfreich sein.
@@ -840,9 +862,6 @@ Die dargelegten räumlichen Untersuchungen lohnen vor allem dann, wenn der Forsc
 Problematisch bleibt auch die Nicht-Gleichzeitigkeit von Befunden, die einer Periode zugeordnet werden. Belegt wird diese Diachronität durch Befundüberschneidungen; eine feinere Datierung anhand archäologischer Kriterien ist häufig nicht möglich. Diese Problematik führt dazu, dass die Ergebnisse der Berechnung noch einmal kritisch hinterfragt werden müssen, denn diese Musterüberlagerung kann auf höherer Maßstabsebene eine Fundstelle als besonders dicht bebaut kennzeichnen (Musterverstärkung), auf niedrigerer Maßstabsebene verwischt sie kleinräumige innere Siedlungsgliederungen^[Vgl. @schier_1990, ebd.]. Insbesondere für die Spätbronzezeit, mit den extrem dicht liegenden Befunden lässt sich vermuten, dass hier Befundanhäufungen aufgrund einer mehrphasigen Belegung beobachtet werden^[Allgemein zu der kleinräumigen Verlagerung von (eisenzeitlichen) Siedlungen z. B. @steuer_1988.]. In dieser Periode kommt erschwerend die Nicht-Abgrenzbarkeit spätbronzezeitlicher von ältereisenzeitlichen Befunden hinzu, die das Bild sicherlich noch weiter „verdichtet“ hat. 
 
 Ein anderer Faktor könnte das Ergebnis in eine andere Richtung verzerren: Da die Entfernungen der Befunde als Distanz von Mittelpunkten gemessen wurden, können zwei große Befunde nebeneinander mit größeren Abständen vermerkt werden, als ihre Grenzen voneinander entfernt waren. In Anbetracht der Größenordnungen ist dies vernachlässigbar.
-
-Es bleibt die Frage inwieweit die von dem Landesdenkmalamt ausgewiesenen Grabungsflächen mit diesen Ergebnissen zusammenhängen. Entsprechen die ausgewiesenen Flächen den vorgeschlagenen Fundstellengrößen?
-Da der untersuchte Transekt mit ca. 40 m recht schmal ist, werden die längsten Seiten der Flächen genommen - dies stellt etwa den größtmöglichen Abstand zwischen zwei Befunden auf einer vom Landesdenkmalamt definierten Fundstelle dar - und mit den Distanzen zwischen den Befunden verglichen (siehe Abb. \@ref(fig:Flaechenpolygone)). Hinzugenommen wird auch der Abstand zwischen zwei Flächen. Die Definition der Flächen erfolgte durch das Landesdenkmalamt nach einer harten Prospektion (s. o.), insofern galt für dieses Fallbeispiel die Annahme, dass in den Lücken zwischen den einzelnen Flächen keine Befunde vorkommen.
 
 
 ```{r }
@@ -897,6 +916,12 @@ Flaechen_Distanzen <- subset(Flaech_Dist, Flaech_Dist$Art=="Entfernung") #für d
 Flaechen_Laenge <- subset(Flaech_Dist, Flaech_Dist$Art=="Fläche")
 
 ```
+
+-- Abb. 10
+
+Es bleibt die Frage inwieweit die von dem Landesdenkmalamt ausgewiesenen Grabungsflächen mit diesen Ergebnissen zusammenhängen. Entsprechen die ausgewiesenen Flächen den vorgeschlagenen Fundstellengrößen?
+Da der untersuchte Transekt mit ca. 40 m recht schmal ist, werden die längsten Seiten der Flächen genommen - dies stellt etwa den größtmöglichen Abstand zwischen zwei Befunden auf einer vom Landesdenkmalamt definierten Fundstelle dar - und mit den Distanzen zwischen den Befunden verglichen (siehe Abb. \@ref(fig:Flaechenpolygone)). Hinzugenommen wird auch der Abstand zwischen zwei Flächen. Die Definition der Flächen erfolgte durch das Landesdenkmalamt nach einer harten Prospektion (s. o.), insofern galt für dieses Fallbeispiel die Annahme, dass in den Lücken zwischen den einzelnen Flächen keine Befunde vorkommen.
+
 Clustergrößen (1. Maximum) in den unterschiedlichen Perioden sind deutlich kleiner als die durchschnittliche längste Flächenseite und scheinen weder von diesem Wert noch von der Breite der Trasse beeinflusst worden zu sein. 
 
 Die durch die kumulative Entfernungsverteilung errechneten Siedlungsgrößen (siehe Tabelle 2 "Wendepunkte", Radius von 117 - 297 m) befinden sich in der Nähe des Medians der längsten Flächenseiten (`r median(Flaechen_Laenge$Strecke)` m, siehe Abb. \@ref(Flaechenpolygone)), was ein guter Hinweis auf einen Zusammenhang darstellt. Die Boxplots der Entfernungen zwischen Befunden jeweils der beiden Perioden Schnurkeramik und Frühbronzezeit befinden sich außerdem in dem Bereich des Quartilabstands der längsten Flächenseiten. Auffällig sind die Entfernungen von spätbronze- und ältereisenzeitlichen Befunden sowie die zahlreichen Ausreißer der Schnurkeramik, die weit darüber hinaus streuen. Ausschlaggebend scheint hier die Anzahl der vorliegenden Befunde zu sein. Dennoch erfassen die Grabungsflächen die räumlichen Zusammenhänge zwischen Befunden angemessen.
