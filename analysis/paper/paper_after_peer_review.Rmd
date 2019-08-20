@@ -287,8 +287,6 @@ knitr::kable(table,
 write.csv2(table, "../figures/tabelle1.csv")
 
 ```
----Tabelle 1
-
 
 ###Ü3# Einordnung der Datengrundlage und Quellenkritik
 
@@ -449,19 +447,19 @@ library(ggplot2)
 
 g <- gridExtra::arrangeGrob(p1, p2, p3, p4, ncol = 2) 
 
-ggsave("../figures/Abb2.jpeg", 
+ggsave("../figures/Abb4.jpeg", 
        g,
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
 #install.packages('svglite')
-ggsave("../figures/Abb2.svg", 
+ggsave("../figures/Abb4.svg", 
        g,
        width = 20, 
        height = 15, 
        units = "cm")
-ggsave("../figures/Abb2.pdf", 
+ggsave("../figures/Abb4.pdf", 
        g,
        width = 20, 
        height = 15, 
@@ -474,7 +472,6 @@ ggsave("../figures/Abb2.pdf",
 g
 
 ```
----Abb. 4
 
 An erster Stelle steht die Berechnung der Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden auf bis zu 1000 m beschränkt.
 
@@ -506,23 +503,20 @@ ggplot() +
   scale_x_continuous(name="Entfernung der Siedlungsbefunde zueinander (in m)")+
   scale_y_continuous(name="Dichte")
 
-ggsave("../figures/Abb3.jpeg", 
+ggsave("../figures/Abb5.jpeg", 
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
-ggsave("../figures/Abb3.svg", 
+ggsave("../figures/Abb5.svg", 
        width = 20, 
        height = 15, 
        units = "cm")
-ggsave("../figures/Abb3.pdf", 
+ggsave("../figures/Abb5.pdf", 
        width = 20, 
        height = 15, 
        units = "cm")
 ```
-
--- Abb. 5 mit der Karte im HG!!
-
 
 Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststellen. Während die Befunde der Schnurkeramik offensichtlich in relativ regelmäßigen Abständen über das gesamte Arbeitsgebiet verteilt aufgefunden wurden, liegen alle  frühbronzezeitlichen Befunde in einem Radius von ca. 3000 m zu einander. Die Befunde der späten Bronzezeit und der älteren Eisenzeit liegen größtenteils sehr eng beieinander. Zwei Schwerpunkte zeigen sich, welche über 10 km voneinander entfernt liegen (etwa an dieser Stelle nimmt die Dichte wieder zu). 
 
@@ -561,7 +555,6 @@ turns_SnK <- which(DeltaY_SnK[-1] * DeltaY_SnK[-length(DeltaY_SnK)] < 0) + 1
 
 ```
 
--- Abb. 6
 
 ```{r Distanzmatrizen2, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 1000 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 
@@ -579,25 +572,24 @@ ggplot() +
   scale_x_continuous(name="Entfernung der gleichdatierten Befunde zueinander (m)")+
   scale_y_continuous(name = "Dichte")
 
-ggsave("../figures/Abb4.jpeg", 
+ggsave("../figures/Abb6.jpeg", 
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
 
-ggsave("../figures/Abb4.svg", 
+ggsave("../figures/Abb6.svg", 
        width = 20, 
        height = 15, 
        units = "cm")
 
-ggsave("../figures/Abb4.pdf", 
+ggsave("../figures/Abb6.pdf", 
        width = 20, 
        height = 15, 
        units = "cm")
 
 
 ```
--- Abb 7
 
 Der Abstand von 1000 m bringt den Vorteil mit sich, dass sich in den Dichtefunktion zwei Maxima um ein Minimum fassen lassen. 
 Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am häufigsten liegen, d. h. die höchste Dichte aufweisen. Dieser Wert ist für die Spätbronzezeit am geringsten (33 m), es folgen diejenigen der Schnurkeramik (62 m), der Aunjetitzer Kultur (87 m) und der der älteren Eisenzeit (92 m). 
@@ -629,24 +621,22 @@ ggplot() +
   scale_x_continuous(name="Entfernungen (auf 500 m eingeschränkt)")
 
 
-ggsave("../figures/Abb5.jpeg", #Abbildungsnummern überarbeitet!
+ggsave("../figures/Abb7.jpeg", #Abbildungsnummern überarbeitet!
        width = 12, 
        height = 10, 
        units = "cm",
        dpi = 300)
 
-ggsave("../figures/Abb5.svg", 
+ggsave("../figures/Abb7.svg", 
        width = 12, 
        height = 10, 
        units = "cm")
 
-ggsave("../figures/Abb5.pdf", 
+ggsave("../figures/Abb7.pdf", 
        width = 12, 
        height = 10, 
        units = "cm")
 ```
-
--- Abb 8
 
 
 Während sich das Bild für die Spätbronzezeit und Schnurkeramik sich im Vergleich zur Darstellung bei 1000 m nicht auffällig verändert, zeigen die Graphen der Frühbronzezeit und frühen Eisenzeit eine Aufteilung des globalen 1. Maximums in zwei kleinere lokale Maxima. 
@@ -699,25 +689,23 @@ ggplot()+
   scale_x_continuous(name="Entfernung (auf 1000 m eingeschränkt)")+
   scale_y_continuous(name = "kumulativer Anteil")
 
-ggsave("../figures/Abb6.jpeg", 
+ggsave("../figures/Abb8.jpeg", 
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
 
-ggsave("../figures/Abb6.svg", 
+ggsave("../figures/Abb8.svg", 
        width = 20, 
        height = 15, 
        units = "cm")
 
-ggsave("../figures/Abb6.pdf", 
+ggsave("../figures/Abb8.pdf", 
        width = 20, 
        height = 15, 
        units = "cm")
 
 ```
-
--- Abb. 9
 
 Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Distanzwerte häufiger kleinere Werte zeigen als bei einer zufälligen Poisson (CSR)-Verteilung (siehe Abb. \@ref(fig:Distanzen_kumulativ)). Wo die Kurven der archäologischen Befunde der räumlichen Zufallsverteilungen nahe kommen, ist dies nicht mehr gegeben. 
 Die Wendepunkte der Kurven sind interessant, da sie den Punkt beschreiben, in der die Kurve abflacht und es damit ab dieser Entfernung weniger Befunde gibt, die zu der Kumulation hinzugefügt werden können. 
@@ -785,9 +773,8 @@ library(knitr)
 
 kable(werte2,
       caption="Ergebnisse der Analysen: Maxima und Minima der Dichtefunktionen sowie Wendepunkte der kumulativen Entfernungsfunktionen")
-
+write.csv2(werte2, "../figures/tabelle2.csv")
 ```
---- Tabelle 2
 
 
 In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt. 
@@ -943,18 +930,18 @@ ggplot() +
 ```
 
 ```{r}
-ggsave("../figures/Abb7.jpeg", 
+ggsave("../figures/Abb9.jpeg", 
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
 
-ggsave("../figures/Abb7.svg", 
+ggsave("../figures/Abb9.svg", 
        width = 20, 
        height = 15, 
        units = "cm")
 
-ggsave("../figures/Abb7.pdf", 
+ggsave("../figures/Abb9.pdf", 
        width = 20, 
        height = 15, 
        units = "cm")
@@ -963,8 +950,6 @@ Flaechen_Distanzen <- subset(Flaech_Dist, Flaech_Dist$Art=="Entfernung") #für d
 Flaechen_Laenge <- subset(Flaech_Dist, Flaech_Dist$Art=="Fläche")
 
 ```
-
--- Abb. 10
 
 Es bleibt die Frage inwieweit die von dem Landesdenkmalamt ausgewiesenen Grabungsflächen mit diesen Ergebnissen zusammenhängen. Entsprechen die ausgewiesenen Flächen den vorgeschlagenen Fundstellengrößen?
 Da der untersuchte Transekt mit ca. 40 m recht schmal ist, werden die längsten Seiten der Flächen genommen - dies stellt etwa den größtmöglichen Abstand zwischen zwei Befunden auf einer vom Landesdenkmalamt definierten Fundstelle dar - und mit den Distanzen zwischen den Befunden verglichen (siehe Abb. \@ref(fig:Flaechenpolygone)). Hinzugenommen wird auch der Abstand zwischen zwei Flächen. Die Definition der Flächen erfolgte durch das Landesdenkmalamt nach einer harten Prospektion (s. o.), insofern galt für dieses Fallbeispiel die Annahme, dass in den Lücken zwischen den einzelnen Flächen keine Befunde vorkommen.
