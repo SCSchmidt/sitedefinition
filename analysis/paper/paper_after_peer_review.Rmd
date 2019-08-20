@@ -183,11 +183,53 @@ Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche defi
 
 Die entstandenen Datenreihen der absoluten Entfernungen aller gleichdatierten Befunde zueinander werden zur Erfassung von Siedlungsgrößen und -abständen auf zwei unterschiedliche Art und Weisen modelliert:
 
-Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen, die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.  
 
+```{r Was_ist_eine_Dichteanalyse, fig.cap="Bei einer Dichteschätzung werden die einzelnen gemessenen Werte auf der x-Achse abgetragen und mit einer Gaußschen Dichte-Kurve übermodelliert. Diese werden aufeinander addiert, um Stellen zu markieren, auf denen besonders häufig und eng beeinander einzelne Werte auftreten, ergo eine besonders hohe Dichte von Werten in diesem Bereich entsteht. Im dargestellten Beispiel sind die Werte aus Abb. 1 übernommen worden."}
 
-![Figure @Dichteschätzung: Bei einer Dichteschätzung werden die einzelnen gemessenen Werte auf der x-Achse abgetragen und mit einer Kerndichteschätzung übermodelliert. Diese werden aufeinander addiert, um Stellen zu markieren, auf denen besonders häufig und eng beeinander einzelne Werte auftreten.](../figures/Abb2_Dichteschätzung.png)
+## Bild für Illustration von Dichte-Analyse kreeieren
 
+# 1. Vektor mit den Werten
+v <- c(1.2, 4.7, 4.0, 4.8, 0, 4.3, 6.1, 6.7, 0, 5.9, 6.5, 0, 1.7, 0)
+v <- subset(v, v > 0)
+
+# dataframe mit den ersten Dichtewerten
+z <- data.frame(
+  x = rnorm(n = 1000, mean = 0, sd = 1), y = NA, i= NA
+)
+# leeren dataframe
+df <- NA
+
+for (i in v)
+{
+  x <- z$x + i # x-Werte anpassen = Dichtefunktion verschieben
+  y <- dnorm(z$x)/length(v) # Dichtefunktion durch Anzahl von Werten von v teilen, damit alle zusammenaddiert unter der Funktion 1 ergeben
+  i <- rep(i, 1000) # Den Wert als Marker benutzen, 1000mal wiederholen, damit er die gleiche Länge wie der ganze dataframe hat
+  df <- rbind(df, data.frame(x,y,i)) # neu kreiierte rows an den bisherigen dataframe unten rankleben
+}
+
+# Faktor für ggplot
+df$i <- as.factor(df$i)
+
+library(ggplot2)
+ggplot()+
+  geom_density(aes(x = v), bw = 0.6)+ # eigentliche Dichtefunktion
+  geom_point(aes(x = v, y = 0), size = 2)+  # gemessene Werte abtragen
+  geom_line(aes(x = df$x, y = df$y, group = df$i),linetype = "dashed" )+ # Dichtefunktionen über den Punkten malen
+  geom_segment(aes(x = v, y = 0, xend = v, yend = max(df$y, na.rm = TRUE)), # Verbindungslinie zwischen gemessenen Werten und höchstem Punkt der Verteilung
+               linetype="dotted",
+               color = "grey",
+               size=0.5)+
+scale_x_continuous(breaks =0:8,
+  labels = 0:8,
+  name = "Entfernungen in m")+
+  scale_y_continuous(name = "Dichte")+
+  theme_classic()
+
+ggsave("/home/sophie/owncloudBonn/PZ-Artikel/nacharbeiten/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, height = 15, units = "cm")
+
+```
+
+Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen (siehe Abb. \@ref(fig:Was_ist_eine_Dichteanalyse)), die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.  
 
 Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt damit stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter (-@nakoinz_2016, 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen (abgetragen an der x-Achse) hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
 
@@ -242,6 +284,8 @@ table <- cbind(table, Datierungen)
 knitr::kable(table,
              col.names=c("Epoche", "Abschnitt", "Anzahl", "Datierungen"),
             caption="Anzahl Befunde nach Perioden und ihre absolute Datierung")
+write.csv2(table, "../figures/tabelle1.csv")
+
 ```
 ---Tabelle 1
 
