@@ -7,6 +7,7 @@ output:
     bookdown::word_document2:
     fig_caption: yes
     reference_docx: templates/template.docx
+    toc: true
 csl: RGK_archaeology_DGUF.csl
 bibliography: sitedefinition2.bib
 abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ eine Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung in Sachsen-Anhalt und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um kulturspezifische Aussagen treffen zu können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern, die Schätzung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
@@ -26,11 +27,9 @@ An dieser Stelle setzt diese Arbeit an und verfolgt die Frage, wie weit Funde od
 
 Ein Problem dabei ist, dass die Begriffe Fundstelle, Fundort oder Fundplatz weder in der deutschsprachigen noch anglophonen Archäologie universell definiert sind^[Vgl. @doneus_2013, 122; @dunnell_1992, 21.]. 
 
-In der deutschsprachigen Archäologie konzentriert sich die Debatte auf den Begriff der Siedlung mehr als auf den des Fundplatzes und darauf, wie diese zu erkennen und abzugrenzen sind^[Siehe z. B. @malmer_1962; @nelson_1988; @schirren_1997, @mischka_2007. ].     
+In der deutschsprachigen Archäologie konzentriert sich die Debatte auf den Begriff der Siedlung mehr als auf den des Fundplatzes und darauf, wie diese zu erkennen und abzugrenzen sind^[Siehe z. B. @malmer_1962; @nelson_1988; @schirren_1997, @mischka_2007. ]. In der englischsprachigen Forschung wurde die Bedeutung von *site* insbesondere seit den 1970er Jahren ausführlich debattiert^[Unter anderem: @thomas_1975; @foley_1981; @dunnell_1992; @binford_1992; @alcock_1994; @fentress_2000; @de_haas_2012.]. Hier wurden Ansätze entwickelt, deren Ziel es war, die Verteilung archäologischer Funde in der Landschaft unabhängig von Fundstellen zu untersuchen^[@thomas_1975; @foley_1981]. Mit dieser *non-* oder *off-site*-Archäologie wurde einerseits das Vorhandensein von *sites* und andererseits der Nutzen des Begriffs für die Landschaftsarchäologie allgemein in Frage gestellt^[@thomas_1975; @dunnell_1992.].  
 
-In der englischsprachigen Forschung wurde die Bedeutung von *site* insbesondere seit den 1970er Jahren ausführlich debattiert^[Unter anderem: @thomas_1975; @foley_1981; @dunnell_1992; @binford_1992; @alcock_1994; @fentress_2000; @de_haas_2012.]. Hier wurden Ansätze entwickelt, deren Ziel es war, die Verteilung archäologischer Funde in der Landschaft unabhängig von Fundstellen zu untersuchen^[@thomas_1975; @foley_1981]. Mit dieser *non-* oder *off-site*-Archäologie wurde einerseits das Vorhandensein von *sites* und andererseits der Nutzen des Begriffs für die Landschaftsarchäologie allgemein in Frage gestellt^[@thomas_1975; @dunnell_1992.].  
-
-Da im Rahmen der Methodenentwicklung auf theoretische Überlegungen zu Siedlungen und Fundstellen zurückgegriffen wird, wird am Beginn der Arbeit die forschungsgeschichtliche Entwicklung der Begriffe Fundort, Fundstelle und Siedlung sowie *site*  dargelegt. 
+Da im Rahmen der Methodenentwicklung auf theoretische Überlegungen zu Siedlungen und Fundstellen zurückgegriffen wird, wird am Beginn der Arbeit die forschungsgeschichtliche Entwicklung der Begriffe Fundort, Fundstelle und Siedlung sowie *site*  dargelegt und ihre unterschiedlichen Nutzungen reflektiert. 
 Anschließend wird die Methode vorgestellt, die Siedlungsgrößen und -abstände anhand von Befunddichten zu eruieren versucht, und exemplarisch anhand von Ausgrabungsergebnissen entlang der B6n nahe der Kreisstadt Köthen, Sachsen-Anhalt, vorgeführt. Die Ergebnisse werden in den Forschungsstand eingebunden und abschließend kritisch diskutiert.
 
 
@@ -49,7 +48,7 @@ library(bookdown)
 
 ```
 
-#Ü1# Forschungsgeschichtliche Vorüberlegungen
+#Ü1# Reflexionen über die Begriffe Fundstelle, Siedlung und *site*
 
 Zwar kann nicht behauptet werden, dass sich die deutsch- und englischsprachige Forschung nicht gegenseitig befruchtet, dennoch lassen sich die zwei Forschungstraditionen besser nacheinander darstellen. Es wird sich folglich erst auf die deutsche und danach auf die englischsprachige (v. a. amerikanische) Forschungsgeschichte zu den relevanten Begriffen bezogen.
 
@@ -58,7 +57,7 @@ Zwar kann nicht behauptet werden, dass sich die deutsch- und englischsprachige F
 
 An erster Stelle geht es im Folgenden um die Nutzungsgeschichte der Begriffe Fundort, Fundplatz und Fundstelle anhand ausgewählter Autoren seit den 1960er Jahren. Es wird insbesondere auf die Problematik der angemessenen Kartierung eingegangen. An zweiter Stelle steht die Beschäftigung mit der Zuweisung, dass es sich bei einer Fundstelle um eine Siedlung handelt. Auch hier wird nach der Definitionsfrage das Anliegen der räumlichen Abgrenzbarkeit und inneren Gliederung in den Mittelpunkt gestellt. 
 
-###Ü3# Fundort und Fundstelle
+###Ü3# Fundort, Fundplatz und Fundstelle
 
 Fundort, Fundstelle oder Fundplatz scheinen in der deutschsprachigen Archäologie so allgemein verständlich, dass sie in den Einführungswerken zur prähistorischen Archäologie nicht definiert werden. Vielmehr wird im Zusammenhang mit den Quellen des Fachs lediglich auf Befunde und Funde bzw. interpretierte Kategorien wie Siedlungen, Gräber, Horte u. ä. eingegangen^[@wolfram_2002; @eggert_2005, 52; @jankuhn_1977, 8.]. 
 
@@ -136,15 +135,15 @@ An der Problematik der Abgrenzbarkeit und, daraus resultierend, der Größe eine
 
 ##Ü2# Zusammenfassung der wichtigsten Vorüberlegungen
 
-Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen. Fundstellen können z. B. durch Geländebegehungen erkundet worden sein, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht worden. Die funktionale Interpretation der Fundstelle als Siedlung erfolgt häufig anhand von Artefaktspektren, genauere Analysen können jedoch nur anhand von Ausgrabungsergebnissen vorgenommen werden. 
+Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen^[Siehe z. B. @jankuhn_1977; @dreslerova_2019]. Hier liegt der Fokus auf denen die durch Geländebegehungen erkundet, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht wurden. Die funktionale Interpretation der Fundstelle als Siedlung erfolgt häufig anhand von Artefaktspektren, genauere Analysen können nur anhand von Ausgrabungsergebnissen vorgenommen werden^[@link_1976, 8; @heege_1989, 63-66; @schier_1990, 166; @schirren_1997, 31; @mischka_2007, 49.]. 
 
 Wurde ein Siedlungsort bestimmt, stellt sich die Frage, wie er räumlich abgegrenzt wird, also wie groß er ist. 
 
-Untersuchungen zur Größe einer Siedlung anhand von Geländebegehungen können aufgrund der Beweglichkeit der Funde verzerrte Ergebnisse liefern. Die Abgrenzung aufgrund von Fund-Dichten sind zudem schwierig, da innerhalb einer Siedlung auch weniger dicht mit Funden belegte Bereiche zu erwarten sind. Auch wird diskutiert, wie dicht Funde liegen müssen, um eine Siedlung zu demarkieren und wie dünnere Streuungen zu interpretieren sind.
+Untersuchungen zur Größe einer Siedlung anhand von Geländebegehungen können aufgrund der Beweglichkeit der Funde verzerrte Ergebnisse liefern^[@schiffer_1987, @sommer_1991; @saile_2002.]. Die Abgrenzung aufgrund von Fund-Dichten sind zudem schwierig, da innerhalb einer Siedlung auch weniger dicht mit Funden belegte Bereiche zu erwarten sind. Auch wird diskutiert, wie dicht Funde liegen müssen, um eine Siedlung zu demarkieren^[Z. B. @given_2004.] und wie dünnere Streuungen zu interpretieren sind^[Z. B. @wobst_1983; @vanhaverbeke_2008.]. Im Sinne der *off-site*-Archäologie wird von der Vorstellung diskreter Fundstellen abstand genommen und eine kontinuierliche Verteilung von Funden im Raum postuliert^[@thomas_1975, @foley_1981.].
 
-Ausgrabungen sind nur selten so groß, dass eine gesamte Fundstelle ergraben wird. Aus diesem Grund können funktionale Zuweisungen schwierig sein, die eine genauere Vorstellung über das Zusammenleben der Menschen an diesem Ort ermöglichen. Die zeitliche Tiefe einer archäologischen Periode und kleinräumige Siedlungsverlagerungen können eine Interpretation erschweren. 
+Ausgrabungen sind nur selten so groß, dass eine gesamte Fundstelle ergraben wird^[Siehe z. B. @gringmuth-dallmer_1998, 381; @hecht_2007, 37.]. Aus diesem Grund können funktionale Zuweisungen schwierig sein, die eine genauere Vorstellung über das Zusammenleben der Menschen an diesem Ort ermöglichen. Die zeitliche Tiefe einer archäologischen Periode und kleinräumige Siedlungsverlagerungen können eine Interpretation erschweren^[@mischka_2007.]. 
 
-Zufallsfunde und Geländebegehungen bringen als Quelle das Problem mit sich, dass der minimale Abstand von Funden zueinander als Anzeiger zweier unterschiedlicher Siedlungen bisher nicht empirisch untersucht wurde. 
+Zufallsfunde und Geländebegehungen bringen als Quelle das Problem mit sich, dass der minimale Abstand von Funden zueinander als Anzeiger zweier unterschiedlicher Siedlungen bisher nicht empirisch untersucht wurde^[Z. B. @schirren_1997; @mischka_2007.]. Diese empirische Untersuchung sollte kultur- und regionalspezifisch erfolgen^[@schirren_1997; @malmer_1962.].
 
 Unter Berücksichtigung dieser Überlegungen wird im Folgenden für letzteres Problem eine nicht fund- sondern befundbasierte Methode dargelegt, mit der Größen und Abstände von Siedlungen mathematisch-abstrahiert bestimmt werden können.
 
@@ -251,7 +250,7 @@ Abschließend können die Analyseergebnisse mit den vom Landesdenkmalamt definie
 
 
 
-#Ü1# Fallbeispiel
+#Ü1# Fallbeispiel: Ausgrabungen entlang der B6n bei Köthen
 
 Die erläuterte Methode wurde anhand einer Straßengrabung  in Sachsen-Anhalt entwickelt. Hier wird im Folgenden die Datenbasis vorgestellt, quellenkritisch reflektiert und daraufhin die Berechnungen durchgeführt und interpretiert.
 
@@ -311,7 +310,7 @@ Einschränkend ist zu erwähnen, dass durch jahrhundertelange intensive Landwirt
 
 Ein großer Teil der Befunde mustte undatiert bleiben (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
 
-##Ü2# Entfernungsmatrizen
+##Ü2# Berechnung der Distanzen
 
 
 ```{r, message=FALSE, include=FALSE, cache=FALSE}
@@ -483,11 +482,11 @@ g
 
 ```
 
-An erster Stelle steht die Berechnung der Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden auf bis zu 1000 m beschränkt.
+An erster Stelle steht die Berechnung der Distanzen mithilfe von Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden in der Visualisierung auf bis zu 1000 m beschränkt. 
 
 
 
-##Ü2# Dichtefunktion über die Distanzmaße
+##Ü2# Dichtefunktion über die Distanzen
 
 Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team_2013) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet.
 
@@ -676,7 +675,7 @@ Das erste lokale Maximum der frühen Eisenzeit liegt bei 67 m, das zweite bei 98
 
 
 
-##Ü2# Kumulative Darstellung der Distanzmaße
+##Ü2# Kumulative Darstellung der Distanzen
 
 
 Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen (im Folgenden Wendepunkte genannt). Ab dort werden die Abstände der Befunde zueinander größer und die Grenze einer Siedlung kann vermutet werden. Anhand dieser Auswertungen können zudem sprunghafte Distanzzunahmen identifiziert werden, die befundleere Bereiche anzeigen können. 
@@ -926,7 +925,7 @@ zu tun“^[@huth_1998, 216.]. Erschwerend kommt hinzu, dass durch die ungenauen 
 Interessant bleibt es festzuhalten, dass sich durchaus Unterschiede zwischen der Spätbronzezeit und den auch ältereisenzeitlich datierten Befunden fassen lassen. Ob dies ein zufälliger Effekt oder ein Hinweis für Veränderungen im Siedlungsverhalten ist, können nur weitere Untersuchungen klären.
 
 
-###Ü3# Zusammenfassung der Analyseergebnisse
+##Ü2# Zusammenfassung der Analyseergebnisse
 
 Die Abstraktion der Befunddichte über die Dichte der Entfernungen zueinander ergibt eine Darstellung der Gesamtlage, nicht das Bild einer Siedlung. Nichtsdestotrotz können daraus Rückschlüsse auf Siedlungsgrößen geschlossen werden.
 
@@ -976,7 +975,7 @@ Das heißt auch, dass das Modifiable Area Unit Problem^[„Das Modifiable Areal 
 
 Die hier vorgestellte Methode der befundbasierten Siedlungsanalyse ist letztendlich die Anwendung einer *intra-site* Analyse auf *inter-site* (bzw. mikroregionaler) Ebene. Ausgearbeitet wurde an dieser Stelle die Möglichkeit Siedlungsgrößen abstrahiert über eine mehrere Kilometer lange, aber nur wenige Dekameter breite, Trasse zu ermitteln. Es zeigt sich, dass die vorgeschlagenen Siedlungsgrößen gut mit bekannten Grabungsergebnissen korrelieren, auch wenn einschränkend auf einige Fehlerquellen hingewiesen werden muss. 
 
-Die Fragestellung, welche Abstände zwei Befunde/Funde voneinander haben sollten, damit sie zu unterschiedlichen Fundstellen gezählt werden, kann mit den Ergebnissen vorläufig für die einzelnen Perioden folgend beantwortet werden^[Die Werte sind gerundet, da keine Genauigkeit auf wenige Meter erreicht werden kann.]: Schnurkeramik 530 m, Frühbronzezeit: 430 m, Spätbronzezeit 470 m, ältere Eisenzeit 350 m.
+Die Fragestellung, welche Abstände zwei Befunde/Funde voneinander haben sollten, damit sie zu unterschiedlichen Fundstellen gezählt werden, kann mit den Ergebnissen vorläufig für die einzelnen Perioden in Mitteldeutschland folgend beantwortet werden^[Die Werte sind gerundet, da keine Genauigkeit auf wenige Meter erreicht werden kann.]: Schnurkeramik 530 m, Frühbronzezeit: 430 m, Spätbronzezeit 470 m, ältere Eisenzeit 350 m.
 
 Die Siedlungsgrößen scheinen dabei etwa diese Ausdehnungen zu erreichen: Schnurkeramik  120 - 300 m, Frühbronzezeit 175 - 220 m, Spätbronzezeit 65 - 120 m und ältere Eisenzeit 180 - 290 m. Ähnliche Untersuchungen weiterer Trassen sind notwendig, um diese Ergebnisse zu veri- oder falsifizieren.
 
