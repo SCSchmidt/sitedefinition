@@ -9,7 +9,7 @@ output:
     reference_docx: templates/template.docx
 csl: RGK_archaeology_DGUF.csl
 bibliography: sitedefinition2.bib
-abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ eine Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um kulturspezifische Aussagen treffen zu können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern, die Schätzung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
+abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ eine Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung in Sachsen-Anhalt und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um kulturspezifische Aussagen treffen zu können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern, die Schätzung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
 keywords:   Siedlungsarchäologie, Fundstelle, Geostatistik, räumliche Analyse, statistische Programmiersprache R, off-site Archäologie, Transektgrabung, Mitteldeutschland
 highlights:  These are the highlights. 
 ---
@@ -93,9 +93,9 @@ Im Gegensatz zu der einfachen Zuweisung „Siedlung“ aufgrund von Prospektione
 
 Die Weide- und Rohstoffzonen sind eventuell mit der unten beschriebenen *non-* oder *off-site*-Archäologie zu fassen^[Vgl. z. B. @alcock_1994]. Wirtschaftsbereiche benötigen einer genaueren Definition: So kann in einem Wohnstallhaus eine Grenze zwischen Wohn- und Wirtschaftsbereich durch die architektonische Form des Hauses selbst definiert sein, in dem der Stallbereich als Wirtschaftszone angesehen wird. In anderen Fällen lassen sich z. B. Anhäufungen von Ofengruben in einem Bereich finden, der abseits von Wohnhäusern liegt. In solchen Fällen lässt sich eine innere Struktur der Siedlung erkennen^[@eggert_2005, 87.].
 
-Die Zuweisung bestimmter Strukturen zueinander ist nicht trivial. Als Beispiel mag das Hofplatzmodell dienen, welches von Boelicke für linearbandkeramische Siedlungen vorgeschlagen wurde. Es basiert darauf, dass eine Zuweisung von Arbeitsbereichen zu einem Haus möglich ist^[Durch Seriationen von Grubeninhalten und Fundzusammensetzungen wurde für die Größe des Hofs ein Radius von 25 m um ein Haus postuliert (@boelicke_1982, 17-18). Knapp zusammengefasst bei @balkowski_2015.]. In anderen Fällen können Zuweisungen aufgrund von Zaunreihen festgestellt werden, z. B. in der jungbronzezeitlich bzw. ältereisenzeitlichen Siedlung bei Zwenkau südlich von Leipzig^[@huth_1998, 211. Verschiedene Interpretationen von Zaunreihen und Gräbchen siehe zusammenfassend @dohlert-albani_2016, 546.]. 
+Die Zuweisung bestimmter Strukturen zueinander ist nicht trivial. Als Beispiel mag das Hofplatzmodell dienen, welches von Boelicke für linearbandkeramische Siedlungen vorgeschlagen wurde. Es basiert darauf, dass eine Zuweisung von Arbeitsbereichen zu einem Haus möglich ist^[Durch Seriationen von Grubeninhalten und Fundzusammensetzungen wurde für die Größe des Hofs ein Radius von 25 m um ein Haus postuliert (@boelicke_1982, 17-18). Knapp zusammengefasst bei @balkowski_2015.]. In anderen Fällen können Zuweisungen aufgrund von Zaunreihen festgestellt werden^[Für verschiedene Interpretationen von Zaunreihen und Gräbchen siehe zusammenfassend @dohlert-albani_2016, 546.], z. B. in der jungbronzezeitlich bzw. ältereisenzeitlichen Siedlung bei Zwenkau südlich von Leipzig^[@huth_1998, 211.]. 
 
-Umschließt ein Graben eine Reihe von Siedlungsbefunden, wird er vornehmlich als Siedlungsumfriedung und -abgrenzung interpretiert^[So handelt es sich bei dem Graben im frühbronzezeitlichen Zwenkau „zu keinem Zeitpunkt um eine Graben-Wallanlage mit defensivem Charakter[...], sondern lediglich um eine sichtbare Abgrenzung der Siedlung“ ([@huth_1998, 195]).]. Dabei werden auch unbebaute Bereiche von solchen Umfriedungen umschlossen^[Siehe z. B. @huth_1998, 189.]. Es lassen sich folglich innere Gliederungen anhand unterschiedlicher Bebauungsdichten fassen.  
+Umschließt ein Graben eine Reihe von Siedlungsbefunden, wird er vornehmlich als Siedlungsumfriedung und -abgrenzung interpretiert^[So handelt es sich bei dem Graben im frühbronzezeitlichen Zwenkau „zu keinem Zeitpunkt um eine Graben-Wallanlage mit defensivem Charakter[...], sondern lediglich um eine sichtbare Abgrenzung der Siedlung“ ([@huth_1998, 195]).]. Dabei werden auch unbebaute Bereiche von solchen Umfriedungen umschlossen^[Siehe z. B. @huth_1998, 189.]. Es lassen sich folglich innere Gliederungen einer Siedlung anhand unterschiedlicher Bebauungsdichten fassen.  
 
 Der weniger konkrete Begriff der Siedlung wird gegenüber dem eines Dorfes, Weilers oder Einzelhofes häufig bevorzugt, vermutlich weil er „nicht interpretierend“ ist und noch nicht erwiesen ist, dass es sich dabei um sinnvolle Kategorien für das Verständnis prähistorischer Gesellschaften handelt. Die Definition des Dorfes benötigt nicht nur die Identifikation mehrerer Höfe (dies wird durch zu kleine Grabungsflächen erschwert), sondern auch die des sozialen Zusammenhalts und der wirtschaftlichen Zusammenarbeit. Nur selten werden diese Interpretationsschritte gegangen^[Z. B. bei @jankuhn_1977; @ruck_2012, 31.]. Stattdessen werden, wie oben dargelegt, die archäologischen Abgrenzungs- und Erkenntnismerkmale von Siedlungen allgemein erörtert. 
 
@@ -136,17 +136,17 @@ An der Problematik der Abgrenzbarkeit und, daraus resultierend, der Größe eine
 
 ##Ü2# Zusammenfassung der wichtigsten Vorüberlegungen
 
-Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen. Fundstellen können durch Geländebegehungen erkundet worden sein, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht worden. Die funktionale Interpretation der Fundstelle als Siedlung erfolgt häufig anhand von Artefaktspektren, genauere Analysen können jedoch nur anhand von Ausgrabungsergebnissen vorgenommen werden. 
+Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen. Fundstellen können z. B. durch Geländebegehungen erkundet worden sein, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht worden. Die funktionale Interpretation der Fundstelle als Siedlung erfolgt häufig anhand von Artefaktspektren, genauere Analysen können jedoch nur anhand von Ausgrabungsergebnissen vorgenommen werden. 
 
-Wurde ein Siedlungsort bestimmt, stellt sich die Frage, wie er räumlich abgegrenzt wird. 
+Wurde ein Siedlungsort bestimmt, stellt sich die Frage, wie er räumlich abgegrenzt wird, also wie groß er ist. 
 
 Untersuchungen zur Größe einer Siedlung anhand von Geländebegehungen können aufgrund der Beweglichkeit der Funde verzerrte Ergebnisse liefern. Die Abgrenzung aufgrund von Fund-Dichten sind zudem schwierig, da innerhalb einer Siedlung auch weniger dicht mit Funden belegte Bereiche zu erwarten sind. Auch wird diskutiert, wie dicht Funde liegen müssen, um eine Siedlung zu demarkieren und wie dünnere Streuungen zu interpretieren sind.
 
-Ausgrabungen sind nur selten so groß, dass eine gesamte Fundstelle ergraben wird. Aus diesem Grund können funktionale Zuweisungen schwierig sein, die eine genauere Vorstellung über das Zusammenleben der Menschen an diesem Ort ermöglichen. Hier spielt ebenfalls die zeitliche Tiefe einer archäologischen Periode und kleinräumige Siedlungsverlagerungen eine Rolle. 
+Ausgrabungen sind nur selten so groß, dass eine gesamte Fundstelle ergraben wird. Aus diesem Grund können funktionale Zuweisungen schwierig sein, die eine genauere Vorstellung über das Zusammenleben der Menschen an diesem Ort ermöglichen. Die zeitliche Tiefe einer archäologischen Periode und kleinräumige Siedlungsverlagerungen können eine Interpretation erschweren. 
 
 Zufallsfunde und Geländebegehungen bringen als Quelle das Problem mit sich, dass der minimale Abstand von Funden zueinander als Anzeiger zweier unterschiedlicher Siedlungen bisher nicht empirisch untersucht wurde. 
 
-Für letzteres Problem wird im Folgenden eine nicht fund- sondern befundbasierte Methode dargelegt, mit der Größen und Abstände von Siedlungen mathematisch-abstrahiert bestimmt werden können.
+Unter Berücksichtigung dieser Überlegungen wird im Folgenden für letzteres Problem eine nicht fund- sondern befundbasierte Methode dargelegt, mit der Größen und Abstände von Siedlungen mathematisch-abstrahiert bestimmt werden können.
 
 
 #Ü1# Die Befundbasierte Methode
@@ -229,15 +229,15 @@ ggsave("/home/sophie/owncloudBonn/PZ-Artikel/nacharbeiten/Abb_2_Was_ist_Dichtefu
 
 ```
 
-Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen (siehe Abb. \@ref(fig:Was_ist_eine_Dichteanalyse)), die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.  
+Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt (s. u., Abb. \@ref(fig:Distanzmatrizen1)). Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen (siehe Abb. \@ref(fig:Was_ist_eine_Dichteanalyse)), die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Sie zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Da diese Entfernungen besonders häufig sind, ist diese eine sinnvolle Größe, um eine archäologische Fläche um einen Fund herum auszuweisen. Minima zeigen hingegen Abstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen.  
 
 Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt damit stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter (-@nakoinz_2016, 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen (abgetragen an der x-Achse) hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
 
-Es ist sinnvoll, bei der Erzeugung der Graphen sehr weite Entfernungen nicht einzubeziehen, da sie für die Fragestellung irrelevant sind und kleinräumige Entwicklungen sonst überprägt werden können. Wo die Grenze gezogen wird, kann für die einzelnen Perioden unterschiedlich sein. Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
+Es ist sinnvoll, bei der Erzeugung der Graphen sehr weite Entfernungen nicht einzubeziehen, da sie für die Fragestellung irrelevant sind und kleinräumige Entwicklungen so überprägt werden können. Wo die Grenze gezogen wird, kann für die einzelnen Perioden unterschiedlich sein. Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
 
 Des Weiteren wird jede Analyse mit einer zufälligen Punktverteilung^[Poissonverteilung, erzeugt mit spatstat::rpoispp, $\lambda$ = 0.01, die eine vollständige räumliche Zufälligkeit und eine voneinander unabhängige identische Verteilung aufweisen (*CSR - complete spatial randomness* und *i.i.d - independent and identically distributed*). Das R-Paket spatstat wurde von @baddeley_2015 entwickelt.] verglichen, für welche die gleichen Berechnungen vorgenommen wurden. Dabei lässt sich z. B. ein Clustergrad feststellen, wenn die empirisch beobachteten Distanzmatrizen mehr kürzere Distanzen aufzeigen, als in einer zufälligen Berechnung zu erwarten wären^[Eine höhere Anzahl kürzerer Entfernungen bedeutet, dass die Befunde zum Teil näher beieinander liegen als wenn sie zufällig gestreut werden. Dies ist bei archäologischen Befunden fast immer der Fall.].
 
-Abschließend können die Analyseergebnisse mit den vom Landesdenkmalamt definierten Grabungsarealen verglichen werden, um abzuschätzen, inwieweit deren Größe Einfluss auf die Ergebnisse hat. 
+Abschließend können die Analyseergebnisse mit den vom Landesdenkmalamt definierten Grabungsarealen verglichen werden, um abzuschätzen, ob und inwieweit deren Größe Einfluss auf die Ergebnisse hat. Dafür bieten sich Boxplotdiagramme an, anhand derer die Entfernungen der Befunde mit Grabungsflächengrößen und Abständen von Grabungsflächen zueinander verglichen werden. 
 
 #Ü1# Fallbeispiel
 
@@ -669,7 +669,7 @@ Das erste lokale Maximum der frühen Eisenzeit liegt bei 67 m, das zweite bei 98
 ##Ü2# Kumulative Darstellung der Distanzmaße
 
 
-Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen (im Folgenden Wendepunkte genannt). Ab dort werden die Abstände der Befunde zueinander größer. Anhand dieser Auswertungen können zusätzlich sprunghafte Distanzzunahmen identifiziert werden. 
+Die kumulative Darstellung der Entfernungen ermöglicht eine Aussage darüber, wie viele Befundpaare die auf der x-Achse abgetragene Entfernung oder eine geringere Distanz zueinander aufweisen. Von Interesse ist in diesem Falle derjenige Wert, an welchem die Kurven der kumulativen Häufigkeitsverteilungen abflachen (im Folgenden Wendepunkte genannt). Ab dort werden die Abstände der Befunde zueinander größer und die Grenze einer Siedlung kann vermutet werden. Anhand dieser Auswertungen können zudem sprunghafte Distanzzunahmen identifiziert werden, die befundleere Bereiche anzeigen können. 
 
 Es entsteht implizit das Bild einer Siedlung, in deren Mitte die Befunde am dichtesten beieinander liegen, während sie zu den Rändern ausstreuen. Dies ist jedoch nur eine Modell. Durch die Abstraktion, dass alle Fundstellen gleichzeitig betrachtet werden, kommen übergreifende Trends zum Ausdruck, nicht die Beschreibung einer einzelnen Siedlung.
 
@@ -708,8 +708,8 @@ ggsave("../figures/Abb8.pdf",
 ```
 
 Alle Perioden zeigen in dieser Darstellung einen Grad der Clusterung, da ihre Distanzwerte häufiger kleinere Werte zeigen als bei einer zufälligen Poisson (CSR)-Verteilung (siehe Abb. \@ref(fig:Distanzen_kumulativ)). Wo die Kurven der archäologischen Befunde der räumlichen Zufallsverteilungen nahe kommen, ist dies nicht mehr gegeben. 
-Die Wendepunkte der Kurven sind interessant, da sie den Punkt beschreiben, in der die Kurve abflacht und es damit ab dieser Entfernung weniger Befunde gibt, die zu der Kumulation hinzugefügt werden können. 
-Den geringsten Wert zeigt die Spätbronzezeit (203 m), es folgt die Frühbronzezeit (219 m), die Ältere Eisenzeit (285 m) und die Schnurkeramik (297 m). 
+Die Wendepunkte der Kurven beschreiben die Entfernung, ab der es eine abnehmende Anzahl von Befunde gibt, die zu der Kumulation hinzugefügt werden können. 
+Den geringsten Wert eines Wendepunkts zeigt die Spätbronzezeit (203 m), es folgt die Frühbronzezeit (219 m), die Ältere Eisenzeit (285 m) und die Schnurkeramik (297 m). 
 
 
 ```{r, include=FALSE, cache=FALSE}
@@ -777,8 +777,71 @@ write.csv2(werte2, "../figures/tabelle2.csv")
 ```
 
 
-In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt. 
+In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt.
 
+
+##Ü2# Vergleich der Befundentfernungen mit Grabungsarealen
+
+An dieser Stelle werden die Entfernungen, die die Siedlungsbefunde zueinander aufweisen, mit der Größe und den Abständen der Grabungsflächen zueinander verglichen. Als Proxy für die Größe der Grabungsflächen werden längsten Seite der Grabungsflächen genommen, da die Breite der Grabungsflächen in den meisten Fällen ca. 40 m sind.
+Boxplotdiagramme werden genutzt, da sich die Mediane und Quantile eignen um abzuschätzen, ob die Größen der Grabungsflächen und ihre Abstände zueinander Einfluss auf die Entfernungen von Befunden haben.
+
+```{r }
+Flaech_Dist <- read.csv('../data/raw_data/Entfernung_und_Groesse_Flaechenpolygone.csv')
+
+siedlSnK_dist_df_1000$kultur <-"01 SnK"
+siedlfBZ_dist_df_1000$kultur <-"02 fBZ"
+siedlsBZ_dist_df_1000$kultur <-"03 sBZ"
+siedlsBZ_aeEZ_dist_df_1000$kultur <-"04 äEZ"
+
+
+
+colnames(siedlSnK_dist_df_1000)[colnames(siedlSnK_dist_df_1000) == 'siedlSnK_dist_v'] <- 'dist' # alle gleichbenennen
+colnames(siedlfBZ_dist_df_1000)[colnames(siedlfBZ_dist_df_1000) == 'siedlfBZ_dist_v'] <- 'dist'
+colnames(siedlsBZ_dist_df_1000)[colnames(siedlsBZ_dist_df_1000) == 'siedlsBZ_dist_v'] <- 'dist'
+colnames(siedlsBZ_aeEZ_dist_df_1000)[colnames(siedlsBZ_aeEZ_dist_df_1000) == 'siedlsBZ_aeEZ_dist_v'] <- 'dist'
+
+
+boxplot_vgl <- rbind(siedlSnK_dist_df_1000, siedlfBZ_dist_df_1000, siedlsBZ_dist_df_1000, siedlsBZ_aeEZ_dist_df_1000) # zusammenführen
+```
+
+```{r Flaechenpolygone, fig.height=8, fig.width=11, fig.cap="Entfernungen der Siedlungsbefunde zueinander im Vergleich mit den vom Landesdenkmalamt definierten Flächen."}
+library(ggplot2)
+
+ggplot() + 
+  geom_boxplot(data = boxplot_vgl, aes(kultur, dist)) +
+  geom_boxplot(data = Flaech_Dist, aes(Art, Strecke)) + 
+  ggtitle("")+
+  scale_x_discrete(labels=c("SnK","fBZ","sBZ", "äEZ", "Abstände \n zw. Flächen", "Längste Flächen- \n seite"))+
+  theme(axis.title.x = element_blank())+
+   ylab("Meter") 
+```
+
+
+
+```{r}
+ggsave("../figures/Abb9.jpeg", 
+       width = 20, 
+       height = 15, 
+       units = "cm",
+       dpi = 300)
+
+ggsave("../figures/Abb9.svg", 
+       width = 20, 
+       height = 15, 
+       units = "cm")
+
+ggsave("../figures/Abb9.pdf", 
+       width = 20, 
+       height = 15, 
+       units = "cm")
+ 
+Flaechen_Distanzen <- subset(Flaech_Dist, Flaech_Dist$Art=="Entfernung") #für das da in-text
+Flaechen_Laenge <- subset(Flaech_Dist, Flaech_Dist$Art=="Fläche")
+
+```
+
+
+Der Median der längsten Flächenseiten liegt bei `r median(Flaechen_Laenge$Strecke)` m, siehe Abb. \@ref(Flaechenpolygone)), der Median der Abständen zwischen den Flächen ist `r median(Flaechen_Distanzen$Strecke)` m. Diese Werte werden unter dem Kapitel "Diskussion" mit den Analyseergebnissen der einzelnen Kulturen in Verbindung gebracht.
 
 
 ##Ü2# Interpretation der Ergebnisse
@@ -888,69 +951,6 @@ Für die Abgrenzung von Fundstellen anhand von Fund- oder Befundstreuungen ist d
 
 Insgesamt wird durch diese Betrachtung des aufgenommenen Datensatzes das implizite Verständnis einer Fundstelle als eine Siedlung aufgebrochen. Die räumlichen Beziehungen können genauer untersucht und insbesondere auf die diachronen Verlagerungen innerhalb eines Fundplatzes eingegangen werden. Die erarbeiteten Größen und Abstände von Siedlungen können bei der Einordnung von Fundstreuungen hilfreich sein.
 
-
-##Ü2# Einschränkende Beobachtungen 
-
-Die dargelegten räumlichen Untersuchungen lohnen vor allem dann, wenn der Forschungsstand Entfernungsberechnungen zwischen zwei Befunden zulässt. Ausschlaggebend für eine erfolgreiche Einschätzung ist eine ausreichende Menge an Befunden und eine adäquate zeitliche Bestimmung derselben. Bleiben zu viele Befunde undatiert, ergeben sich nicht-prähistorische „Lücken“, die das Bild verzerren. Bei dem vorliegenden Datensatz kann dies für die aunjetitzer Kultur und auch für die Schnurkeramik vermutet werden.  Es ist zu hoffen, dass dieses Problem nur zu einer Musterabschwächung führt^[Musterabschwächung: Definiert nach Schier als ein Muster, dass durch eine selektive Wiedergabe abgeschwächt wird, jedoch in seiner Grundstruktur zu erkennen bleibt (@schier_1990, 44-45).]. 
-
-Problematisch bleibt auch die Nicht-Gleichzeitigkeit von Befunden, die einer Periode zugeordnet werden. Belegt wird diese Diachronität durch Befundüberschneidungen; eine feinere Datierung anhand archäologischer Kriterien ist häufig nicht möglich. Diese Problematik führt dazu, dass die Ergebnisse der Berechnung noch einmal kritisch hinterfragt werden müssen, denn diese Musterüberlagerung kann auf höherer Maßstabsebene eine Fundstelle als besonders dicht bebaut kennzeichnen (Musterverstärkung), auf niedrigerer Maßstabsebene verwischt sie kleinräumige innere Siedlungsgliederungen^[Vgl. @schier_1990, ebd.]. Insbesondere für die Spätbronzezeit, mit den extrem dicht liegenden Befunden lässt sich vermuten, dass hier Befundanhäufungen aufgrund einer mehrphasigen Belegung beobachtet werden^[Allgemein zu der kleinräumigen Verlagerung von (eisenzeitlichen) Siedlungen z. B. @steuer_1988.]. In dieser Periode kommt erschwerend die Nicht-Abgrenzbarkeit spätbronzezeitlicher von ältereisenzeitlichen Befunden hinzu, die das Bild sicherlich noch weiter „verdichtet“ hat. 
-
-Ein anderer Faktor könnte das Ergebnis in eine andere Richtung verzerren: Da die Entfernungen der Befunde als Distanz von Mittelpunkten gemessen wurden, können zwei große Befunde nebeneinander mit größeren Abständen vermerkt werden, als ihre Grenzen voneinander entfernt waren. In Anbetracht der Größenordnungen ist dies vernachlässigbar.
-
-
-```{r }
-Flaech_Dist <- read.csv('../data/raw_data/Entfernung_und_Groesse_Flaechenpolygone.csv')
-
-siedlSnK_dist_df_1000$kultur <-"01 SnK"
-siedlfBZ_dist_df_1000$kultur <-"02 fBZ"
-siedlsBZ_dist_df_1000$kultur <-"03 sBZ"
-siedlsBZ_aeEZ_dist_df_1000$kultur <-"04 äEZ"
-
-
-
-colnames(siedlSnK_dist_df_1000)[colnames(siedlSnK_dist_df_1000) == 'siedlSnK_dist_v'] <- 'dist' # alle gleichbenennen
-colnames(siedlfBZ_dist_df_1000)[colnames(siedlfBZ_dist_df_1000) == 'siedlfBZ_dist_v'] <- 'dist'
-colnames(siedlsBZ_dist_df_1000)[colnames(siedlsBZ_dist_df_1000) == 'siedlsBZ_dist_v'] <- 'dist'
-colnames(siedlsBZ_aeEZ_dist_df_1000)[colnames(siedlsBZ_aeEZ_dist_df_1000) == 'siedlsBZ_aeEZ_dist_v'] <- 'dist'
-
-
-boxplot_vgl <- rbind(siedlSnK_dist_df_1000, siedlfBZ_dist_df_1000, siedlsBZ_dist_df_1000, siedlsBZ_aeEZ_dist_df_1000) # zusammenführen
-```
-
-```{r Flaechenpolygone, fig.height=8, fig.width=11, fig.cap="Entfernungen der Siedlungsbefunde zueinander im Vergleich mit den vom Landesdenkmalamt definierten Flächen."}
-library(ggplot2)
-
-ggplot() + 
-  geom_boxplot(data = boxplot_vgl, aes(kultur, dist)) +
-  geom_boxplot(data = Flaech_Dist, aes(Art, Strecke)) + 
-  ggtitle("")+
-  scale_x_discrete(labels=c("SnK","fBZ","sBZ", "äEZ", "Abstände \n zw. Flächen", "Längste Flächen- \n seite"))+
-  theme(axis.title.x = element_blank())+
-   ylab("Meter") 
-```
-
-```{r}
-ggsave("../figures/Abb9.jpeg", 
-       width = 20, 
-       height = 15, 
-       units = "cm",
-       dpi = 300)
-
-ggsave("../figures/Abb9.svg", 
-       width = 20, 
-       height = 15, 
-       units = "cm")
-
-ggsave("../figures/Abb9.pdf", 
-       width = 20, 
-       height = 15, 
-       units = "cm")
- 
-Flaechen_Distanzen <- subset(Flaech_Dist, Flaech_Dist$Art=="Entfernung") #für das da in-text
-Flaechen_Laenge <- subset(Flaech_Dist, Flaech_Dist$Art=="Fläche")
-
-```
-
 Es bleibt die Frage inwieweit die von dem Landesdenkmalamt ausgewiesenen Grabungsflächen mit diesen Ergebnissen zusammenhängen. Entsprechen die ausgewiesenen Flächen den vorgeschlagenen Fundstellengrößen?
 Da der untersuchte Transekt mit ca. 40 m recht schmal ist, werden die längsten Seiten der Flächen genommen - dies stellt etwa den größtmöglichen Abstand zwischen zwei Befunden auf einer vom Landesdenkmalamt definierten Fundstelle dar - und mit den Distanzen zwischen den Befunden verglichen (siehe Abb. \@ref(fig:Flaechenpolygone)). Hinzugenommen wird auch der Abstand zwischen zwei Flächen. Die Definition der Flächen erfolgte durch das Landesdenkmalamt nach einer harten Prospektion (s. o.), insofern galt für dieses Fallbeispiel die Annahme, dass in den Lücken zwischen den einzelnen Flächen keine Befunde vorkommen.
 
@@ -961,6 +961,15 @@ Die durch die kumulative Entfernungsverteilung errechneten Siedlungsgrößen (si
 Die seltenen Abstände zwischen 350 und 541 m scheinen nicht von den Abständen zwischen den Flächen beeinflusst worden zu sein. Hier liegt der Median bei `r median(Flaechen_Distanzen$Strecke)` m. Die Ausgrabungsflächen konstruieren folglich nicht die Abstände zwischen Siedlungen. Dies ist sicherlich dadurch gegeben, dass die Berechnungen diachron differenziert wurden, die Ausgrabungsflächen jedoch nicht. Das oben beschriebene Problem der Fundplätze und Fundstellen spiegelt sich hier deutlich wieder. 
 
 Das heißt auch, dass das Modifiable Area Unit Problem^[„Das Modifiable Areal Unit  Problem  (Problem der veränderbaren Gebietseinheit) oder abgekürzt MAUP beschreibt die Anfälligkeit der  Ergebnisse  von kartographischen oder statistischen Analysen und jeder Form von räumlicher Modellierung gegenüber der Definition  der untersuchten Raumeinheiten“ (@madelin_2009, 645). In der archäologischen Literatur diskutiert zuletzt von Harris (-@harris_2006, 48-50).] bei der fundplatzübergreifenden Betrachtung von Befunden nicht greift.
+
+##Ü2# Einschränkende Beobachtungen 
+
+Die dargelegten räumlichen Untersuchungen lohnen vor allem dann, wenn der Forschungsstand Entfernungsberechnungen zwischen zwei Befunden zulässt. Ausschlaggebend für eine erfolgreiche Einschätzung ist eine ausreichende Menge an Befunden und eine adäquate zeitliche Bestimmung derselben. Bleiben zu viele Befunde undatiert, ergeben sich nicht-prähistorische „Lücken“, die das Bild verzerren. Bei dem vorliegenden Datensatz kann dies für die aunjetitzer Kultur und auch für die Schnurkeramik vermutet werden.  Es ist zu hoffen, dass dieses Problem nur zu einer Musterabschwächung führt^[Musterabschwächung: Definiert nach Schier als ein Muster, dass durch eine selektive Wiedergabe abgeschwächt wird, jedoch in seiner Grundstruktur zu erkennen bleibt (@schier_1990, 44-45).]. 
+
+Problematisch bleibt auch die Nicht-Gleichzeitigkeit von Befunden, die einer Periode zugeordnet werden. Belegt wird diese Diachronität durch Befundüberschneidungen; eine feinere Datierung anhand archäologischer Kriterien ist häufig nicht möglich. Diese Problematik führt dazu, dass die Ergebnisse der Berechnung noch einmal kritisch hinterfragt werden müssen, denn diese Musterüberlagerung kann auf höherer Maßstabsebene eine Fundstelle als besonders dicht bebaut kennzeichnen (Musterverstärkung), auf niedrigerer Maßstabsebene verwischt sie kleinräumige innere Siedlungsgliederungen^[Vgl. @schier_1990, ebd.]. Insbesondere für die Spätbronzezeit, mit den extrem dicht liegenden Befunden lässt sich vermuten, dass hier Befundanhäufungen aufgrund einer mehrphasigen Belegung beobachtet werden^[Allgemein zu der kleinräumigen Verlagerung von (eisenzeitlichen) Siedlungen z. B. @steuer_1988.]. In dieser Periode kommt erschwerend die Nicht-Abgrenzbarkeit spätbronzezeitlicher von ältereisenzeitlichen Befunden hinzu, die das Bild sicherlich noch weiter „verdichtet“ hat. 
+
+Ein anderer Faktor könnte das Ergebnis in eine andere Richtung verzerren: Da die Entfernungen der Befunde als Distanz von Mittelpunkten gemessen wurden, können zwei große Befunde nebeneinander mit größeren Abständen vermerkt werden, als ihre Grenzen voneinander entfernt waren. In Anbetracht der Größenordnungen ist dies vernachlässigbar.
+
 
 ##Ü2# Zusammenfassung
 
