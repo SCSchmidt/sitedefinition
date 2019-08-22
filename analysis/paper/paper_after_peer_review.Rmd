@@ -160,7 +160,7 @@ Diese Herangehensweise ist nur bei sesshaften Gesellschaften möglich, da „geb
 
 Für Funde ist die kleinste räumliche Einheit, in der sie interpretiert werden können, wie oben dargelegt, bereits in den 1970er Jahren aufgebrochen worden. Die *off-* oder *non-site*-Archäologie wurde entwickelt, um die Verteilung von Funden unabhängig der Fundstellen zu untersuchen. Die Arbeit mit Befunden stellt einen Versuch dar, den Einschränkungen von Prospektionsbegehungen durch eine andere Quellengattung entgegenzuwirken. 
 
-Dabei wird, ähnlich wie in der *off-site*-Archäologie für Funde, davon ausgegangen, dass sich archäologische Befunde wie eine Decke im Raum ausbreiten. Der Befund entsteht erst wenn in den Boden eingegriffen wird. Dadurch kann mit ihm keine flüchtige Aktion wie mit einem Artefakt konnotiert werden, welches im Vorbeigehen verloren, weggeworfen oder fallen gelassen werden kann^[Die meisten Arbeiten, die sich mit der Entwicklung der *off-* oder *non-site*-Archäologie beschäftigt haben, stammen aus der Erforschung von Jäger- und Sammler-Gesellschaften anhand von Flurbegehungen (vgl. @gallant_1986, 409). Eine Untersuchung von Befunden war daher weder vorgesehen noch möglich.]. Die Grundannahme ist, dass „Befunde und Funde, die sich nahe beieinander befinden, bilden tendenziell eher eine strukturelle oder funktionale Einheit als Befunde, die weit auseinander liegen“. Sie erst lässt eine Fundstellen- oder *site*-Definition und ihre Interpretation als Siedlung oder Gräberfeld erst zu. 
+Dabei wird, ähnlich wie in der *off-site*-Archäologie für Funde, davon ausgegangen, dass sich archäologische Befunde wie eine Decke im Raum ausbreiten. Der Befund entsteht erst wenn in den Boden eingegriffen wird. Dadurch kann mit ihm keine flüchtige Aktion wie mit einem Artefakt konnotiert werden, welches im Vorbeigehen verloren, weggeworfen oder fallen gelassen werden kann^[Die meisten Arbeiten, die sich mit der Entwicklung der *off-* oder *non-site*-Archäologie beschäftigt haben, stammen aus der Erforschung von Jäger- und Sammler-Gesellschaften anhand von Flurbegehungen (vgl. @gallant_1986, 409). Eine Untersuchung von Befunden war daher weder vorgesehen noch möglich.]. Die Grundannahme ist, dass „Befunde und Funde, die sich nahe beieinander befinden, tendenziell eher eine strukturelle oder funktionale Einheit bilden als Befunde, die weit auseinander liegen“. Sie erst lässt eine Fundstellen- oder *site*-Definition und ihre Interpretation als Siedlung oder Gräberfeld zu. 
 
 Bodeneingriffe geschehen durchaus auch außerhalb von Siedlungen oder Gräberfeldern. Horte sind bekannt, im Jagd- und Landwirtschaftskontext sind zudem Fallen, Zwischenlager und ähnliches vorstellbar und z. T. belegt^[Siehe z. B. @szedeli_2006, @eckmeier_2017.]. Die zugrunde liegende Handlung ist jedoch zeitaufwendiger, intensiver und - dankenswerterweise für die Archäologie - permanenter. Nichtsdestotrotz sind auch für die Identifikation von Siedlungen anhand von Befunden quantitative und qualitative  Merkmale notwendig^[Vergl. @malmer_1962 und siehe oben.]. Während als Qualitativmerkmale der Ausschluss gelten soll, dass es sich um einen Grab- oder Hortbefund handelt, wird den quantitativen Merkmalen nachgegangen. Insbesondere soll betrachtet werden, in welchen räumlichen Zusammenhängen Befunde stehen müssen, um als zusammengehörig definiert werden zu können. Die Ergebnisse sollen herangezogen werden, um die von Malmer, Linke und Schirren geforderte räumliche Abgrenzbarkeit kulturspezifisch in Abständen von Siedlungen zueinander zu definieren. Mischka schlägt eine ähnliche Vorgehensweise vor, allerdings als Versuch, Wechselsiedlungen ausfindig zu machen: „Es kann versucht werden, Regelabstände zwischen Befunden einer Siedlung einerseits und zwischen Befunden benachbarter Siedlungen andererseits zu vergleichen. Auch dies kann nur eine Annäherung sein, da sich ja im Laufe der Zeit ursprünglich größere Lücken zwischen Siedlungen später füllen konnten, die bei der Ausgrabung alle gleichzeitig erscheinen würden“^[@mischka_2007, 50.]. 
 
@@ -182,12 +182,12 @@ Zur Abgrenzung der Fundstellen findet das Konzept von Plog et al. 1978 Anwendung
 
 Der Begriff der „Dichte“ wird häufig als Anzahl oder Menge pro Fläche definiert^[„Density is defined as the measure of **something** in a certain **amount** of space” (@nakoinz_2016, 68).]. An dieser Stelle soll jedoch als Dichtemaß die Entfernung zwischen Punkten gewählt werden. Dieses Maß ist auch aus Clustererkennungsanalysen zur Ähnlichkeitsbestimmung bekannt^[@baxter_2015, 152-153.]. 
 
-Die Entfernungsberechnungen von den Mittelpunkten der Polygone schwächen die Verzerrung ab, welche die den taphonomischen Prozessen unterworfene Form der Befunde hervorgerufen haben könnte. Zwei große Befunde nebeneinander werden, da sie nur als Punkte dargestellt werden, mit größeren Abständen vermerkt, als ihre Grenzen voneinander entfernt waren. In Anbetracht des Maßstabs sind diese systematischen Fehler, die durch die Reduktion von Befunden auf einen Mittelpunkt entstehen, vernachlässigbar. 
+Die Polygone, die die Befunde beschreiben, können nur einen bestimmten Zustand des Befundes abbilden. Dieser ist taphonomischen Prozessen unterworfen, kann sich also z. B. durch Erosion oder Auspflügen verändern. Diese Verzerrung wird dadurch abgeschwächt, dass mit den Mittelpunkten der Polygone gearbeitet wird. Eine Folge davon ist, dass zwischen besonders großen Befunden ein deutlich größerer Abstand berechnet wird, als ihre Grenzen *in realitas* voneinander entfernt waren. In Anbetracht des Maßstabs sind diese systematischen Fehler, die durch die Reduktion von Befunden auf einen Mittelpunkt entstehen, vernachlässigbar. 
 
-Als Entfernungsberechnung werden Distanzmatrizen zwischen den Befunden einer Zeitstellung  ermittelt. Eine Distanzmatrix zeigt die Entfernungen zwischen allen Punkten einer Verteilung. Diese Entfernungsmatrix wird umgewandelt in eine Tabelle, die die Entfernungen zwischen zwei Befunden darstellt (siehe Abb. 1).
+Als Entfernungsberechnung werden Distanzmatrizen zwischen den Befunden einer Zeitstellung ermittelt. Eine Distanzmatrix zeigt die euklidische Distanz zwischen allen Punkten einer Verteilung. Diese Matrix wird umgewandelt in eine Tabelle, die die Entfernungen zwischen zwei Befunden darstellt (siehe Abb. 1).
 
 
-![Figure @Distanzmatrizen_erklärt: Eine Distanzmatrix ist zuerst eine Zusammenstellung der Distanzen zwischen allen Befunden in Matrix-Form. Sie wurde zur weiteren Analyse in eine tabellarische Form überführt, in der die Entfernungen zwischen den Befunden einzeln untereinander gelistet wurden.](../figures/Abb1_was_sind_distanzmatrizen.jpg)
+![Figure @Distanzmatrizen_erklärt: Eine Distanzmatrix ist zuerst eine Zusammenstellung der Distanzen zwischen allen Befunden in Matrix-Form. Sie wurde zur weiteren Analyse in eine tabellarische Form überführt, in der die Entfernungen zwischen den Befunden einzeln untereinander gelistet wurden.](../figures/Abb1_was_sind_distanzmatrizen_2.jpg)
 
 Die entstandenen Datenreihen der absoluten Entfernungen aller gleichdatierten Befunde zueinander werden zur Erfassung von Siedlungsgrößen und -abständen auf zwei unterschiedliche Art und Weisen modelliert:
 
@@ -219,7 +219,7 @@ df <- df[-1,]
 # Faktor für ggplot
 
 library(ggplot2)
-ggplot()+
+g1 <- ggplot()+
   geom_density(aes(x = v), bw = 1)+ # eigentliche Dichtefunktion
   geom_point(aes(x = v, y = 0), size = 2)+  # gemessene Werte abtragen
   geom_line(aes(x = df$x, y = df$y, group = df$i),linetype = "dashed" )+ # Dichtefunktionen über den Punkten malen
@@ -232,6 +232,41 @@ scale_x_continuous(breaks =0:8,
   name = "Entfernungen in m")+
   scale_y_continuous(name = "Dichte")+
   theme_classic()
+
+
+
+# dataframe mit den ersten Dichtewerten
+z2 <- rnorm(n = 1000, mean = 0, sd = 1)
+# leeren dataframe
+df2 <- NA
+
+
+
+for (i in v)
+{
+  x <- z2 + i # x-Werte anpassen = Dichtefunktion verschieben
+  y <- dnorm(z2, sd = 0.2)/length(v) # Dichtefunktion durch Anzahl von Werten von v teilen, damit alle zusammenaddiert unter der Funktion 1 ergeben
+  i <- rep(as.factor(i), 1000) # Den Wert als Marker benutzen, 1000mal wiederholen, damit er die gleiche Länge wie der ganze dataframe hat
+  df2 <- rbind(df2, data.frame(x,y,i)) # neu kreiierte rows an den bisherigen dataframe unten rankleben
+}
+
+df2 <- df2[-1,]
+
+g2 <- ggplot()+
+  geom_density(aes(x = v), bw = 0.2)+ # eigentliche Dichtefunktion
+  geom_point(aes(x = v, y = 0), size = 2)+  # gemessene Werte abtragen
+  geom_line(aes(x = df2$x, y = df2$y, group = df2$i),linetype = "dashed" )+ # Dichtefunktionen über den Punkten malen
+  geom_segment(aes(x = v, y = 0, xend = v, yend = max(df2$y, na.rm = TRUE)), # Verbindungslinie zwischen gemessenen Werten und höchstem Punkt der Verteilung
+               linetype="dotted",
+               color = "grey",
+               size=0.5)+
+scale_x_continuous(breaks =0:8,
+  labels = 0:8,
+  name = "Entfernungen in m")+
+  scale_y_continuous(name = "Dichte")+
+  theme_classic()
+
+ggsave("../figures/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, height = 15, units = "cm", arrangeGrob(g1, g2))
 
 ggsave("../figures/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, height = 15, units = "cm")
 
