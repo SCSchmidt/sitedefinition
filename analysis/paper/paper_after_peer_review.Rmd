@@ -20,14 +20,14 @@ und Besiedlungsdichte in einem Transekt im Mittelelbe-Saale-Gebiet“, die im M�
 
 #Ü1# Einleitung
 
-Nach Eggert bildet die Fundstelle „die zentrale Größe aller Bemühungen, die archäologischen Hinterlassenschaften räumlich zu ordnen“^[@eggert_2005, 270.]. Die räumliche Abgrenzung von Fundstellen, Fundorten oder Fundplätzen ist grundlegend für siedlungs- und landschaftsarchäologische Arbeiten, da so neu aufgedeckte Funde und Befunde entweder einer bestehenden Fundstelle zugewiesen werden können oder eine neue definieren. Die räumliche Begrenzung wird dabei aus den bekannten Funden oder Befunden ermittelt. Bisherige siedlungsarchäologische Arbeiten kommen bei diesem Schritt stets zu unterschiedlichen Annahmen darüber, was ein angemessener Abstand  zwischen zwei zeitgleichen Funden, ist, um eine neue Fundstelle zu dekarieren.^[Siehe z. B. @malmer_1962: 200 m, ebd., 258 ; @linke_1976: „mehrere[n] Dekameter[n]“, ebd. 8; @mischka_2007: weniger als 50 m, ebd. 49-50.]. 
-@malmer_1962 konstatiert, dass dieser Wert eigentlich auf einem „empirischen Studium“^[@malmer_1962, 258.] basieren sollte und Schirren weist darauf hin, dass dabei ein kulturspezifisches Vorgehen von Nöten ist^[@schirren_1997, 30].
+Nach Eggert bildet die Fundstelle „die zentrale Größe aller Bemühungen, die archäologischen Hinterlassenschaften räumlich zu ordnen“^[@eggert_2005, 270.]. Die räumliche Abgrenzung von Fundstellen, Fundorten oder Fundplätzen ist grundlegend für siedlungs- und landschaftsarchäologische Arbeiten, da so neu aufgedeckte Funde und Befunde entweder einer bestehenden Fundstelle zugewiesen werden können oder eine neue definieren. Die räumliche Begrenzung wird dabei aus den bekannten Funden oder Befunden ermittelt. Bisherige siedlungsarchäologische Arbeiten kommen bei diesem Schritt stets zu unterschiedlichen Annahmen darüber, was ein angemessener Abstand  zwischen zwei zeitgleichen Funden, ist, um eine neue Fundstelle zu dekarieren^[Siehe z. B. @malmer_1962: 200 m, ebd., 258 ; @linke_1976: „mehrere[n] Dekameter[n]“, ebd. 8; @mischka_2007: weniger als 50 m, ebd. 49-50.]. 
+@malmer_1962 konstatiert, dass dieser Wert eigentlich auf einem „empirischen Studium“^[@malmer_1962, 258.] basieren sollte und Schirren weist darauf hin, dass dabei ein kulturspezifisches Vorgehen von Nöten ist^[@schirren_1997, 30.].
 
 An dieser Stelle setzt diese Arbeit an und verfolgt die Frage, wie weit Funde oder Befunde zu dem nächsten entfernt sein müssen, um eine neue Fundstelle zu markieren. Dafür wurde eine geostatistische Methode zur Schätzung von Siedlungsgrößen und -abständen anhand von Grabungsergebnissen einer Transektgrabung entwickelt.
 
 Ein Problem dabei ist, dass die Begriffe Fundstelle, Fundort oder Fundplatz weder in der deutschsprachigen noch anglophonen Archäologie universell definiert sind^[Vgl. @doneus_2013, 122; @dunnell_1992, 21.]. 
 
-In der deutschsprachigen Archäologie konzentriert sich die Debatte auf den Begriff der Siedlung mehr als auf den des Fundplatzes und darauf, wie diese zu erkennen und abzugrenzen sind^[Siehe z. B. @malmer_1962; @nelson_1988; @schirren_1997, @mischka_2007. ]. In der englischsprachigen Forschung wurde die Bedeutung von *site* insbesondere seit den 1970er Jahren ausführlich debattiert^[Unter anderem: @thomas_1975; @foley_1981; @dunnell_1992; @binford_1992; @alcock_1994; @fentress_2000; @de_haas_2012.]. Hier wurden Ansätze entwickelt, deren Ziel es war, die Verteilung archäologischer Funde in der Landschaft unabhängig von Fundstellen zu untersuchen^[@thomas_1975; @foley_1981]. Mit dieser *non-* oder *off-site*-Archäologie wurde einerseits das Vorhandensein von *sites* und andererseits der Nutzen des Begriffs für die Landschaftsarchäologie allgemein in Frage gestellt^[@thomas_1975; @dunnell_1992.].  
+In der deutschsprachigen Archäologie konzentriert sich die Debatte auf den Begriff der Siedlung mehr als auf den des Fundplatzes und darauf, wie diese zu erkennen und abzugrenzen sind^[Siehe z. B. @malmer_1962; @nelson_1988; @schirren_1997, @mischka_2007. ]. In der englischsprachigen Forschung wurde die Bedeutung von *site* insbesondere seit den 1970er Jahren ausführlich debattiert^[Unter anderem: @thomas_1975; @foley_1981; @dunnell_1992; @binford_1992; @alcock_1994; @fentress_2000; @de_haas_2012.]. Hier wurden Ansätze entwickelt, deren Ziel es war, die Verteilung archäologischer Funde in der Landschaft unabhängig von Fundstellen zu untersuchen^[@thomas_1975; @foley_1981.]. Mit dieser *non-* oder *off-site*-Archäologie wurde einerseits das Vorhandensein von *sites* und andererseits der Nutzen des Begriffs für die Landschaftsarchäologie allgemein in Frage gestellt^[@thomas_1975; @dunnell_1992.].  
 
 Da im Rahmen der Methodenentwicklung auf theoretische Überlegungen zu Siedlungen und Fundstellen zurückgegriffen wird, wird am Beginn der Arbeit die forschungsgeschichtliche Entwicklung der Begriffe Fundort, Fundstelle und Siedlung sowie *site*  dargelegt und ihre unterschiedlichen Nutzungen reflektiert. 
 Anschließend wird die Methode vorgestellt, die Siedlungsgrößen und -abstände anhand von Befunddichten zu eruieren versucht, und exemplarisch anhand von Ausgrabungsergebnissen entlang der B6n nahe der Kreisstadt Köthen, Sachsen-Anhalt, vorgeführt. Die Ergebnisse werden in den Forschungsstand eingebunden und abschließend kritisch diskutiert.
@@ -48,7 +48,7 @@ library(bookdown)
 
 ```
 
-#Ü1# Reflexionen über die Begriffe Fundstelle, Siedlung und *site*
+#Ü1# Reflexionen über die Begriffe Fundort, Fundplatz, Fundstelle, Siedlung und *site*
 
 Zwar kann nicht behauptet werden, dass sich die deutsch- und englischsprachige Forschung nicht gegenseitig befruchtet, dennoch lassen sich die zwei Forschungstraditionen besser nacheinander darstellen. Es wird sich folglich erst auf die deutsche und danach auf die englischsprachige (v. a. amerikanische) Forschungsgeschichte zu den relevanten Begriffen bezogen.
 
@@ -86,7 +86,7 @@ Eine Siedlung ist ein Ort, an dem Menschen leben^[So oder ähnlich definiert z. 
 Eine Siedlung kann ein Einzelhof sein, der als alleinstehende Betriebseinheit definiert wird. Treten mehrere Höfe gemeinsam auf, kann es sich um einen Weiler oder ein Dorf handeln, die sich vor allem über unterschiedliche Größen definieren, häufig, ohne dass exakte Zahlen genannt werden^[In Norwegen wird ein Weiler als aus zwei bis sechs Einzelhöfen in einem Abstand von 100 m bestehend, definiert (@loken_2005). Solche Abstandskriterien werden aber in den skandinavischen Ländern zunehmend kritisch betrachtet (@lund_2005, @carlie_2005).]. 
 Als Kriterium für ein Dorf gilt dabei nicht allein die Nähe zusammenstehender Höfe, sondern gemeinsam genutzte Strukturen wie z. B. Brunnen, Wege, Wälder, Zäune und Befestigungen^[@jager_2005, 83.]. Diese geographisch-historische Definition wird in der archäologische Forschung übernommen, da sich solche gemeinsamen Einrichtungen zum Teil fassen lassen^[@jankuhn_2005, 94.].
 
-Bei der Identifikation von Siedlungen gibt es nach Malmer Qualitäts- und Quantitätsmerkmale zu unterscheiden. Als Qualitätskriterium sieht er den Ausschluss, dass der Fund aus einem Grab- oder Depotkontext stammt, während sein minimales Quantitätskriterium eine einzelne Scherbe ist^[@malmer_1962, 256-258.]. Dies wird von Nelson entschieden als zu wenig zurückgewiesen^[@nelson_1988, 215-216.] und auch von anderen Bearbeitern kritisch gesehen^[@schirren_1997, 30-31; @hecht_2007, 29-33.]. Schirren stellt fest, dass dabei kulturspezifisch vorgegangen werden muss: „Definitionen von „Siedlung“ [..] aus Gebieten mit vergleichbaren naturräumlichen Voraussetzungen und Überlieferungsbedingungen“^[@schirren_1997, 30.] sollten herangezogen werden. Im Gegensatz zu einer quantitativen Ausrichtung in der englischsprachigen Diskussion überwiegt in deutschsprachigen Arbeiten zur Identifikation von Siedlungen die qualitative Auswertung des Fundmaterials. So wird häufig ein besonderer Fokus auf die Artefaktspektren gelegt, die eine Siedlung definieren sowie betont, dass erst die Befunderkennung eine sichere Identifikation erlaubt^[z. B. @linke_1976, 8; @heege_1989, 63-66; @schirren_1997, 31; @mischka_2007, 49.]. Ebenso gilt eine räumliche Abgrenzbarkeit^[@schirren_1997, 31.], die Linke mit „mehreren Dekametern“ bezeichnet^[„Treten in einer Verbreitung von mehreren Dekametern Keramikreste, Geräte oder deren Bruchstücke auf, so scheint es möglich zu sein, von diesem Fundplatz auch bei geringer Fundzahl als Siedlungplatz zu sprechen“ (@linke_1976, 8).]. Malmer definiert explizit einen Minimalabstand von 200 m zwischen zwei Funden, der zwei unterschiedliche Siedlungen oder Gräberfelder denotiert^[@malmer_1962, 258]. Zur Erläuterung dieses Werts führt er an: „Die Bestimmung derselben müsste von Rechts wegen auf einem empirischen Studium der Häuser, Höfe und Dörfer der Streitaxtkultur aufbauen“^[@malmer_1962, 258.], da diese zur Zeit aber noch fehlten, müssten allgemeine Überlegungen dafür herangezogen werden. Doris Mischka fasst Befunde und Funde in einem Abstand von weniger als 50 m zusammen, die zeitgleich datiert wurden und nicht durch topographische Besonderheiten getrennt liegen. Sie macht zudem auf das Problem der Wechselsiedlungen aufmerksam, deren Abfolge archäologisch nicht zu fassen sind, wenn die Datierungsmethoden gröber sind als die Belegungsdauer, wodurch Siedlungen archäologisch gesehen größer erscheinen können als sie waren^[@mischka_2007, 49-50.]. 
+Bei der Identifikation von Siedlungen gibt es nach Malmer Qualitäts- und Quantitätsmerkmale zu unterscheiden. Als Qualitätskriterium sieht er den Ausschluss, dass der Fund aus einem Grab- oder Depotkontext stammt, während sein minimales Quantitätskriterium eine einzelne Scherbe ist^[@malmer_1962, 256-258.]. Dies wird von Nelson entschieden als zu wenig zurückgewiesen^[@nelson_1988, 215-216.] und auch von anderen Bearbeitern kritisch gesehen^[@schirren_1997, 30-31; @hecht_2007, 29-33.]. Schirren stellt fest, dass dabei kulturspezifisch vorgegangen werden muss: „Definitionen von „Siedlung“ [..] aus Gebieten mit vergleichbaren naturräumlichen Voraussetzungen und Überlieferungsbedingungen“^[@schirren_1997, 30.] sollten herangezogen werden. Im Gegensatz zu einer quantitativen Ausrichtung in der englischsprachigen Diskussion überwiegt in deutschsprachigen Arbeiten zur Identifikation von Siedlungen die qualitative Auswertung des Fundmaterials. So wird häufig ein besonderer Fokus auf die Artefaktspektren gelegt^[Schirren nennt z. B. kulturspezifische und phasentypische Funde wie Keramik und Beiltypen, Abfälle aus Produktionsvorgängen wie Trümmer, Abschläge oder Kernsteine und ausgepflügte Befundreste wie verziegelter Lehm oder verbrannte Feldsteine (-@schirren_1997, 31).], die eine Siedlung definieren sowie betont, dass erst die Befunderkennung eine sichere Identifikation erlaubt^[z. B. @linke_1976, 8; @heege_1989, 63-66; @schirren_1997, 31; @mischka_2007, 49.]. Ebenso gilt eine räumliche Abgrenzbarkeit^[@schirren_1997, 31.], die Linke mit „mehreren Dekametern“ bezeichnet^[„Treten in einer Verbreitung von mehreren Dekametern Keramikreste, Geräte oder deren Bruchstücke auf, so scheint es möglich zu sein, von diesem Fundplatz auch bei geringer Fundzahl als Siedlungplatz zu sprechen“ (@linke_1976, 8).]. Malmer definiert explizit einen Minimalabstand von 200 m zwischen zwei Funden, der zwei unterschiedliche Siedlungen oder Gräberfelder denotiert^[@malmer_1962, 258]. Zur Erläuterung dieses Werts führt er an: „Die Bestimmung derselben müsste von Rechts wegen auf einem empirischen Studium der Häuser, Höfe und Dörfer der Streitaxtkultur aufbauen“^[@malmer_1962, 258.], da diese zur Zeit aber noch fehlten, müssten allgemeine Überlegungen dafür herangezogen werden. Doris Mischka fasst Befunde und Funde in einem Abstand von weniger als 50 m zusammen, die zeitgleich datiert wurden und nicht durch topographische Besonderheiten getrennt liegen. Sie macht zudem auf das Problem der Wechselsiedlungen aufmerksam, deren Abfolge archäologisch nicht zu fassen sind, wenn die Datierungsmethoden gröber sind als die Belegungsdauer, wodurch Siedlungen archäologisch gesehen größer erscheinen können als sie waren^[@mischka_2007, 49-50.]. 
 
 Im Gegensatz zu der einfachen Zuweisung „Siedlung“ aufgrund von Prospektionen^[„Das grobe Raster einer weitgehend auf Lesefunden basierenden Untersuchung erlaubt in der Regel keine Aussagen über Fortbestand oder Wüstfallen einzelner Siedlungen, ebensowenig wie über die innere Struktur und Entwicklung“ (@schier_1990, 166).], werden ausgegrabene Siedlungen in verschiedene Arten von Siedlungsformen unterteilt, deren Systematik auf unterschiedlichen Faktoren beruhen können. Möglich ist eine Kategorisierung aufgrund der Lage oder dem Vorhandensein von Befestigungen^[@eggert_2005, 74.] oder auf der Anordnung der Häuser, wie z. B. „Streusiedlung“, „Haufensiedlung“ oder „Zeilensiedlung“^[vgl. @bernbeck_1997, 190; @steuer_2005.]. Die Binnenstruktur einer Siedlung kann auch mit Wohn- und Wirtschaftsbereichen beschrieben werden^[Zusammenfassend: @bernbeck_1997, 183-185.]. Hecht beispielsweise trennt ein „Siedlungsfeld“,  von einem „Wirtschaftsfeld“ und einer „Weide/Rohstoffzone“^[@hecht_2007, 29.].
 
@@ -135,7 +135,7 @@ An der Problematik der Abgrenzbarkeit und, daraus resultierend, der Größe eine
 
 ##Ü2# Zusammenfassung der wichtigsten Vorüberlegungen
 
-Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen^[Siehe z. B. @jankuhn_1977; @dreslerova_2019]. Hier liegt der Fokus auf denen die durch Geländebegehungen erkundet, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht wurden. Die funktionale Interpretation der Fundstelle als Siedlung erfolgt häufig anhand von Artefaktspektren, genauere Analysen können nur anhand von Ausgrabungsergebnissen vorgenommen werden^[@link_1976, 8; @heege_1989, 63-66; @schier_1990, 166; @schirren_1997, 31; @mischka_2007, 49.]. 
+Zur Untersuchung von Siedlungslandschaften werden unterschiedliche archäologische Quellen herangezogen^[Siehe z. B. @jankuhn_1977; @dreslerova_2019]. Hier liegt der Fokus auf denen, die durch Geländebegehungen erkundet, ganz oder teilweise ergraben oder durch Zufallsfunde bekannt gemacht wurden. Die funktionale Interpretation der Fundstelle als Siedlung erfolgt häufig anhand von Artefaktspektren^[@schirren_1997, 31.], genauere Analysen können nur anhand von Ausgrabungsergebnissen vorgenommen werden^[@linke_1976, 8; @heege_1989, 63-66; @schier_1990, 166; @mischka_2007, 49.]. 
 
 Wurde ein Siedlungsort bestimmt, stellt sich die Frage, wie er räumlich abgegrenzt wird, also wie groß er ist. 
 
@@ -201,26 +201,26 @@ v <- c(1.2, 4.7, 4.0, 4.8, 0, 4.3, 6.1, 6.7, 0, 5.9, 6.5, 0, 1.7, 0)
 v <- subset(v, v > 0)
 
 # dataframe mit den ersten Dichtewerten
-z <- data.frame(
-  x = rnorm(n = 1000, mean = 0, sd = 1), y = NA, i= NA
-)
+z <- rnorm(n = 1000, mean = 0, sd = 1)
 # leeren dataframe
 df <- NA
 
+
+
 for (i in v)
 {
-  x <- z$x + i # x-Werte anpassen = Dichtefunktion verschieben
-  y <- dnorm(z$x)/length(v) # Dichtefunktion durch Anzahl von Werten von v teilen, damit alle zusammenaddiert unter der Funktion 1 ergeben
-  i <- rep(i, 1000) # Den Wert als Marker benutzen, 1000mal wiederholen, damit er die gleiche Länge wie der ganze dataframe hat
+  x <- z + i # x-Werte anpassen = Dichtefunktion verschieben
+  y <- dnorm(z)/length(v) # Dichtefunktion durch Anzahl von Werten von v teilen, damit alle zusammenaddiert unter der Funktion 1 ergeben
+  i <- rep(as.factor(i), 1000) # Den Wert als Marker benutzen, 1000mal wiederholen, damit er die gleiche Länge wie der ganze dataframe hat
   df <- rbind(df, data.frame(x,y,i)) # neu kreiierte rows an den bisherigen dataframe unten rankleben
 }
 
+df <- df[-1,]
 # Faktor für ggplot
-df$i <- as.factor(df$i)
 
 library(ggplot2)
 ggplot()+
-  geom_density(aes(x = v), bw = 0.6)+ # eigentliche Dichtefunktion
+  geom_density(aes(x = v), bw = 1)+ # eigentliche Dichtefunktion
   geom_point(aes(x = v, y = 0), size = 2)+  # gemessene Werte abtragen
   geom_line(aes(x = df$x, y = df$y, group = df$i),linetype = "dashed" )+ # Dichtefunktionen über den Punkten malen
   geom_segment(aes(x = v, y = 0, xend = v, yend = max(df$y, na.rm = TRUE)), # Verbindungslinie zwischen gemessenen Werten und höchstem Punkt der Verteilung
@@ -233,7 +233,7 @@ scale_x_continuous(breaks =0:8,
   scale_y_continuous(name = "Dichte")+
   theme_classic()
 
-ggsave("/home/sophie/owncloudBonn/PZ-Artikel/nacharbeiten/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, height = 15, units = "cm")
+ggsave("../figures/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, height = 15, units = "cm")
 
 ```
 
