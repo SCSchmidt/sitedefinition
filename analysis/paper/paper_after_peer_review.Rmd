@@ -274,7 +274,27 @@ ggsave("../figures/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, hei
 
 Zuerst werden sie mit einer Kerndichteschätzung abstrahiert dargestellt. Bei der Kerndichteschätzung wird über jedem Entfernungswert eine Wahrscheinlichkeitsdichtefunktion aufgetragen (siehe Abb. \@ref(fig:Was_ist_eine_Dichteanalyse)), die mit einer bestimmten Bandbreite als steil oder breit beschrieben wird. Wo sich die Dichtefunktionen überlagern, werden sie addiert. Dadurch entsteht eine Kurve, die in den Bereichen, in denen häufig Werte vorkommen höher ausfällt als in anderen. Eine große Bandbreite glättet die entstandene Kurve, eine zu kleine kann ein sehr unruhiges Bild vermitteln^[@baxter_2003, 30-33; @shennan_1997, 29-30.]. Die Kerndichteschätzung zeigt folglich an, welche Bereiche von Befunddistanzen besonders häufig (Maxima) bzw. selten (Minima) beobachtet werden. Die Maxima können dabei als Mindestgrößen von Siedlungen bzw. innere Cluster innerhalb einer Siedlung interpretiert werden. Da diese Entfernungen besonders häufig sind, ist diese eine sinnvolle Größe, um eine archäologische Fläche um einen Fund herum auszuweisen. Minima zeigen hingegen Mindestabstände von Clustern zueinander, da diese Entfernungen von Befunden zueinander besonders selten vorkommen. Es werden so die „weniger dicht mit Befunden belegten Bereiche“ zwischen zwei Anhäufungen modelliert.
 
-Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung (abgetragen an der x-Achse) zu einander aufweisen. Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter (-@nakoinz_2016, 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
+```{r wie funktioniert kumulativ, fig.cap="Bei einer kumulativen Darstellung werden die gemessenen Werte auf der x-Achse abgetragen und der prozentuale Anteil, wie viele Entfernungen diesen oder einen kleineren Wert haben auf der y-Achse abgetragen. Steigt der Graph nicht, so gibt es in diesem Bereich keine Werte, steigt er schnell, gibt es in diesem Bereich besonders viele. Eine Siedlungsgrenze kann dort vermutet werden, wo der Graph über längere Strecken keinen Anstieg hat. Im dargestellten Beispiel sind die Werte aus Abb. 1 und 2 übernommen worden. "}
+v <- sort(v)
+df_v <- NA
+df_v <- data.frame(v)
+df_v$n <- c(1:length(v))
+df_v$prozent <- c(df_v$n/nrow(df_v))
+
+ggplot()+
+  geom_line(data = df_v, aes(x = v, y = prozent))+
+  ggtitle("")+
+  scale_x_continuous(name="Entfernungen", breaks = 1:7, labels = 1:7)+
+  scale_y_continuous(name = "kumulativer Anteil")+
+  theme_classic()
+
+ggsave("../figures/Abb_3_Was_ist_kumulativ.jpg", dpi = 300, width = 20, height = 15, units = "cm")
+
+
+```
+
+
+Die Ausdehnung einer Siedlung soll über die Kumulation der Entfernungswerte aufgezeigt werden. Die Aufsummierung der Häufigkeiten von Distanzmaßen ergibt stets einen Wert, der besagt, wieviele Befunde diese oder eine geringere Entfernung (abgetragen an der x-Achse) zu einander aufweisen (siehe Abb. \@ref(fig:wie funktioniert kumulativ)). Durch die Messung der Entfernungen aller Befunde zu allen Befunden lassen sich die Entfernungen innerhalb verschiedener Cluster betrachten. Gleichzeitig werden Entfernungen zwischen Clustern in der Verteilung sichtbar. Auf diese Weise lässt sich die Mehrstufigkeit von Gruppierungen aufzeigen^[Etwas, das durch eine Nächste-Nachbar-Analyse oder eine Triangulation (angewandt von Zimmermann [-@zimmermann_2004], 55) nicht hätte erfasst werden können. Die G-, F- und Ripley's K-Funktion zur Analyse von Punktgruppierungen, vorgeschlagen von Nakoinz und Knitter (-@nakoinz_2016, 135-144), sind stark von Randeffekten beeinflusst. Aufgrund der Schmalheit der Trasse hätten diese einen großen Anteil an der Analyse und es wurde von der Anwendung dieser Funktionen Abstand genommen.]. Eine „durchschnittliche Größe“ von Siedlungen lässt sich an der Stelle aufzeigen, an der in der Graphik der Anstieg sinkt. Dies bedeutet, dass ab dort weniger gemessene Entfernungen hinzukommen. Zur Vergleichbarkeit der verschiedenen Perioden, für die sehr unterschiedlich viele Befunde bestimmt wurden, werden die kumulativen Häufigkeitswerte auf Prozente normiert.
 
 Es ist sinnvoll, bei der Erzeugung der Graphen sehr weite Entfernungen nicht einzubeziehen, da sie für die Fragestellung irrelevant sind und kleinräumige Entwicklungen so überprägt werden können. Wo die Grenze gezogen wird, kann für die einzelnen Perioden unterschiedlich sein. Dabei sind die berechneten Entfernungen als Radius von einem Befund aus zu verstehen. Da dieser Radius sich in alle Richtungen erstreckt, entspricht der Durchschnitt des entstehenden Kreises der Clustergröße.
 
@@ -340,7 +360,7 @@ Auf der anderen Seite können die Befunde einer Zeitstellung nicht als räumlich
 
 Einschränkend ist zu erwähnen, dass durch jahrhundertelange intensive Landwirtschaft manche Befunde nur noch rudimentär erhalten^[So zum Beispiel ein Befund der Bernburger Kultur (Fpl. 18: Bef. 10079).], andere auf Kuppenlagen eventuell ganz erodiert sind. Die Einmessungen von Befunden in verschiedenen Plana wurden so zusammengeführt, dass die größte Ausdehnung die Form bestimmt. Daraus wurde der Mittelpunkt (geometrischer Schwerpunkt) des Polygons ermittelt.
 
-Ein großer Teil der Befunde mustte undatiert bleiben (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
+Ein großer Teil der Befunde musste undatiert bleiben (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
 
 ##Ü2# Berechnung der Distanzen
 
@@ -454,7 +474,7 @@ CSR_dist_df_1000$prozent <-c(CSR_dist_df_1000$n/nrow(CSR_dist_df_1000)) # macht 
 
 ```
 
-```{r Entfernungsmatrizen_berechnung, message=FALSE, include=FALSE, cache=FALSE}
+```{r Entfernungsmatrizen_berechnung, eval=FALSE, message=FALSE, cache=FALSE, include=FALSE}
 
 p1 <- ggplot() +
   geom_line(data=siedlSnK_dist_df_1000, aes(x=n, y=siedlSnK_dist_v)) +
@@ -505,13 +525,14 @@ ggsave("../figures/Abb4.pdf",
        width = 20, 
        height = 15, 
        units = "cm")
-
+# rausgenommen weil nicht hilfreich
 ```
 
-```{r Entfernungsmatrizen, fig.cap="Darstellung der Distanzmatrizen der einzelnen Perioden. Die Entfernung jeweils zweier Befunde (Befundpaare) zueineinander wird auf der y-Achse abgetragen (aufsteigend geordnet bis 1000 m). Die Information, welche zwei Befunde dies sind, ist in diesem Falle irrelevant und deshalb nicht explizit auf der x-Achse eingetragen.", fig.height=11, fig.width=11, cache=FALSE}
+```{r Entfernungsmatrizen, eval=FALSE, fig.cap="Darstellung der Distanzmatrizen der einzelnen Perioden. Die Entfernung jeweils zweier Befunde (Befundpaare) zueineinander wird auf der y-Achse abgetragen (aufsteigend geordnet bis 1000 m). Die Information, fig.width=11, cache=FALSE, include=FALSE, welche zwei Befunde dies sind, ist in diesem Falle irrelevant und deshalb nicht explizit auf der x-Achse eingetragen.", fig.height=11}
 
 g
 
+#rausgenommen weil nicht hilfreich
 ```
 
 An erster Stelle steht die Berechnung der Distanzen mithilfe von Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden in der Visualisierung auf bis zu 1000 m beschränkt. 
