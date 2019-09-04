@@ -362,7 +362,6 @@ Einschränkend ist zu erwähnen, dass durch jahrhundertelange intensive Landwirt
 
 Ein großer Teil der Befunde musste undatiert bleiben (siehe Tabelle 1). Werden nun die räumlichen Beziehung der Befunde einer Zeitstellung zueinander untersucht, wird dies nur annäherungsweise der urgeschichtlichen Realität entsprechen, da sicher einige undatierten Befunde in eine der untersuchten Perioden gehören. Da Befunde im Gegensatz zu Funden in der Regel nur durch Ausgrabungen aufgenommen und datiert werden können, schränkt dies die Anwendungsmöglichkeit der Methode ein. Luftbildarchäologie und geophysikalische Prospektion können ebenfalls Befunde räumlich verorten, doch fehlt häufig die Möglichkeit, den Befund angemessen funktional zu bestimmen oder zu datieren^[@renfrew_2009, 78-83.]. Der Anwendungsbereich der vorgestellten Methode beschränkt sich aus diesem Grund auf großflächig ergrabene Bereiche, wie sie z. B. in der Braunkohlearchäologie oder auf Trassengrabungen zu finden sind. 
 
-##Ü2# Berechnung der Distanzen
 
 
 ```{r, message=FALSE, include=FALSE, cache=FALSE}
@@ -535,11 +534,11 @@ g
 #rausgenommen weil nicht hilfreich
 ```
 
-An erster Stelle steht die Berechnung der Distanzen mithilfe von Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe. Die Häufigkeiten der Entfernungen werden in der Abbildung \@ref(fig:Entfernungsmatrizen) auf der y-Achse abgetragen. Hier zeigt sich bereits, dass es Unterschiede zwischen den betrachteten Perioden gibt. Die Entfernungen wurden in der Visualisierung auf bis zu 1000 m beschränkt. 
 
 
 
 ##Ü2# Dichtefunktion über die Distanzen
+An erster Stelle steht die Berechnung der Distanzen mithilfe von Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe^[Genutzt wurde hierzu das spatstat-Paket von @baddeley_2015.]. 
 
 Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team_2013) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet.
 
