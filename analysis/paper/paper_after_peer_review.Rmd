@@ -833,7 +833,7 @@ werte2 <- cbind(werte1, Wendepunkt = c(round(siedlSnK_turn[2]), round(siedlfBZ_t
 library(knitr)
 
 kable(werte2,
-      caption="Ergebnisse der Analysen: Maxima und Minima der Dichtefunktionen sowie Wendepunkte der kumulativen Entfernungsfunktionen")
+      caption="Ergebnisse der Analysen: Maxima und Minima der Dichtefunktionen mit größerer Bandbreite und in Klammern Angaben der Analyse mit geringerer Bandbreite, daraus abgeleitet die minimalen schützenswerten Flächen um einen Fundpunkt, sowie Wendepunkte der kumulativen Entfernungsfunktionen.")
 write.csv2(werte2, "../figures/tabelle2.csv")
 ```
 
