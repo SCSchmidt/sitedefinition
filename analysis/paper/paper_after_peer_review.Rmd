@@ -657,7 +657,7 @@ Das 1. Maximum kann als der Radius gelten, in dem die Befunde einer Periode am h
 
 Das Minimum ist die Entfernung, in welcher die wenigsten Befunde auftauchen. In der Grafik kann man erkennen, dass diese für die ersten drei Perioden in einem Bereich von 100 m beieinander liegen (zwischen 433 und 532 m), während die ältere Eisenzeit in dem Bereich einen Anstieg aufweist und ihr Minimum schon bei 346 m ermittelt werden konnte. 
 
-Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Analyse der Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt^[Damit verkleinern sich die Bandbreiten nach „Silverman's Rule of Thumb“ auf folgende Werte: Für die Schnurkeramik BW = 29,9, für die Frühbronzezeit BW = 24,3; für die Spätbronzezeit BW = 8,63 und die frühe Eisenzeit BW = 8,87.]. 
+Da sich die wenigen Befunde der frühen Bronzezeit im westlichen Drittel des Transekts befinden, kann vermutet werden, dass die vorherige Darstellung mit der Einschränkung auf 1000 m für die Analyse der Frühbronzezeit zu grob ist. Aus diesem Grund werden die Dichtefunktionen noch einmal auf 500 m eingeschränkt dargestellt. Nach „Silverman's Rule of Thumb“ werden die Bandweiten kleiner und damit die Analyse weniger glatt^[Nun werden folgende Werte genutzt: Für die Schnurkeramik BW = 29,9, für die Frühbronzezeit BW = 24,3; für die Spätbronzezeit BW = 8,63 und die frühe Eisenzeit BW = 8,87.]. 
 
 ```{r Distanzmatrizen3, fig.cap="Periodenspezifische Dichtefunktion über die Entfernungen von Siedlungsbefunden zueinander. Entfernungen auf 500 m begrenzt. CSR beschreibt die Zufallsverteilung.", fig.height=8, fig.width=11, message=FALSE, warning=FALSE, cache=FALSE}
 siedlSnK_dist_df_500 <-subset(siedlSnK_dist_df, siedlSnK_dist_df > 0 & siedlSnK_dist_df < 500 )
@@ -838,7 +838,7 @@ write.csv2(werte2, "../figures/tabelle2.csv")
 ```
 
 
-In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt.
+In der Tabelle \@ref(tab:Wendepunkte) werden die Ergebnisse der zwei Analysen zusammengefasst: Die Maximal- und Minimalwerte der Dichtefunktion sowie die Wendepunkte der kumulativen Verteilungen werden für die unterschiedlichen Perioden aufgeschlüsselt. Die minimale Größe der Fläche um einen Befund, die als schützenswert ausgewiesen werden sollte, da in diesem Bereich die meisten Befunde zu erwarten sind, wird ebenfalls abgebildet. Dies ist der doppelte Wert des 1. Maximums der Dichteanalyse.
 
 
 ##Ü2# Vergleich der Befundentfernungen mit Grabungsarealen
