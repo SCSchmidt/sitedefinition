@@ -1,5 +1,5 @@
 ---
-title: "Geostatistische Analyse von Transektdaten: Siedlungsgrößen und Abstände zwischen Siedlungsstandorten"
+title: "Siedlungsgrößen und Abstände zwischen Siedlungsstandorten – eine geostatistische Analyse von Transektdaten"
 author:
   - Schmidt, Sophie C.
 date: "`r format(Sys.time(), '%d %B, %Y')`"
