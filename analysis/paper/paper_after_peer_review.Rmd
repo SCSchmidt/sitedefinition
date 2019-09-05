@@ -8,8 +8,9 @@ output:
     fig_caption: yes
     reference_docx: templates/template.docx
     toc: true
-csl: RGK_archaeology_DGUF.csl
+csl: deutsches-archaeologisches-institut_to_RGK.csl
 bibliography: sitedefinition2.bib
+
 abstract: In mehreren siedlungsarchäologischen Arbeiten wird die Frage aufgeworfen, welchen Abstand zwei Funde mindestens zueinander haben müssen, um zwei unterschiedliche Fundstellen zu denotieren. Seit den 1960er Jahren wird eine empirische Untersuchung zu diesem Thema gefordert. Dieser Beitrag greift die Debatte auf und entwickelt unter Bezugnahme der deutschsprachigen und englischsprachigen Theoriedebatte um die Begriffe „Fundplatz“, „Fundstelle“, „*site*“ und „Siedlung“ eine Methode, die diese Frage zu beantworten sucht. Genutzt wird dafür eine Transektgrabung in Sachsen-Anhalt und die einzelnen dort aufgedeckten Befunde der Schnurkeramik, Frühbronzezeit, Spätbronzezeit und frühen Eisenzeit, um kulturspezifische Aussagen treffen zu können. Die Befunde werden im Sinne der *off-site* Archäologie als sich in der Landschaft kontinuierlich verbreitende Decke angesehen. Die Abgrenzung von Clustern, die Schätzung von Siedlungsgrößen und ihre Abstände zueinander werden mit Hilfe von Kerndichteschätzungen und kumulative Entfernungen berechnet. Damit wird eine Methode der *intra-site* - Analyse auf die *inter-site* Ebene gehoben. Es zeigt sich, dass dies ein gewinnbringender Ansatz ist, der insbesondere bei Straßen- und Pipeline-Grabungen zum Einsatz kommen kann. 
 keywords:   Siedlungsarchäologie, Geostatistik, räumliche Analyse, statistische Programmiersprache R, off-site Archäologie, Transektgrabung, Mitteldeutschland
 highlights:  These are the highlights. 
@@ -228,6 +229,7 @@ g1 <- ggplot()+
                linetype="dotted",
                color = "grey",
                size=0.5)+
+    geom_text(aes(x = 1 , y = 0.2, label = "BW = 1"))+
 scale_x_continuous(breaks =0:8,
   labels = 0:8,
   name = "Entfernungen in m")+
@@ -261,13 +263,14 @@ g2 <- ggplot()+
                linetype="dotted",
                color = "grey",
                size=0.5)+
+  geom_text(aes(x = 1, y = 0.35, label = "BW = 0,2"))+
 scale_x_continuous(breaks =0:8,
   labels = 0:8,
   name = "Entfernungen in m")+
   scale_y_continuous(name = "Dichte")+
-  theme_classic()
+  theme_classic() 
 
-ggsave("../figures/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 20, height = 15, units = "cm", arrangeGrob(g1, g2))
+ggsave("../figures/Abb_2_Was_ist_Dichtefunktion.jpg", dpi = 300, width = 15, height = 15, units = "cm", arrangeGrob(g1, g2))
 
 
 ```
@@ -288,7 +291,7 @@ ggplot()+
   scale_y_continuous(name = "kumulativer Anteil")+
   theme_classic()
 
-ggsave("../figures/Abb_3_Was_ist_kumulativ.jpg", dpi = 300, width = 20, height = 15, units = "cm")
+ggsave("../figures/Abb_3_Was_ist_kumulativ.jpg", dpi = 300, width = 10, height = 10, units = "cm")
 
 
 ```
@@ -537,7 +540,7 @@ g
 
 
 
-##Ü2# Dichtefunktion über die Distanzen
+##Ü2# Kerndichteschätzung der Distanzen
 An erster Stelle steht die Berechnung der Distanzen mithilfe von Entfernungsmatrizen, d. h. der euklidischen Distanz aller Befunde einer Periode zu allen anderen Befunden dieser Zeitstufe^[Genutzt wurde hierzu das spatstat-Paket von @baddeley_2015.]. 
 
 Die Distanzen aller Siedlungsbefunde einer Zeitstellung zueinander sind mit der Dichtefunktion abstrahiert worden. Die hier verwendete Dichtefunktion ist die *density*-Funktion in R^[Pakete: base (@r_core_team_2013) und ggplot2 (@wickham_2016)] mit der Abschätzung der Bandweite „Silverman's Rule of Thumb“, die für jede der Perioden eine eigene Bandweite berechnet.
@@ -557,26 +560,29 @@ ggplot() +
   geom_density(data = CSR_dist_df, aes(x = CSR_dist_df[,1], color = "5 CSR")) +
   ggtitle("")+
   scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+     theme_classic()+
   theme(plot.title = element_text(hjust = 0.5), 
         legend.position="bottom", 
         legend.title=element_blank(),
         plot.margin = margin(10, 20, 10, 10))+
   scale_x_continuous(name="Entfernung der Siedlungsbefunde zueinander (in m)")+
   scale_y_continuous(name="Dichte")
+ 
+
 
 ggsave("../figures/Abb5.jpeg", 
        width = 20, 
        height = 15, 
        units = "cm",
        dpi = 300)
-ggsave("../figures/Abb5.svg", 
-       width = 20, 
-       height = 15, 
-       units = "cm")
-ggsave("../figures/Abb5.pdf", 
-       width = 20, 
-       height = 15, 
-       units = "cm")
+#ggsave("../figures/Abb5.svg", 
+#       width = 20, 
+#       height = 15, 
+#       units = "cm")
+#ggsave("../figures/Abb5.pdf", 
+#       width = 20, 
+#       height = 15, 
+#       units = "cm")
 ```
 
 Es lassen sich zwischen den einzelnen Perioden deutliche Unterschiede feststellen. Während die Befunde der Schnurkeramik offensichtlich in relativ regelmäßigen Abständen über das gesamte Arbeitsgebiet verteilt aufgefunden wurden, liegen alle  frühbronzezeitlichen Befunde in einem Radius von ca. 3000 m zu einander. Die Befunde der späten Bronzezeit und der älteren Eisenzeit liegen größtenteils sehr eng beieinander. Zwei Schwerpunkte zeigen sich, welche über 10 km voneinander entfernt liegen (etwa an dieser Stelle nimmt die Dichte wieder zu). 
@@ -627,6 +633,7 @@ ggplot() +
   geom_density(data = CSR_dist_df_1000, aes(x = CSR_dist_df_1000[,1], color = "5 CSR")) +
   ggtitle("")+
   scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+       theme_classic()+
   theme(legend.position="bottom", 
         legend.title=element_blank(), 
         plot.title = element_text(hjust = 0.5))+
@@ -675,6 +682,7 @@ ggplot() +
   geom_density(data = CSR_dist_df_500, aes(x = CSR_dist_df_500[,1], color = "5 CSR")) +
   theme(legend.title=element_blank())+
   scale_y_continuous(name = "Dichte")+
+       theme_classic()+
   theme(legend.position="bottom", 
         legend.title=element_blank())+
   ggtitle("")+
@@ -745,6 +753,7 @@ ggplot()+
   geom_line(data = CSR_dist_df_1000, aes(x = CSR_dist_v, y = prozent, color="5 CSR"))+
   ggtitle("")+
   scale_color_manual(labels = c("Schnurkeramik", "Aunjetitzer Kultur","Spätbronzezeit","Ältere Eisenzeit", "CSR"), values=c("#577abf", "#55c8c6", "#12ff24", "#DD8935", "#000000"))+
+       theme_classic()+
   theme(legend.position="bottom", 
         legend.title=element_blank())+
   scale_x_continuous(name="Entfernung (auf 1000 m eingeschränkt)")+
@@ -874,6 +883,7 @@ ggplot() +
   geom_boxplot(data = Flaech_Dist, aes(Art, Strecke)) + 
   ggtitle("")+
   scale_x_discrete(labels=c("SnK","fBZ","sBZ", "äEZ", "Abstände \n zw. Flächen", "Längste Flächen- \n seite"))+
+       theme_classic()+
   theme(axis.title.x = element_blank())+
    ylab("Meter") 
 ```
@@ -906,7 +916,7 @@ Flaechen_Laenge <- subset(Flaech_Dist, Flaech_Dist$Art=="Fläche")
 Der Median der längsten Flächenseiten liegt bei `r median(Flaechen_Laenge$Strecke)` m, siehe Abb. \@ref(Flaechenpolygone)), der Median der Abständen zwischen den Flächen ist `r median(Flaechen_Distanzen$Strecke)` m. Diese Werte werden unter dem Kapitel "Diskussion" mit den Analyseergebnissen der einzelnen Kulturen in Verbindung gebracht.
 
 
-##Ü2# Interpretation der Ergebnisse
+##Ü2# Siedlungsarchäologische Interpretation der Ergebnisse
 
 Die hier vorliegenden Ergebnisse mit den Siedlungsgrößenberechnungen anderer Ausgrabungen zu vergleichen, ist schwierig, da großflächige Grabungen selten sind. Ihre vollständige Publikation und die Annahme, dass damit der gesamte Siedlungsbereich erfasst wurde, sind noch seltener^[Vgl. z. B. @bernbeck_1997, 205; @gringmuth-dallmer_1998, 381 ; @hecht_2007, 37.]. Es soll trotzdem für die unterschiedlichen Perioden auszugsweise versucht werden. Der Forderung Schirrens^[S. o., @schirren_1997, 30.] entsprechend, sollen die Vergleiche innerhalb Mitteldeutschlands, und wenn möglich, innerhalb Sachsen-Anhalts erfolgen.
 
@@ -983,18 +993,17 @@ Interessant bleibt es festzuhalten, dass sich durchaus Unterschiede zwischen der
 
 Die Abstraktion der Befunddichte über die Dichte der Entfernungen zueinander ergibt eine Darstellung der Gesamtlage, nicht das Bild einer Siedlung. Aus diesem Modell können Rückschlüsse auf Siedlungsgrößen gezogen werden.
 
-Für die Schnurkeramik zeigt sich eine lockere Verteilung der Befunde in kleine Anhäufungen mit einem Radius von 62 m. Durch den rapiden Abfall des Steigungsgrades der kumulativen Kurve über die Distanzen der Befunde bei knapp 300 m kann hier eine räumliche Abgrenzung vorgenommen werden. Schnurkeramische Siedlungen können folglich auf 124 m - 300 m geschätzt werden. Als minimale um eine Fundstelle ausweisbare Fläche kann der Radius des 1. Maximums empfohlen werden (62 m), da in diesem Umkreis die meisten weiteren Befunde zu erwarten sind. 
+Für die Schnurkeramik zeigt sich eine lockere Verteilung der Befunde in kleine Anhäufungen mit einem Radius von 62 m. Durch den rapiden Abfall des Steigungsgrades der kumulativen Kurve über die Distanzen der Befunde bei knapp 300 m kann hier eine räumliche Abgrenzung vorgenommen werden. Schnurkeramische Siedlungen können folglich auf 124 m - 300 m geschätzt werden. Das Minimum der Kerndichteschätzung der deutet auf einen Siedlungsabstand von ca. 530 m hin. Als minimale um eine Fundstelle ausweisbare Fläche kann der Radius des 1. Maximums empfohlen werden (62 m), da in diesem Umkreis die meisten weiteren Befunde zu erwarten sind.
 
-Die Verteilung der frühbronzezeitlichen Befunde wird durch die Abstände von Hausgrundrissen zueinander dominiert, die zwischen 87 und 127 m voneinander entfernt liegen (zweites lokales Maximum von 95 m) und den enger gruppiert liegenden weiteren Befunden. Deren lokales Maximum von 23 m sollte als minimale Fläche um eine Fundstelle herum ausgewiesen werden. Der Wendepunkt in der kumulativen Distanzenkurve ist bei 219 m deutlich ausgeprägt, ein Wert, der Grabenwerksgrößen aus bekannten aunjetitzer Siedlungen ähnelt. Die Siedlungsgröße wird folglich auf ca. 190-220 m geschätzt.
+Die Verteilung der frühbronzezeitlichen Befunde wird durch die Abstände von Hausgrundrissen zueinander dominiert, die zwischen 87 und 127 m voneinander entfernt liegen (zweites lokales Maximum von 95 m) und den enger gruppiert liegenden weiteren Befunden. Deren lokales Maximum von 23 m sollte als minimale Fläche um eine Fundstelle herum ausgewiesen werden. Der Wendepunkt in der kumulativen Kurve der Distanzen ist bei 219 m deutlich ausgeprägt, ein Wert, der Grabenwerksgrößen aus bekannten aunjetitzer Siedlungen ähnelt. Die Siedlungsgröße wird folglich auf ca. 190-220 m geschätzt. Das Minimum der Kerndichteschätzung liegt bei ca. 430 m. Dieser Wert kann als Abstand zwischen zwei Siedlungen verstanden werden und wird durch eine vergleichbaren Grabung bestätigt. 
 
-In der Spätbronzezeit liegen Befunde sehr dicht, wobei bei einem Radius von 33 m die größten Konzentrationen zu erwarten sind. Denkmalpflegerisch sollte also mindestens diese Fläche als geschützt aufgenommen werden. 
-Kumulativ zeigt sich ein recht breiter Bereich zwischen 117 und 375 m, in dem der Anstieg stetig langsam abnimmt. Hier zeigt sich vermutlich eine Mehrperiodigkeit, die zu einer schlechten Trennbarkeit verschiedener Areale führt. Es lässt sich vermuten, dass Befundanhäufungen aufgrund einer mehrphasigen Belegung beobachtet werden. 
+In der Spätbronzezeit liegen Befunde sehr dicht, wobei bei einem Radius von 33 m die größten Konzentrationen zu erwarten sind. Denkmalpflegerisch sollte also mindestens diese Fläche als geschützt aufgenommen werden. Kumulativ zeigt sich ein recht breiter Bereich zwischen 117 und 375 m, in dem der Anstieg stetig langsam abnimmt. Ebenso zeigt das Minimum der Kerndichteschätzung einen im Vergleich hohen Dichtewert. Hier zeigt sich vermutlich eine Mehrphasigkeit, die zu einer schlechten Trennbarkeit verschiedener Areale führt. Es lässt sich vermuten, dass Befundanhäufungen aufgrund einer mehrmaligen Besiedlung des Platzes beobachtet werden. Ein Siedlungsabstand von ca. 470 m, wie ihn die Kerndichteschätzung vorschlägt, kann schwer überprüft werden.
 
-Die ältereisenzeitlichen Befunde zeigen in der Dichteanalyse mit kleineren Bandbreiten zwei lokale Maxima. Deren erstes bei 67 m kann als minimale schützenswerte Fläche um eine Fundstelle angesehen werden. Insgesamt streuen sie deutlich weiter als die spätbronzezeitlichen Befunde, mit einem maximalen Dichtewert von 92 m und dem Wendepunkt der kumulativen Kurve bei 285 m. Hier und bei den spätbronzezeitlichen Befunden ist zu vermuten, dass die schlechte Differenzierbarkeit der beiden Perioden eine entscheidende Rolle spielt.
+Die ältereisenzeitlichen Befunde zeigen in der Dichteanalyse mit kleineren Bandbreiten zwei lokale Maxima. Deren erstes bei 67 m kann als minimale schützenswerte Fläche um eine Fundstelle angesehen werden. Insgesamt streuen sie deutlich weiter als die spätbronzezeitlichen Befunde, mit einem maximalen Dichtewert von 92 m und dem Wendepunkt der kumulativen Kurve bei 285 m. Hier und bei den spätbronzezeitlichen Befunden ist zu vermuten, dass die schlechte Differenzierbarkeit der beiden Perioden eine entscheidende Rolle spielt. Dafür kann auch das geringe Minimum der Kerndichteschätzung von ca. 350 m ein Indiz sein, das für einen Abstand von zwei gleichzeitigen Siedlungen doch sehr nah erscheint. 
 
-Die vorgestellten Analysen zur Abgrenzung von Fundstellen zeigen unterschiedliche Werte für die betrachteten Perioden. Dies ist durchaus zu erwarten. Auf diese Weise lassen sich unterschiedliche Siedlungsverhalten beobachten, wie es auch durch vorangegangene Arbeiten bekannt ist. Mit diesen Arbeiten wurden die Ergebnisse korreliert. Dabei zeigten sich gute Übereinstimmungen. 
+Die vorgestellten Analysen zur Abgrenzung von Fundstellen zeigen unterschiedliche Werte für die betrachteten Perioden. Dies ist durchaus zu erwarten. Auf diese Weise lassen sich unterschiedliche Siedlungsverhalten beobachten, wie es auch durch vorangegangene Arbeiten bekannt ist. Mit diesen Arbeiten wurden die Ergebnisse korreliert. Dabei zeigten sich gute Übereinstimmungen.
 
-Interessant ist, dass die Minima der jeweiligen Verteilungen - das heißt, der Abstand, der besonders selten zwischen den Befunden vorkommt - meistens in einem relativ ähnlich großen Bereich (zwischen 430 und 540 m) liegen. In dieser Arbeit werden diese Werte als Minimalabstände zwischen zwei Siedlungen interpretiert.
+Interessant ist, dass die Minima der jeweiligen Verteilungen - das heißt, der Abstand, der besonders selten zwischen den Befunden vorkommt – (mit Ausnahme der Befunde der älteren Eisenzeit) in einem relativ ähnlich großen Bereich, zwischen 430 und 540 m liegen. In dieser Arbeit werden diese Werte als Minimalabstände zwischen zwei Siedlungen interpretiert.
 
 
 
@@ -1012,6 +1021,7 @@ Für die Abgrenzung von Fundstellen anhand von Fund- oder Befundstreuungen ist d
 Insgesamt wird durch diese Betrachtung des aufgenommenen Datensatzes das implizite Verständnis einer Fundstelle als eine Siedlung aufgebrochen. Die räumlichen Beziehungen können genauer untersucht und insbesondere auf die diachronen Verlagerungen innerhalb eines Fundplatzes eingegangen werden. Die erarbeiteten Größen und Abstände von Siedlungen können bei der Einordnung von Fundstreuungen hilfreich sein.
 
 Es bleibt die Frage inwieweit die von dem Landesdenkmalamt ausgewiesenen Grabungsflächen mit diesen Ergebnissen zusammenhängen. Entsprechen die ausgewiesenen Flächen den vorgeschlagenen Fundstellengrößen?
+
 Da der untersuchte Transekt mit ca. 40 m recht schmal ist, werden die längsten Seiten der Flächen genommen - dies stellt etwa den größtmöglichen Abstand zwischen zwei Befunden auf einer vom Landesdenkmalamt definierten Fundstelle dar - und mit den Distanzen zwischen den Befunden verglichen (siehe Abb. \@ref(fig:Flaechenpolygone)). Hinzugenommen wird auch der Abstand zwischen zwei Flächen. Die Definition der Flächen erfolgte durch das Landesdenkmalamt nach einer harten Prospektion (s. o.), insofern galt für dieses Fallbeispiel die Annahme, dass in den Lücken zwischen den einzelnen Flächen keine Befunde vorkommen.
 
 Der Median der längsten Flächenseiten liegt bei `r median(Flaechen_Laenge$Strecke)` m, siehe Abb. \@ref(Flaechenpolygone)), der Median der Abständen zwischen den Flächen ist `r median(Flaechen_Distanzen$Strecke)` m. 
